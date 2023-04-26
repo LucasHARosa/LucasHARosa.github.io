@@ -1,0 +1,18 @@
+.Footer{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  background-color: var(--purple-700);
+  bottom: 0;
+}
+.Footer p{
+  color: var(--gray-300);
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+.Footer a{
+  color: var(--purple-300);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
