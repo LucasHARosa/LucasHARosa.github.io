@@ -24,7 +24,7 @@ export function MainProjetos(){
     <section id="Projetos" className={styles.containerProjetos}>
         <div className={styles.selection}>
           <div className={styles.containerTitle}>
-            <div className={styles.tag}>📁 Portfolio</div>
+            <div className={styles.tag}>📁 Portfólio</div>
             <h1>Trabalhos e projetos</h1>
           </div>
           

@@ -27,19 +27,22 @@ export function Projetos(props: ProjetosProps) {
         </div>
         <img src={props.imagem} />
         <div className={styles.containerButtons}>
-        <a href={props.LinkGithub}>
+          <a href={props.LinkGithub}>
             <button>
               <div><GithubLogo size={20}/></div>
               Github
             </button>
           </a>
-          <a href={props.LinkGithub}>
+          {props.Link === '' ?
+           '' 
+          :
+          <a href={props.Link}>
             <button>
               <div><Link size={20}/></div>
               Link
             </button>
           </a>
-          
+          }       
         </div>
       </div>
       

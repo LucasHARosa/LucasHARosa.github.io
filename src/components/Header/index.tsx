@@ -7,9 +7,9 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <p><a href="#Home">&lt;LR/&gt;</a></p>
+        <a href="#Home"><img src="/cod.svg" alt="" /></a>
         <button 
-          className={styles.buttonMenu}
+          className={styles.buttonMenu} 
           onClick={() => setMenu(!menu)}  
         >
           {menu ? <X size={30}/> : <List size={30}/>}

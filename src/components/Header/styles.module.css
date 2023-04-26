@@ -17,19 +17,22 @@
   width: 100%;
   color: var(--white);
 }
+
+.container img{
+  width: 60px;
+  height: 40px;
+  margin-top: 3px;
+}
+.container a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .buttonMenu{
   display: none;
 }
 
-.container p a{
-  color: var(--green-300);
-  font-size: 1.75rem;
-  font-weight: 600;
-  transition: 0.2s;
-}
-.container p a:hover{
-  color: var(--green-200);
-}
+
 
 
 .navLink ul{
