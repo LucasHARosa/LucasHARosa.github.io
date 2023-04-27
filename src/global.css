@@ -20,7 +20,9 @@
     --green-200: #2b8903;
     --green-300: #1e5c03;
     --green-500: #1b5c00;
-    --green-700: #0f3d00; 
+    --green-700: #0f3d00;
+    
+    --red: #e52e4d;
   }
   
   :focus {

@@ -16,3 +16,16 @@
   font-size: 0.875rem;
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .Footer{
+    padding: 0.5rem;
+  }
+  .Footer p{
+    font-size: 0.625rem;
+  }
+  .Footer a{
+    font-size: 0.625rem;
+  }
+}
+  

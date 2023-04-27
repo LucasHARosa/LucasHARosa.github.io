@@ -8,6 +8,7 @@ import { MainProjetos } from "./components/MainProjetos";
 import { Skills } from "./components/Skills";
 import { Footer } from "./components/Footer";
 import { Contact } from "./components/Contact";
+
 export function App() {
   
 

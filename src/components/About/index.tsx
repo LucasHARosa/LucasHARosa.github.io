@@ -1,13 +1,20 @@
 import styles from './styles.module.css';
 import foto from '../../assets/foto.png'
-
+import { Heart, ChatCircle, PaperPlaneTilt } from 'phosphor-react';
 
 
 export function About(){
   return (
     <section id="SobreMim">
       <div className={styles.container}>
-        <img src={foto} alt="" />
+        <div className={styles.imagem}>
+          <img src={foto} alt="" />
+          <div>
+            <Heart size={24} weight="fill" color="#e52e4d" />
+            <ChatCircle size={24}  color="#FFF" />
+            <PaperPlaneTilt size={24}  color="#FFF" />
+          </div>
+        </div>
         <div className={styles.containerInfo}>
           <div className={styles.tag}>✍ Sobre mim</div>
           <h1>Lucas Henrique Alves Rosa</h1>
