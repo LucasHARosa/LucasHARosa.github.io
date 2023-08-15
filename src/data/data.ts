@@ -89,4 +89,34 @@ export const listaProjetos = [
   "LinkGit":"https://github.com/LucasHARosa/IA_convolution",
   "tipo":"Machine"
 },
+{
+  "id": 10,
+  "titulo":"Teams",
+  "descricao":"Aplicação Mobile para gerenciamento de times de jogos, onde é possível criar times, adicionar jogadores, criar eventos e gerenciar os times.",
+  "tags":["React Native", "TypeScript"],
+  "imagem":"/imagens/teams.PNG",
+  "Link":"",
+  "LinkGit":"https://github.com/LucasHARosa/Teams",
+  "tipo":"desenvolvimento"
+},
+{
+  "id": 11,
+  "titulo":"Redes Neurais com Ruído",
+  "descricao":"Redes neurais com ruído são um tipo de rede neural projetada para prever a classe de um objeto ou dados de entrada. Elas são amplamente utilizadas em tarefas de classificação. Nessa aplicação vemos os efeitos de ruídos em uma rede neural",
+  "tags":["CNN", "Redes Neurais", "Ruído"],
+  "imagem":"/imagens/ruidos.PNG",
+  "Link":"",
+  "LinkGit":"https://github.com/LucasHARosa/IA_ruidos",
+  "tipo":"Machine"
+},
+{
+  "id": 12,
+  "titulo":"TCC: Inteligência Artificial aplicada em Soldagem GMAW",
+  "descricao":"Trabalho de conclusão de curso, onde foi desenvolvido um sistema de inteligência artificial para identificação da poça de solda e o arame em soldagens GMAW. Uso do YOLOV8",
+  "tags":["CNN", "TCC", "YOLOV8"],
+  "imagem":"/imagens/tcc.PNG",
+  "Link":"",
+  "LinkGit":"https://github.com/LucasHARosa/IA_GMAW_TG_UnB",
+  "tipo":"Machine"
+},
 ]
