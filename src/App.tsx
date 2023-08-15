@@ -15,7 +15,7 @@ export function App() {
 
   return (
     <>
-      {/* <Particle/> */}
+      
       <Header />
       <Intro />
       <About />
@@ -23,6 +23,7 @@ export function App() {
       <Skills />
       <Contact />
       <Footer />
+      <Particle/> 
     </>
   )
 }

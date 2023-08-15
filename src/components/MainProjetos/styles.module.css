@@ -64,6 +64,7 @@
   height: 22px;
 }
 .selection button:hover{
+  border: 3px  solid var(--purple-300);
   background-color: var(--purple-800);
   border: 0;
 }
