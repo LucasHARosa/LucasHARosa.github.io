@@ -28,10 +28,12 @@ export function Intro(){
             />
           </p>
           <div className={styles.containerButtons}>
-            <a href="https://github.com/LucasHARosa"><button>
+            <a href="https://github.com/LucasHARosa">
+              <button>
               <div><GithubLogo size={22}/></div>
               Github
-            </button></a>
+              </button>
+            </a>
             <a href="https://www.linkedin.com/in/lucas-henrique-alves-rosa/"><button>
               <div><LinkedinLogo size={22}/></div>
               Linkedin

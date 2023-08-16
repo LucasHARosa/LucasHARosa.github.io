@@ -35,7 +35,7 @@
 .containerInfo p{
   font-style: normal;
   font-weight: 400; 
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--gray-400);
 }
 .containerButtons{

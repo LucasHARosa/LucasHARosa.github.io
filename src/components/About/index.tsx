@@ -3,6 +3,7 @@ import foto from '../../assets/foto.png'
 import { Heart, ChatCircle, PaperPlaneTilt } from 'phosphor-react';
 
 
+
 export function About(){
   return (
     <section id="SobreMim">
@@ -25,6 +26,7 @@ export function About(){
           </div>
         </div>
       </div>
+      
     </section>
   )
 }

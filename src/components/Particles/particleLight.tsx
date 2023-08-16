@@ -4,7 +4,7 @@ import Particles from "react-particles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
-export function Particle ()  {
+export function ParticleLight ()  {
     const particlesInit = useCallback(async (engine: Engine) => {
         console.log(engine);
 
@@ -20,7 +20,11 @@ export function Particle ()  {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
-                fullScreen:true,
+                zLayers:1,
+                fullScreen:{
+                    enable:true,
+                    zIndex:-1,
+                },
                 fpsLimit: 60,
                 interactivity: {
                     events: {
@@ -28,45 +32,58 @@ export function Particle ()  {
                             enable: true,
                             mode: "push",
                         },
+                        onHover: {
+                            enable: true,
+                            mode: "repulse",
+                        },
+                        resize: true,
                     },
                     modes: {
                         push: {
-                            particles_nb: 1,
+                            quantity: 4,
                         },
-
+                        repulse: {
+                            distance: 100,
+                            duration: 0.4,
+                        },
                     },
                 },
                 particles: {
                     color: {
                         value: "#ffffff",
                     },
-                    line_linked: {
-                        enable: false,
-                        opacity: 0.03,
+                    links: {
+                        color: "#ffffff",
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.5,
+                        width: 1,
                     },
                     move: {
-                        direction: "right",
-                        speed: 0.05,
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce",
+                        },
+                        random: false,
+                        speed: 1,
+                        straight: false,
                     },
                     number: {
-                        value: 160,
                         density: {
-                          enable: true,
-                          value_area: 1500,
+                            enable: true,
+                            area: 1200,
                         },
+                        value: 60,
                     },
                     opacity: {
-                        anim: {
-                          enable: true,
-                          speed: 1,
-                          opacity_min: 0.05,
-                        },
+                        value: 0.5,
                     },
                     shape: {
                         type: "circle",
                     },
                     size: {
-                        value: 1,
+                        value: { min: 1, max: 3 },
                     },
                 },
                 detectRetina: true,
