@@ -42,7 +42,7 @@ export function ParticleStar ()  {
                 },
                 particles: {
                     color: {
-                        value: "#ffffff",
+                        value: "#956dea",
                     },
                     line_linked: {
                         enable: false,
@@ -77,4 +77,4 @@ export function ParticleStar ()  {
             }}
         />
     );
-};
+}

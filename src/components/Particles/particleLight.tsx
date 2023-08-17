@@ -50,10 +50,10 @@ export function ParticleLight ()  {
                 },
                 particles: {
                     color: {
-                        value: "#ffffff",
+                        value: "#956dea",
                     },
                     links: {
-                        color: "#ffffff",
+                        color: "#956dea",
                         distance: 150,
                         enable: true,
                         opacity: 0.5,
@@ -90,4 +90,4 @@ export function ParticleLight ()  {
             }}
         />
     );
-};
+}

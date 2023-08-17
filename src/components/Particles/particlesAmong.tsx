@@ -42,7 +42,7 @@ export function ParticleAmong ()  {
                 },
                 particles: {
                     color: {
-                        value: "#ffffff",
+                        value: "#956dea",
                     },
                     move: {
                       angle: {
@@ -211,4 +211,4 @@ export function ParticleAmong ()  {
             }}
         />
     );
-};
+}
