@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import Hand from '../../assets/Hand.svg'
+import astronormal from '../../assets/astronormal.png'
 import Typewriter from "typewriter-effect";
 
 import {LinkedinLogo, GithubLogo} from 'phosphor-react'
@@ -40,7 +40,7 @@ export function Intro(){
             </button></a>
           </div>
         </div>
-        <img src={Hand} alt="" />
+        <img src={astronormal} alt="" />
         
       </div>
     </section>
