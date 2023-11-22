@@ -1,30 +1,17 @@
-import { About } from "./components/About";
-import { Header } from "./components/Header"
-import { Intro } from "./components/Intro";
-
-import './global.css';
-
-import { MainProjetos } from "./components/MainProjetos";
-import { Skills } from "./components/Skills";
-import { Footer } from "./components/Footer";
-import { Contact } from "./components/Contact";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "./styles/themes/default";
+import { GlobalStyle } from "./styles/global";
+import { Home } from "./pages/Home";
 
 
 export function App() {
   
 
   return (
-    <>
-      
-      <Header />
-      <Intro />
-      <About />
-      <MainProjetos />
-      <Skills />
-      <Contact />
-      <Footer />
-
-    </>
+    <ThemeProvider theme={defaultTheme}>
+      <Home/>
+      <GlobalStyle />
+    </ThemeProvider>
   )
 }
 

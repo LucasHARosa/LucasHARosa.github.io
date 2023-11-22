@@ -1,0 +1,63 @@
+export const defaultTheme = {
+  "white": "#fff",
+   
+  "Gray-050":"#f9f9f9",
+  "Gray-100": "#f0f0f0",
+  "Gray-200": "#d9d9d9",
+  "Gray-300": "#bfbfbf",
+  "Gray-400": "#a6a6a6",
+  "Gray-500": "#8c8c8c",
+  "Gray-600": "#737373",
+  "Gray-700": "#595959",
+  "Gray-800": "#404040",
+  "Gray-900": "#262626",
+
+  "Purple-050": "#ecd8ff",
+  "Purple-100": "#d8b9ff",
+  "Purple-200": "#c297ff",
+  "Purple-300": "#a475f9",
+  "Purple-400": "#8250df",
+  "Purple-500": "#6639ba",
+  "Purple-600": "#512a97",
+  "Purple-700": "#3e1f79",
+  "Purple-800": "#2e1461",
+  "Purple-900": "#161218",
+  
+  "--purple-hover": "#34275064",
+  
+  "--red": "#e52e4d",
+
+  "Green-050": "#e1f7e1",
+  "Green-100": "#c3f0c3",
+  "Green-200": "#a4e8a4",
+  "Green-300": "#85e085",
+  "Green-400": "#66d666",
+  "Green-500": "#47cf47",
+  "Green-600": "#2ebf2e",
+  "Green-700": "#1d9d1d",
+  "Green-800": "#126d12",
+  "Green-900": "#083e08",
+
+  "Blue-050": "#e5f1fb",
+  "Blue-100": "#cce3f7",
+  "Blue-200": "#a8cff0",
+  "Blue-300": "#85b9e9",
+  "Blue-400": "#62a2e2",
+  "Blue-500": "#408bda",
+  "Blue-600": "#2e6ebf",
+  "Blue-700": "#1c519f",
+  "Blue-800": "#0e3975",
+  "Blue-900": "#081e41",
+
+  "background": "#0d1117",
+  "Blue-Gray-800":"#000a0f",
+  "Blue-Gray-700":"#101822",
+  //background
+  "Blue-Gray-600":"#1f2736",
+  "Blue-Gray-500":"#2e374a",
+  "Blue-Gray-400":"#3d4557",
+  "Blue-Gray-300":"#394654",
+  "Blue-Gray-200":"#4a5460",
+  "Blue-Gray-100":"#5a6573",
+
+}

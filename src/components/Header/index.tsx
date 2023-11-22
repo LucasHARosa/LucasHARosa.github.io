@@ -1,10 +1,10 @@
-import styles from './styles.module.css';
 import { useState } from 'react';
 import {List, X} from 'phosphor-react'
 import { ParticleStar } from '../Particles/particleStar';
 import { ParticleSnow } from '../Particles/particleSnow';
 import { ParticleLight } from '../Particles/particleLight';
 import { ParticleAmong } from '../Particles/particlesAmong';
+import { HeaderButton, HeaderContainer, HeaderContent, HeaderNav } from './styles';
 
 export function Header() {
   const [menu, setMenu] = useState(false);
@@ -26,32 +26,29 @@ export function Header() {
 
   return (
     <>
-      <header className={styles.header}>
-        <div className={styles.container}>
-          <a href="#Home"><img src="/cod.svg" alt="" /></a>
-          <button 
-            className={styles.buttonMenu} 
-            onClick={() => setMenu(!menu)}  
-          >
-            {menu ? <X size={30}/> : <List size={30}/>}
+      <HeaderContainer>
+        <HeaderContent>
+            <a href="#Home"><img src="/cod.svg" alt="" /></a>
+            <HeaderButton onClick={() => setMenu(!menu)}>
+              {menu ? <X size={30}/> : <List size={30}/>}
+              
+            </HeaderButton>
             
-          </button>
-          <nav 
-            className={`${menu ? styles.navLinkActive:styles.navLink}`}>
-            <ul>
-              <li><a href="#Home">Home</a></li>
-              <li><a href="#SobreMim">Sobre mim</a></li>
-              <li><a href="#Projetos">Projetos</a></li>
-              <li><a href="#Skills">Skills</a></li>
-              <li><a href="#Contato">Contato</a></li>
-              <li>
-                <a href="#" onClick={handleTheme}>Mudar o tema</a>
-              </li>
-            </ul>
-          </nav>
+            <HeaderNav>
+              <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#SobreMim">Sobre mim</a></li>
+                <li><a href="#Projetos">Projetos</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Contato">Contato</a></li>
+                <ul>
+                  <li><a href="#" onClick={handleTheme}>Mudar o tema</a></li>
+                </ul>
+              </ul>
+            </HeaderNav>
 
-        </div>
-      </header>
+        </HeaderContent>
+      </HeaderContainer>
       {theme === 'stars' && (
         <ParticleStar/> 
       )}
