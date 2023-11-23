@@ -1,17 +1,16 @@
-import styles from './styles.module.css';
 import astronormal from '../../assets/astronormal.png'
 import Typewriter from "typewriter-effect";
 
 import {LinkedinLogo, GithubLogo} from 'phosphor-react'
+import { Tag } from '../Tag';
+import { IntroButtons, IntroContainer, IntroContent } from './styles';
 
 export function Intro(){
   return (
     <section id="Home">
-      <div className={styles.container}>
-        <div className={styles.containerInfo}>
-          <div className={styles.tag}>
-          👋 Hello!
-          </div>
+      <IntroContainer>
+        <IntroContent>
+          <Tag color="blue" background='blue'>👋 &nbsp; Hello!</Tag>
           <h1>Lucas Rosa</h1>
           <p>
             <Typewriter
@@ -27,22 +26,24 @@ export function Intro(){
               }}
             />
           </p>
-          <div className={styles.containerButtons}>
+          <IntroButtons>
             <a href="https://github.com/LucasHARosa">
               <button>
-              <div><GithubLogo size={22}/></div>
-              Github
+                <div>
+                  <GithubLogo size={22}/>
+                </div>
+                Github
               </button>
             </a>
             <a href="https://www.linkedin.com/in/lucas-henrique-alves-rosa/"><button>
               <div><LinkedinLogo size={22}/></div>
               Linkedin
             </button></a>
-          </div>
-        </div>
+          </IntroButtons>
+        </IntroContent>
         <img src={astronormal} alt="" />
         
-      </div>
+      </IntroContainer>
     </section>
   )
 }

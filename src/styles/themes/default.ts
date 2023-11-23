@@ -1,6 +1,5 @@
 export const defaultTheme = {
   "white": "#fff",
-   
   "Gray-050":"#f9f9f9",
   "Gray-100": "#f0f0f0",
   "Gray-200": "#d9d9d9",
@@ -12,13 +11,16 @@ export const defaultTheme = {
   "Gray-800": "#404040",
   "Gray-900": "#262626",
 
+
   "Purple-050": "#ecd8ff",
   "Purple-100": "#d8b9ff",
   "Purple-200": "#c297ff",
   "Purple-300": "#a475f9",
+  "Purple-300-opacity": "#a375f98a",
   "Purple-400": "#8250df",
   "Purple-500": "#6639ba",
   "Purple-600": "#512a97",
+  "Purple-600-opacity": "#3f1f799a",
   "Purple-700": "#3e1f79",
   "Purple-800": "#2e1461",
   "Purple-900": "#161218",
@@ -31,6 +33,7 @@ export const defaultTheme = {
   "Green-100": "#c3f0c3",
   "Green-200": "#a4e8a4",
   "Green-300": "#85e085",
+  "Green-300-opacity": "#85e0858a",
   "Green-400": "#66d666",
   "Green-500": "#47cf47",
   "Green-600": "#2ebf2e",
@@ -42,10 +45,12 @@ export const defaultTheme = {
   "Blue-100": "#cce3f7",
   "Blue-200": "#a8cff0",
   "Blue-300": "#85b9e9",
+  "Blue-300-opacity": "#85b9e98a",
   "Blue-400": "#62a2e2",
   "Blue-500": "#408bda",
   "Blue-600": "#2e6ebf",
   "Blue-700": "#1c519f",
+  "Blue-700-opacity": "#1c509f96",
   "Blue-800": "#0e3975",
   "Blue-900": "#081e41",
 
