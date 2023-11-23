@@ -28,7 +28,7 @@ export function Header() {
     <>
       <HeaderContainer>
         <HeaderContent>
-            <a href="#Home"><img src="/cod.svg" alt="" /></a>
+            <a href="#Home"><img src="/lr.svg" alt="" /></a>
             <HeaderButton onClick={() => setMenu(!menu)}>
               {menu ? <X size={30}/> : <List size={30}/>}
               

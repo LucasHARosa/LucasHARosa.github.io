@@ -28,6 +28,7 @@ export const HeaderContent = styled.div`
     width: 60px;
     height: 40px;
     margin-top: 3px;
+    color: ${({ theme }) => theme['gray-300']};
   }
 
   a {

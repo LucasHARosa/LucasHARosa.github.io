@@ -42,7 +42,7 @@ export function ParticleStar ()  {
                 },
                 particles: {
                     color: {
-                        value: "#956dea",
+                        value: "#a8cff0",
                     },
                     line_linked: {
                         enable: false,
@@ -53,7 +53,7 @@ export function ParticleStar ()  {
                         speed: 0.05,
                     },
                     number: {
-                        value: 200,
+                        value: 300,
                         density: {
                           enable: true,
                           value_area: 1500,
@@ -70,7 +70,7 @@ export function ParticleStar ()  {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 1, max: 2 },
+                        value: { min: 0.3, max: 1 },
                     },
                 },
                 detectRetina: true,

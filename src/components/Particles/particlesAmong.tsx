@@ -42,7 +42,7 @@ export function ParticleAmong ()  {
                 },
                 particles: {
                     color: {
-                        value: "#956dea",
+                        value: "#cce3f7",
                     },
                     move: {
                       angle: {
@@ -72,7 +72,7 @@ export function ParticleAmong ()  {
                         acceleration: 9.81,
                         enable: false,
                         inverse: false,
-                        maxSpeed: 50
+                        maxSpeed: 80
                       },
                       
                       outModes: {
@@ -86,7 +86,7 @@ export function ParticleAmong ()  {
                       speed: 2,
                     },
                     number: {
-                      value: 200
+                      value: 170
                     },
                     opacity: {
                       value: 1,
@@ -97,7 +97,7 @@ export function ParticleAmong ()  {
                       type: "circle"
                     },
                     size: {
-                        value: { min: 1, max: 3 },
+                        value: { min: 0.5, max: 2 },
                     },
                     groups:{
                       z5000: {

@@ -42,7 +42,7 @@ export function ParticleSnow ()  {
                 },
                 particles: {
                     color: {
-                      value: "#956dea",
+                      value: "#cce3f7",
                     },
                     line_linked: {
                         enable: false,
@@ -54,13 +54,13 @@ export function ParticleSnow ()  {
                         speed: 1,
                     },
                     number: {
-                        value: 70,
+                        value: 150,
                         density: {
                           enable: false,
                         },
                     },
                     size: {
-                        value: 5,
+                        value: 2,
                         random: true,
                     },
                     opacity: {
