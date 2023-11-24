@@ -5,8 +5,9 @@ export const IntroContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
-  padding: 10rem 20vw 6.25rem;
+  height: 85vh;
+  maring-bottom: 0vh;
+  padding: 0 20vw ;
   @media(max-width: 768px){
     justify-content: center;
     padding: 14rem 1rem 6.25rem;
