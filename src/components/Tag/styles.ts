@@ -35,4 +35,8 @@ export const TagContainer = styled.div<Props>`
         return theme["Blue-900"];
     }
   }};
+
+  @media(max-width: 768px){
+    font-size: 0.625rem;
+  }
 `
