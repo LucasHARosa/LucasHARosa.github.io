@@ -1,4 +1,3 @@
-import styles from './styles.module.css';
 import  node from   '../../assets/Skills/icons8-node-js-64.png'
 import  react from   '../../assets/Skills/icons8-reagir-64.png'
 import  c from   '../../assets/Skills/icons8-c++-64.png'
@@ -11,17 +10,19 @@ import  git from   '../../assets/Skills/icons8-git-64.png'
 import  github from   '../../assets/Skills/icons8-github-64.png'
 import  java from   '../../assets/Skills/icons8-logo-java-coffee-cup-64.png'
 import sql from '../../assets/Skills/icons8-sql-64.png'
+import { Tag } from '../Tag';
+import { ContainerSection, ContainerTechs, ContainerTitle, Techs } from './styles';
 
 export function Skills(){
   return(
-    <section id="Skills" className={styles.container}>
-      <div className={styles.containerTitle}>
-        <div className={styles.tag}>💻 Skills</div>
+    <ContainerSection id="Skills">
+      <ContainerTitle>
+        <Tag color="blue" background='blue'>💻&nbsp;Skills</Tag>
         <h1>Tecnologias e linguagens</h1>
-      </div>
+      </ContainerTitle>
       
-      <div className={styles.containerTechs}>
-        <div className={styles.techs}>
+      <ContainerTechs>
+        <Techs>
           <p>Techs de desenvolvimento</p>
           <div>
             <img src={react}/>
@@ -30,8 +31,8 @@ export function Skills(){
             <img src={css}/>
     
           </div>
-        </div>
-        <div className={styles.techs}>
+        </Techs>
+        <Techs>
           <p>Linguagens</p>
           <div>
             <img src={js}/>
@@ -42,17 +43,17 @@ export function Skills(){
             <img src={sql}/>
             
           </div>
-        </div>
-        <div className={styles.techs}>
+        </Techs>
+        <Techs>
           <p>Outras Skills</p>
           <div>
             <img src={git}/>
             <img src={github}/>
             
           </div>
-        </div>
-      </div>  
+        </Techs>
+      </ContainerTechs>  
 
-    </section>
+    </ContainerSection>
   )
 }

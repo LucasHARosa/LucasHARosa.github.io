@@ -48,11 +48,27 @@ export const defaultTheme = {
   "Blue-300-opacity": "#85b9e98a",
   "Blue-400": "#62a2e2",
   "Blue-500": "#408bda",
+  "Blue-500-opacity": "#408bda50",
   "Blue-600": "#2e6ebf",
+  "Blue-600-opacity": "#2e6dbf50",
   "Blue-700": "#1c519f",
   "Blue-700-opacity": "#1c509f96",
   "Blue-800": "#0e3975",
   "Blue-900": "#081e41",
+
+  "Blue-Green-050": "#e1f7f7",
+  "Blue-Green-100": "#c3f0f0",
+  "Blue-Green-200": "#a4e8e8",
+  "Blue-Green-300": "#85e0e0",
+  "Blue-Green-300-opacity": "#85e0e054",
+  "Blue-Green-400": "#66d6d6",
+  "Blue-Green-500": "#47cece",
+  "Blue-Green-600": "#2ebfbf",
+  "Blue-Green-700": "#1d9d9d",
+  "Blue-Green-800": "#126d6d",
+  "Blue-Green-900": "#083e3e",
+
+
 
   "background": "#0d1117",
   "Blue-Gray-800":"#000a0f",

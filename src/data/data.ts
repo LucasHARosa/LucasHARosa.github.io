@@ -111,7 +111,7 @@ export const listaProjetos = [
 },
 {
   "id": 12,
-  "titulo":"TCC: Inteligência Artificial aplicada em Soldagem GMAW",
+  "titulo":"TCC: Inteligência Artificial (GMAW)",
   "descricao":"Trabalho de conclusão de curso, onde foi desenvolvido um sistema de inteligência artificial para identificação da poça de solda e o arame em soldagens GMAW. Uso do YOLOV8",
   "tags":["CNN", "TCC", "YOLOV8"],
   "imagem":"/imagens/tcc.PNG",

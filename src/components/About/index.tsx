@@ -8,21 +8,27 @@ import { useGesture } from "react-use-gesture";
 import { useSpring, animated, to} from "@react-spring/web";
 
 
-const calcX = (y: number, ly: number) => {
-  
-  return -(y - ly - window.innerHeight /2) / 50;
-}
-
-const calcY = (x: number, lx: number) => {
-  
-  return (x - lx - window.innerWidth /4.2) / 50;
-}
-
-
 export function About(){
+  const domTarget = useRef<HTMLDivElement>(null);
+ 
+
+  const calcX = (y: number) => {
+    if (!domTarget.current) return;
+    const cardRect = domTarget.current.getBoundingClientRect();
+    const centery = (cardRect.top + cardRect.bottom) /2;
+    console.log("y",y,"cardrect",centery)
+    return -(y - centery) / 35;
+  }
+  
+  const calcY = (x: number) => {
+    if (!domTarget.current) return;
+    const cardRect = domTarget.current.getBoundingClientRect();
+    const centerx = (cardRect.left + cardRect.right) /2;
+    return (x - centerx) / 35;
+  }
+
   
   
-  const domTarget = useRef(null);
   const [{ x, y, rotateX, rotateY,rotateZ,scale,zoom}, api] = useSpring(
     () => ({
       rotateX: 0,
@@ -41,19 +47,19 @@ export function About(){
       onMove: ({ xy: [px, py], dragging }) =>
         !dragging &&
         api({
-          rotateX: calcX(py, y.get()),
-          rotateY: calcY(px, x.get()),
+          rotateX: calcX(py),
+          rotateY: calcY(px),
           scale: 1.05,
         }),
         onHover: ({ hovering }) =>
         !hovering && api({ rotateX: 0, rotateY: 0, scale: 1 }),
-      
-      
     },
-    { domTarget, eventOptions: { passive: false } },
+    { domTarget,eventOptions: { passive: false }},
   );
 
-
+  
+ 
+  
   return (
     <section id="SobreMim">
       <ContainerAbout>
@@ -79,7 +85,7 @@ export function About(){
           </ContainerAboutImage>
         </animated.div>
         <ContainerAboutText>
-          <Tag color="purple" background='purple'>✍ &nbsp; Sobre mim</Tag>
+          <Tag color="blue" background='blue'>✍ &nbsp; Sobre mim</Tag>
           <h1>Lucas Henrique Alves Rosa</h1>
           <div>
             <p>🖐 Prazer! Sou desenvolvedor e programador, com anos de experiência em diversas linguagens de programação e frameworks, tenho habilidades sólidas em desenvolvimento web e aplicativos, bem como em automação e Machine Learning</p>

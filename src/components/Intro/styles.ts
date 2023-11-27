@@ -10,7 +10,7 @@ export const IntroContainer = styled.div`
   padding: 0 20vw ;
   @media(max-width: 768px){
     justify-content: center;
-    padding: 14rem 1rem 6.25rem;
+    padding: 0 1rem 6.25rem;
   }
 
   @keyframes floatAnimation {
@@ -87,7 +87,7 @@ export const IntroButtons = styled.div`
     transition: 0.4s;
 
     &:hover{
-      background-color:  ${({ theme }) => theme['Blue-700-opacity']};
+      background-color:  ${({ theme }) => theme['Blue-600-opacity']};
       box-shadow: 0px 0px 50px ${({ theme }) => theme['Blue-300-opacity']};
       transition: 0.4s;
     }

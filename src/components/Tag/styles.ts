@@ -10,7 +10,7 @@ export const TagContainer = styled.div<Props>`
   font-size: 0.875rem;
   
   border-radius: 0.5rem;
-  padding: 0.25rem 0.875rem 0.25rem 0.675rem ;
+  padding: 0.25rem 0.675rem 0.25rem 0.675rem ;
   background-color: ${({ background, theme }) => {
     switch (background) {
       case 'blue':

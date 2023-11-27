@@ -5,15 +5,12 @@ export const ContainerAbout = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 130px;
-  padding: 8rem 10vw;
-
-  border-bottom: 0.1px solid ${({ theme }) => theme['Purple-600-opacity']};
-  border-top: 0.1px solid ${({ theme }) => theme['Purple-600-opacity']};;
+  padding: 4rem 10vw;
 
   @media(max-width: 768px){
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
   }
 
 ` 
@@ -39,7 +36,7 @@ export const ContainerAboutText = styled.div`
     font-size: 1rem;
     color: ${({ theme }) => theme['Gray-300']};
     @media(max-width: 768px){
-      font-size: 0.875rem;
+      font-size: 0.675rem;
     }
   }
   div{
@@ -51,11 +48,12 @@ export const ContainerAboutText = styled.div`
 
 export const ContainerAboutImage = styled.div`
   padding: 0.5rem;
-  background-color: ${({ theme }) => theme['Purple-600-opacity']};
+  background-color: ${({ theme }) => theme['Blue-600-opacity']};
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-
+  transition: 0.4s;
+  box-shadow: 0px 0px 30px ${({ theme }) => theme['Blue-600-opacity']};
   
 
   img{
@@ -63,6 +61,11 @@ export const ContainerAboutImage = styled.div`
     @media(max-width: 768px){
       width: 50vw;
     }
+  }
+
+  &:hover{
+    box-shadow: 0px 0px 100px ${({ theme }) => theme['Blue-600-opacity']};
+    transition: 0.4s;
   }
 `
 
