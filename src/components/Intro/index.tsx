@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 
 import {LinkedinLogo, GithubLogo} from 'phosphor-react'
 import { Tag } from '../Tag';
-import { IntroButtons, IntroContainer, IntroContent } from './styles';
+import { IntroButtons, IntroContainer, IntroContent, TypeWriterText } from './styles';
 
 export function Intro(){
   return (
@@ -12,7 +12,7 @@ export function Intro(){
         <IntroContent>
           <Tag color="blue" background='blue'>👋 &nbsp; Hello!</Tag>
           <h1>Lucas Rosa</h1>
-          <p>
+          <TypeWriterText>
             <Typewriter
               options={{
                 strings: [
@@ -25,7 +25,7 @@ export function Intro(){
                 deleteSpeed: 50,
               }}
             />
-          </p>
+          </TypeWriterText>
           <IntroButtons>
             <a href="https://github.com/LucasHARosa">
               <button>

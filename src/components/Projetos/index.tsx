@@ -4,6 +4,7 @@ import { Container, ContainerButtons, ContainerTags } from './styles';
 import { useRef } from 'react';
 import { animated, to, useSpring } from '@react-spring/web';
 import { useGesture } from 'react-use-gesture';
+import { motion } from 'framer-motion';
 
 
 interface ProjetosProps {
@@ -24,7 +25,6 @@ export function Projetos(props: ProjetosProps) {
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
     const centery = (cardRect.top + cardRect.bottom) /2;
-    console.log("y",y,"cardrect",centery)
     return -(y - centery) / 250;
   }
   
@@ -65,53 +65,60 @@ export function Projetos(props: ProjetosProps) {
 
   
   return (
-    <animated.div
-      ref={domTarget}
-      style={{
-        x,
-        y,
-        transform: "perspective(600px)",
-        scale: to([scale, zoom], (s, z) => s + z),
-        rotateX,
-        rotateY,
-        rotateZ,
-      }}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ type: "spring" }}
+      layout
     >
-    <Container>
-      <div>
-        <h1>{props.titulo}</h1>
-        <p>{props.descricao}</p>
-      </div>
-      <div>
-        <ContainerTags>
-          {props.tags.map((tag) => {
-            return (
-              <Tag key={tag} color="blue" background='blue'>{tag}</Tag>
+      <animated.div
+        ref={domTarget}
+        style={{
+          x,
+          y,
+          transform: "perspective(600px)",
+          scale: to([scale, zoom], (s, z) => s + z),
+          rotateX,
+          rotateY,
+          rotateZ,
+        }}
+      >
+      <Container>
+        <div>
+          <h1>{props.titulo}</h1>
+          <p>{props.descricao}</p>
+        </div>
+        <div>
+          <ContainerTags>
+            {props.tags.map((tag) => {
+              return (
+                <Tag key={tag} color="blue" background='blue'>{tag}</Tag>
+              )}
             )}
-          )}
-        </ContainerTags>
-        <img src={props.imagem} />
-        <ContainerButtons>
-          <a href={props.LinkGithub}>
-            <button>
-              <div><GithubLogo size={20}/></div>
-              Github
-            </button>
-          </a>
-          {props.Link === '' ?
-           '' 
-          :
-          <a href={props.Link}>
-            <button>
-              <div><Link size={20}/></div>
-              Link
-            </button>
-          </a>
-          }       
-        </ContainerButtons>
-      </div>
-      
-    </Container>
-    </animated.div>
+          </ContainerTags>
+          <img src={props.imagem} />
+          <ContainerButtons>
+            <a href={props.LinkGithub}>
+              <button>
+                <div><GithubLogo size={20}/></div>
+                Github
+              </button>
+            </a>
+            {props.Link === '' ?
+            '' 
+            :
+            <a href={props.Link}>
+              <button>
+                <div><Link size={20}/></div>
+                Link
+              </button>
+            </a>
+            }       
+          </ContainerButtons>
+        </div>
+        
+      </Container>
+      </animated.div>
+    </motion.div>
   )
 }

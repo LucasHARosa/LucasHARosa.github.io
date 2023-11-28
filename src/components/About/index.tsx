@@ -16,7 +16,6 @@ export function About(){
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
     const centery = (cardRect.top + cardRect.bottom) /2;
-    console.log("y",y,"cardrect",centery)
     return -(y - centery) / 35;
   }
   
@@ -57,9 +56,6 @@ export function About(){
     { domTarget,eventOptions: { passive: false }},
   );
 
-  
- 
-  
   return (
     <section id="SobreMim">
       <ContainerAbout>

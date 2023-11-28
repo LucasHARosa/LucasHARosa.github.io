@@ -77,8 +77,10 @@ export const defaultTheme = {
   //background
   "Blue-Gray-600":"#1f2736",
   "Blue-Gray-500":"#2e374a",
+  "Blue-Gray-500-opacity":"#2e374a8a",
   "Blue-Gray-400":"#3d4557",
   "Blue-Gray-300":"#394654",
+  "Blue-Gray-300-opacity":"#3946548a",
   "Blue-Gray-200":"#4a5460",
   "Blue-Gray-100":"#5a6573",
 

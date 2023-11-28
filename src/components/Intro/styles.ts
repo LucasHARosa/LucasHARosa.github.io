@@ -60,6 +60,13 @@ export const IntroContent = styled.div`
   }
 `
 
+export const TypeWriterText = styled.div`
+  font-style: normal;
+  font-weight: 400; 
+  font-size: 1.5rem;
+  color: ${({ theme }) => theme['Blue-400']};
+`
+
 export const IntroButtons = styled.div`
   display: flex;
   flex-direction: row;
