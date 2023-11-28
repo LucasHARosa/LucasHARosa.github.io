@@ -47,6 +47,7 @@ export const defaultTheme = {
   "Blue-300": "#85b9e9",
   "Blue-300-opacity": "#85b9e98a",
   "Blue-400": "#62a2e2",
+  "Blue-400-opacity": "#62a2e28a",
   "Blue-500": "#408bda",
   "Blue-500-opacity": "#408bda50",
   "Blue-600": "#2e6ebf",

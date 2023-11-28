@@ -21,6 +21,7 @@ export const ContainerTitle = styled.div`
 
 
   h1{
+    color: ${({ theme }) => theme['Blue-100']};
     font-size: 3rem;
     font-weight: 600;
     @media(max-width: 768px){
