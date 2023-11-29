@@ -1,8 +1,7 @@
 
 import { Tag } from '../Tag';
 import { ButtonSkill, ContainerButtons, ContainerSection, ContainerTechs, ContainerTitle, Techs, TechsDescription, TechsLogo } from './styles';
-import { useEffect, useState } from 'react'
-import { AnimatePresence, animate, motion, useMotionValue, useTransform } from 'framer-motion'
+import {  useState } from 'react'
 import { listaSkills } from '../../data/data';
 import { DiNodejs } from "react-icons/di";
 import { FaGithub, FaReact } from "react-icons/fa";

@@ -4,8 +4,8 @@ export const Container = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
-  background-color: ${({ theme }) => theme['Blue-Gray-500']};
+  height: 2rem;
+  background-color: ${({ theme }) => theme['Blue-Gray-500-opacity']};
 
   @media(max-width: 768px){
     padding: 0.5rem;
