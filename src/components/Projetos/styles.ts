@@ -99,10 +99,11 @@ export const ContainerButtons = styled.div`
 
     background-color: transparent;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.4s;
 
     &:hover{
-      background-color: ${({ theme }) => theme['Blue-Green-800-opacity']};
+      transition: 0.4s;
+      background-color: ${({ theme }) => theme['Blue-300-opacity']};
     }
 
     @media(max-width: 768px){

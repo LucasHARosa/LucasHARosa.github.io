@@ -58,7 +58,7 @@ export const ButtonSelect = styled.button<ButtonSelectProps>`
 
   color: ${({ theme }) => theme['Blue-100']};
   border: 1px solid ${({ theme }) => theme['Blue-300']};
-  background-color: ${({ theme, isActive }) => isActive ? theme['Blue-Green-800-opacity'] : 'transparent'};
+  background-color: ${({ theme, isActive }) => isActive ? theme['Blue-500-opacity'] : 'transparent'};
 
   @media(max-width: 768px){
     width: 140px;
@@ -67,7 +67,7 @@ export const ButtonSelect = styled.button<ButtonSelectProps>`
   }
 
   &:hover{
-    background-color: ${({ theme }) => theme['Blue-Green-800-opacity']};
+    background-color: ${({ theme }) => theme['Blue-500-opacity']};
     box-shadow: 0px 0px 30px ${({ theme,isActive }) => isActive ? 'transparent': theme['Blue-600']};
     transition: 0.4s;
   }

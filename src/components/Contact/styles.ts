@@ -44,18 +44,20 @@ export const ContainerContact = styled.div`
     gap:1rem;
     flex-wrap: wrap;
     
-    border-radius: 0.5rem;
-    padding: 0.25rem 1rem;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+
+    border: 1px solid ${({ theme }) => theme['Blue-300']};
     
-    color: ${({ theme }) => theme['Blue-100']};
-    background-color: ${({ theme }) => theme['Blue-500-opacity']};
+    color: ${({ theme }) => theme['Blue-200']};
+    
     box-shadow: 0px 0px 5px ${({ theme }) => theme['Blue-300-opacity']};
 
     transition: 0.4s;
 
     &:hover{
       transition: 0.4s;
-      background-color: ${({ theme }) => theme['Blue-400-opacity']};
+      background-color:  ${({ theme }) => theme['Blue-500-opacity']};
       box-shadow: 0px 0px 30px ${({ theme }) => theme['Blue-300-opacity']};
     }
 

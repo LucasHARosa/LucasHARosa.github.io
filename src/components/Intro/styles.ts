@@ -81,7 +81,7 @@ export const IntroButtons = styled.div`
 
     margin-top: 1rem;
     padding: 0.5rem 1.5rem;
-    border: 2px solid ${({ theme }) => theme['Blue-300']};
+    border: 1px solid ${({ theme }) => theme['Blue-300']};
     border-radius: 0.5rem;
 
     
@@ -94,8 +94,8 @@ export const IntroButtons = styled.div`
     transition: 0.4s;
 
     &:hover{
-      background-color:  ${({ theme }) => theme['Blue-600-opacity']};
-      box-shadow: 0px 0px 50px ${({ theme }) => theme['Blue-300-opacity']};
+      background-color:  ${({ theme }) => theme['Blue-500-opacity']};
+      box-shadow: 0px 0px 30px ${({ theme }) => theme['Blue-300-opacity']};
       transition: 0.4s;
     }
     div{

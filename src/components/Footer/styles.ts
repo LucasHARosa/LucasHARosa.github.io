@@ -4,7 +4,7 @@ export const Container = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  height: 3rem;
   background-color: ${({ theme }) => theme['Blue-Gray-500-opacity']};
 
   @media(max-width: 768px){
@@ -19,7 +19,7 @@ export const Container = styled.footer`
     }
   }
   a{
-    color: ${({ theme }) => theme['Blue-500']};
+    color: ${({ theme }) => theme['Blue-300']};
     font-size: 0.875rem;
     font-weight: 600;
     @media(max-width: 768px){

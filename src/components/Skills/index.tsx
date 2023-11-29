@@ -8,6 +8,7 @@ import { FaGithub, FaReact } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 import { SiCplusplus, SiNextdotjs, SiStyledcomponents, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { motion } from 'framer-motion';
 
 
 export function Skills(){
@@ -65,7 +66,7 @@ export function Skills(){
          
           <TechsLogo
             key={skill.id}
-            initial={{ opacity: 0, scale: 0.8, x:-30 }}
+            initial={{ opacity: 0, scale: 0.8, x:-50 }}
             animate={{ opacity: 1, scale: 1, x:0 }}
             
             transition={{ duration: 1.2, type: "spring" }}
@@ -118,13 +119,15 @@ export function Skills(){
           
             <h2>{skill.titulo}</h2>
             <p>{skill.description}</p>
-            <div>
+            <motion.div
+              transition={{  staggerChildren: 1 }}
+            >
               {skill.tecnologiasAxiliares.map((tag) => {
                 return (
                   <Tag key={tag} color="blue" background='blue'>{tag}</Tag>
                 )}
               )}
-            </div>
+            </motion.div>
             
           
         </TechsDescription>
