@@ -48,7 +48,7 @@ export const Techs = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  padding: 2rem;
+  padding: 2rem 1rem;
   border-radius: 1rem;
   gap: 4rem;
 
@@ -56,7 +56,7 @@ export const Techs = styled.div`
   height: auto;
   max-height: 80vh;
 
-  background: linear-gradient(to bottom right, ${({ theme }) => theme["Blue-Gray-500"]}, ${({ theme }) => theme["Blue-Green-600"]});
+  background: linear-gradient(to bottom right, ${({ theme }) => theme["Blue-Gray-500"]} , ${({ theme }) => theme["Blue-Green-600"]} 150%);
 `
 
 export const TechsLogo = styled(motion.div)`
@@ -67,7 +67,7 @@ export const TechsLogo = styled(motion.div)`
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 `
 
@@ -79,7 +79,7 @@ export const ButtonSkill = styled.button<ButtonProps>`
   cursor: pointer;
   background: none;
   transition: 0.4s;
-  color: ${({ theme, active }) => active ? theme["Blue-200"] : theme["Blue-Gray-500"]};
+  color: ${({ theme, active }) => active ? theme["Blue-200"] : theme["Blue-Gray-600"]};
   &:hover{
     transition: 0.4s;
     color: ${({ theme }) => theme["Blue-200"]};

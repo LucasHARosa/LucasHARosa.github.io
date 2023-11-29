@@ -29,13 +29,13 @@ export function Contact(){
       <ContainerContact>
         <div>
           <a href="https://wa.me/5561992836376">
-            <WhatsappLogo size={50}  color='#85b9e9'/>
+            <WhatsappLogo size={50}  color='#e5f1fb'/>
             <span>61 99283-6376</span>
           </a>
         </div>
         <div>
           <a href="#Contato" onClick={handlecopy}>
-            <Envelope size={50}  color='#85b9e9'/>
+            <Envelope size={50}  color='#e5f1fb'/>
             <span>lucashrosa99@gmail</span>
           </a>
         </div>

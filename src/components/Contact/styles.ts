@@ -18,7 +18,7 @@ export const SectionContainer = styled.div`
 
   h1{
     margin-top: 1rem;
-    color: ${({ theme }) => theme['Blue-100']};
+    color: ${({ theme }) => theme['Gray-200']};
     font-size: 3rem;
     font-weight: 600;
     @media(max-width: 768px){
@@ -49,7 +49,7 @@ export const ContainerContact = styled.div`
 
     border: 1px solid ${({ theme }) => theme['Blue-300']};
     
-    color: ${({ theme }) => theme['Blue-200']};
+    color: ${({ theme }) => theme['Blue-100']};
     
     box-shadow: 0px 0px 5px ${({ theme }) => theme['Blue-300-opacity']};
 
