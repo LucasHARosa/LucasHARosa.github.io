@@ -67,6 +67,7 @@ export const defaultTheme = {
   "Blue-Green-600": "#2ebfbf",
   "Blue-Green-700": "#1d9d9d",
   "Blue-Green-800": "#126d6d",
+  "Blue-Green-800-opacity": "#126d6d8a",
   "Blue-Green-900": "#083e3e",
 
 

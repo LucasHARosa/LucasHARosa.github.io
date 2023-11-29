@@ -1,12 +1,13 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const ContainerSection = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
-  padding: 6.25rem 10vw;
+  padding: 0rem 10vw 4rem;
   gap: 2rem;
 
   @media(max-width: 768px){
@@ -33,14 +34,12 @@ export const ContainerTechs = styled.div`
   display: flex;
   flex-direction: row;
   gap: 4rem;
-  justify-content: center;
-  align-items: center;
-
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 3rem;
   @media(max-width: 768px){
     gap: 2rem;
   }
-
-  
 `
 
 export const Techs = styled.div`
@@ -49,50 +48,69 @@ export const Techs = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  width: 40vw;
-  height: 50vw;
+  padding: 2rem;
   border-radius: 1rem;
+  gap: 4rem;
 
-  background: linear-gradient(to bottom right, ${({ theme }) => theme["Blue-Gray-500"]}, ${({ theme }) => theme["Blue-Gray-300"]});
+  width: 35vw;
+  height: auto;
+  max-height: 80vh;
 
-  
+  background: linear-gradient(to bottom right, ${({ theme }) => theme["Blue-Gray-500"]}, ${({ theme }) => theme["Blue-Green-600"]});
 `
 
-export const TechsLogo = styled.div`
-
-  width: 10vw;
-  height: 10vw;
-
-  img{
-    width: 190px;
-    height: 190px;
-  }
+export const TechsLogo = styled(motion.div)`
+  height: 300px;
+  display: fixed;
 
 `
-
-export const TechsDescription = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  width: 40vw;
-  height: 50vw;
-  border-radius: 1rem;
-`
-
-export const ButtonSkill = styled.div`
-
-  button{
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-
-`
-
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+  flex-wrap: wrap;
+`
+
+interface ButtonProps{
+  active: boolean;
+}
+export const ButtonSkill = styled.button<ButtonProps>`
+  border: none;
+  cursor: pointer;
+  background: none;
+  transition: 0.4s;
+  color: ${({ theme, active }) => active ? theme["Blue-200"] : theme["Blue-Gray-500"]};
+  &:hover{
+    transition: 0.4s;
+    color: ${({ theme }) => theme["Blue-200"]};
+  }
+`
+
+
+
+export const TechsDescription = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 35vw;
+
+  h2{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: ${({ theme }) => theme["Blue-100"]};
+  }
+  p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: ${({ theme }) => theme["Blue-100"]};
+    margin-bottom: 3rem;
+  }
+  div{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
 `

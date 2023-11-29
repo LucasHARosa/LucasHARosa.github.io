@@ -7,7 +7,8 @@ export const Container = styled.div`
 
   border: 0.5px  solid ${({ theme }) => theme['Blue-300-opacity']};
   border-radius: 1rem;
-  background-color: ${({ theme }) => theme['Blue-600-opacity']};
+  // background-color: ${({ theme }) => theme['Blue-600-opacity']};
+  background: linear-gradient(to bottom right, ${({ theme }) => theme["Blue-Green-300-opacity"]}, ${({ theme }) => theme['Blue-600-opacity']});
   width: 350px;
   height: 530px;
   padding: 1.625rem 1.875rem;
@@ -101,7 +102,7 @@ export const ContainerButtons = styled.div`
     transition: 0.2s;
 
     &:hover{
-      background-color: ${({ theme }) => theme['Blue-Green-300-opacity']};
+      background-color: ${({ theme }) => theme['Blue-Green-800-opacity']};
     }
 
     @media(max-width: 768px){

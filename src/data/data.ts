@@ -143,7 +143,7 @@ export const listaSkills=[
   },
   {
     id:"java",
-    titulo:"java",
+    titulo:"Java",
     description:"Java consolidou-se como uma escolha líder para o desenvolvimento backend, fornecendo uma plataforma confiável e escalável para a construção de aplicações empresariais robustas. Sua combinação de portabilidade, desempenho e uma ampla comunidade de desenvolvedores fazem dele uma escolha sólida para ambientes de servidor.",
     tecnologiasAxiliares:["Spring Boot", "Spring Web", "Spring Data JPA", "Spring Security", "Spring Cloud"]
   },
@@ -155,7 +155,7 @@ export const listaSkills=[
   },
   {
     id:"typescript",
-    titulo:"typescript",
+    titulo:"Typescript",
     description:"TypeScript, uma extensão tipada do JavaScript, tem se destacado como uma escolha poderosa para o desenvolvimento de backend. Ao agregar tipagem estática ao JavaScript, o TypeScript oferece benefícios significativos em termos de segurança, legibilidade e escalabilidade do código.",
     tecnologiasAxiliares:["NodeJs", "React", "React Native"]
   },
