@@ -72,8 +72,6 @@ export const HeaderNav = styled.nav`
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 2rem;
-    list-style: none;
     color: ${({ theme }) => theme['Gray-300']}; 
   }
   

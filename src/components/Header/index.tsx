@@ -6,6 +6,7 @@ import { ParticleLight } from '../Particles/particleLight';
 import { ParticleAmong } from '../Particles/particlesAmong';
 import { ContainerVertical, HeaderButton, HeaderContainer, HeaderContent, HeaderNav, HeaderNavMobile, NavLi } from './styles';
 import { Variants, motion } from 'framer-motion';
+import { ButtonAnimationHover } from '../ButtonAnimationHover';
 
 
 const itemVariants: Variants = {
@@ -109,21 +110,25 @@ export function Header() {
                   >
                     {dataHeader.map((item) => (
                       <NavLi key={item.id}  variants={itemVariants} >
-                        <a href={item.link}>{item.name} </a>
+                        <ButtonAnimationHover text={item.name} link={item.link} mobile={true}/>
                       </NavLi>
                     ))}
-                    <NavLi variants={itemVariants} ><a href="#" onClick={handleTheme} >Mudar o tema</a></NavLi>
+                    <NavLi variants={itemVariants} >
+                      <ButtonAnimationHover text={"Mudar o tema"} link={"#"} handleTheme={handleTheme} mobile={true}/>
+                    </NavLi>
                   </motion.ul>
                 </HeaderNavMobile>
              
                 <HeaderNav>
                   <ul>
                     {dataHeader.map((item) => (
-                      <li key={item.id}  >
-                        <a href={item.link}>{item.name} </a>
+                      <li key={item.id}>
+                        <ButtonAnimationHover text={item.name} link={item.link}/>
                       </li>
                     ))}
-                    <li ><a href="#" onClick={handleTheme} >Mudar o tema</a></li>
+                    <li>
+                      <ButtonAnimationHover text={"Mudar o tema"} link={"#"} handleTheme={handleTheme}/>
+                    </li>
                   </ul>
                 </HeaderNav>
               
