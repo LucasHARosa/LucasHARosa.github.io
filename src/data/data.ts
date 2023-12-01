@@ -11,11 +11,11 @@ export const listaProjetos = [
 },
 {
   "id": 2,
-  "titulo":"Coffe Delivery",
-  "descricao":"Coffe Delivery É uma aplicação desenvolvida em ReactJS para web que simula um delivery de cafés, onde é possível selecionar os cafés de sua preferência, informar seu endereço e selecionar a forma de pagamento",
+  "titulo":"Coffee Delivery",
+  "descricao":"Coffee Delivery É uma aplicação desenvolvida em ReactJS para web que simula um delivery de cafés, onde é possível selecionar os cafés de sua preferência, informar seu endereço e selecionar a forma de pagamento",
   "tags":["React","TypeScript"],
   "imagem":"/imagens/coffe_deliveryHome.png",
-  "Link":"",
+  "Link":"https://lucasharosa.github.io/Coffee_delivery/",
   "LinkGit":"https://github.com/LucasHARosa/Coffe_delivery",
   "tipo":"desenvolvimento"
 },
@@ -35,7 +35,7 @@ export const listaProjetos = [
   "descricao":"Timer Pomodoro que simula um timer de tarefas, onde é possível organizar uma rotina, definir um tempo para cada tarefa programada e visualizar todas as tarefas realizadas",
   "tags":["React","TypeScript"],
   "imagem":"/imagens/timer_pomoro_1.png",
-  "Link":"",
+  "Link":"https://lucasharosa.github.io/Timer_Pomodoro/",
   "LinkGit":"https://github.com/LucasHARosa/Timer_Pomodoro",
   "tipo":"desenvolvimento"
 },
@@ -119,6 +119,37 @@ export const listaProjetos = [
   "LinkGit":"https://github.com/LucasHARosa/IA_GMAW_TG_UnB",
   "tipo":"Machine"
 },
+{
+  "id": 13,
+  "titulo":"E-Commerce",
+  "descricao":"E-Commerce é uma aplicação de ecommerce de produtos de tecnologia e computadores, onde é possível adicionar produtos ao carrinho. Uma aplicação integrada com API e demonstrando o uso de animações",
+  "tags":["React", "TypeScript", "Frame Motion"],
+  "imagem":"/imagens/home.png",
+  "Link":"https://lucasharosa.github.io/MKS_SISTEMAS/",
+  "LinkGit":"https://github.com/LucasHARosa/MKS_SISTEMAS",
+  "tipo":"desenvolvimento"
+},
+{
+  "id": 14,
+  "titulo":"Gym Train",
+  "descricao":"Gym Train é uma aplicação desenvolvida em React Native para mobile que simula um aplicativo de academia, onde é possível criar treinos, visualizar treinos, visualizar exercícios e criar exercícios.",
+  "tags":["React Native", "TypeScript", "Styled Components"],
+  "imagem":"/imagens/gyntrain.png",
+  "Link":"",
+  "LinkGit":"https://github.com/LucasHARosa/gym_train",
+  "tipo":"desenvolvimento"
+},
+{
+  "id": 15,
+  "titulo":"Quiz Programing",
+  "descricao":"Quiz Programing é uma aplicação desenvolvida em React Native para mobile que simula um quiz de perguntas e respostas sobre programação, onde é possível responder perguntas e visualizar o resultado",
+  "tags":["React Native", "TypeScript", "Native Base"],
+  "imagem":"/imagens/quizprogram.png",
+  "Link":"",
+  "LinkGit":"https://github.com/LucasHARosa/Quiz_Programing",
+  "tipo":"desenvolvimento"
+}
+
 ]
 
 export const listaSkills=[
