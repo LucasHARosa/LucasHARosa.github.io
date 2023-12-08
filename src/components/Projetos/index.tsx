@@ -98,7 +98,7 @@ export function Projetos(props: ProjetosProps) {
           </ContainerTags>
           <img src={props.imagem} />
           <ContainerButtons>
-            <a href={props.LinkGithub}>
+            <a href={props.LinkGithub} target="_blank">
               <button>
                 <div><GithubLogo size={20}/></div>
                 Github
@@ -107,7 +107,7 @@ export function Projetos(props: ProjetosProps) {
             {props.Link === '' ?
             '' 
             :
-            <a href={props.Link}>
+            <a href={props.Link} target="_blank">
               <button>
                 <div><Link size={20}/></div>
                 Link
