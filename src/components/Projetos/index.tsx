@@ -25,7 +25,7 @@ export function Projetos(props: ProjetosProps) {
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
     const centery = (cardRect.top + cardRect.bottom) /2;
-    return -(y - centery) / 250;
+    return -(y - centery) / 350;
   }
   
   const calcY = (x: number) => {
@@ -44,7 +44,7 @@ export function Projetos(props: ProjetosProps) {
       y: 0,
       scale:1,
       zoom: 0,
-      config: { mass: 10, tension: 500, friction: 40 },
+      config: { mass: 10, tension: 700, friction: 30 },
     }),
   );
 

@@ -55,7 +55,7 @@ export const listaProjetos = [
   "descricao":"To Do List É uma aplicação desenvolvida em ReactJS para web que simula uma lista de atividades. Onde é possível cadastrar atividades marcar como concluídas e excluir atividades.",
   "tags":["React", "JavaScript"],
   "imagem":"/imagens/todolist.png",
-  "Link":"",
+  "Link":"https://lucasharosa.github.io/To_Do_List/",
   "LinkGit":"https://github.com/LucasHARosa/To_Do_List",
   "tipo":"desenvolvimento"
 },

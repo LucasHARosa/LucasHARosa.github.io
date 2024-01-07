@@ -10,7 +10,7 @@ export const ContainerAbout = styled.div`
   @media(max-width: 768px){
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem 1rem;
+    
   }
 
 ` 
@@ -24,7 +24,7 @@ export const ContainerAboutText = styled.div`
     font-style: normal;
     font-weight: 400; 
     font-size: 2rem;
-    color: var(--white);
+    color: ${({ theme }) => theme['Blue-100']};
     @media(max-width: 768px){
       font-size: 1.5rem;
     }

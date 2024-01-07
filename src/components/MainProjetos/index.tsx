@@ -24,44 +24,44 @@ export function MainProjetos(){
 
   return (
     <SectionContainer id="Projetos">
-        <SelectContainer>
-          <ContainerTitle>
-            <Tag color="blue" background='blue'>📁 &nbsp; Portfólio</Tag>
-            <h1>Trabalhos e projetos</h1>
-          </ContainerTitle>
-          
-          <ContainerButtonSelect>
-            <ButtonSelect isActive={!buttonActive}
-              onClick={handleChangeButton}>
-              <div><Code size={22}/></div>
-              Desenvolvimento
-            </ButtonSelect>
-            <ButtonSelect isActive={buttonActive}
-              onClick={handleChangeButton}>
-              <div><Cpu size={22}/></div>
-              Machine Learning
-            </ButtonSelect>
-            
-          </ContainerButtonSelect>
-        </SelectContainer>
-       
-        <ContainerProjetos>
-          {lista.map((item) => {
-            return (
-              <Projetos
-                key={item.id}
-                titulo={item.titulo}
-                tags={item.tags}
-                descricao={item.descricao}
-                imagem={item.imagem}
-                LinkGithub={item.LinkGit}
-                Link={item.Link} 
-              />
-            )
-          })}
-          
-        </ContainerProjetos>
+      <SelectContainer>
+        <ContainerTitle>
+          <Tag color="blue" background='blue'>📁 &nbsp; Portfólio</Tag>
+          <h1>Trabalhos e projetos</h1>
+        </ContainerTitle>
         
-      </SectionContainer>
+        <ContainerButtonSelect>
+          <ButtonSelect isActive={!buttonActive}
+            onClick={handleChangeButton}>
+            <div><Code size={22}/></div>
+            Desenvolvimento
+          </ButtonSelect>
+          <ButtonSelect isActive={buttonActive}
+            onClick={handleChangeButton}>
+            <div><Cpu size={22}/></div>
+            Machine Learning
+          </ButtonSelect>
+          
+        </ContainerButtonSelect>
+      </SelectContainer>
+       
+      <ContainerProjetos>
+        {lista.map((item) => {
+          return (
+            <Projetos
+              key={item.id}
+              titulo={item.titulo}
+              tags={item.tags}
+              descricao={item.descricao}
+              imagem={item.imagem}
+              LinkGithub={item.LinkGit}
+              Link={item.Link} 
+            />
+          )
+        })}
+        
+      </ContainerProjetos>
+        
+    </SectionContainer>
   )
 }
