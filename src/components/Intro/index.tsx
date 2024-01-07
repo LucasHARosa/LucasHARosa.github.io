@@ -27,7 +27,7 @@ export function Intro(){
             />
           </TypeWriterText>
           <IntroButtons>
-            <a href="https://github.com/LucasHARosa">
+            <a href="https://github.com/LucasHARosa" target="_blank">
               <button>
                 <div>
                   <GithubLogo size={22}/>
@@ -35,7 +35,7 @@ export function Intro(){
                 Github
               </button>
             </a>
-            <a href="https://www.linkedin.com/in/lucas-henrique-alves-rosa/"><button>
+            <a href="https://www.linkedin.com/in/lucas-henrique-alves-rosa/" target="_blank"><button>
               <div><LinkedinLogo size={22}/></div>
               Linkedin
             </button></a>

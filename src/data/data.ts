@@ -20,15 +20,16 @@ export const listaProjetos = [
   "tipo":"desenvolvimento"
 },
 {
-  "id": 3,
-  "titulo":"Game tracker",
-  "descricao":"Game tracker é uma aplicação de ecommerce de jogos, onde você pode comprar jogos, filtrar a lista de jogos e obter informações dos Games.",
-  "tags":["React","JavaScript"],
-  "imagem":"/imagens/Game_tracker_web.png",
+  "id":3,
+  "titulo":"Enigm",
+  "descricao":"Enigm é uma aplicação desenvolvida em NextJs que simula o jogo TERMO, onde o objetivo é acertar a palavra de 5 letras com 6 tentativas",
+  "tags":["NextJs","TypeScript", "React"],
+  "imagem":"/imagens/Enigm.png",
   "Link":"",
-  "LinkGit":"https://github.com/LucasHARosa/Game_tracker",
+  "LinkGit":"https://github.com/LucasHARosa/Enigm",
   "tipo":"desenvolvimento"
 },
+
 {
   "id": 4,
   "titulo":"Timer Pomodoro",
@@ -148,7 +149,17 @@ export const listaProjetos = [
   "Link":"",
   "LinkGit":"https://github.com/LucasHARosa/Quiz_Programing",
   "tipo":"desenvolvimento"
-}
+},
+{
+  "id": 16,
+  "titulo":"Game tracker",
+  "descricao":"Game tracker é uma aplicação de ecommerce de jogos, onde você pode comprar jogos, filtrar a lista de jogos e obter informações dos Games.",
+  "tags":["React","JavaScript"],
+  "imagem":"/imagens/Game_tracker_web.png",
+  "Link":"",
+  "LinkGit":"https://github.com/LucasHARosa/Game_tracker",
+  "tipo":"desenvolvimento"
+},
 
 ]
 
