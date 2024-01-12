@@ -116,16 +116,56 @@ export const TechsDescription = styled(motion.div)`
     margin-bottom: 1rem;
     color: ${({ theme }) => theme["Blue-100"]};
   }
-  p{
-    font-size: 1rem;
-    font-weight: 300;
-    color: ${({ theme }) => theme["Blue-100"]};
-    margin-bottom: 3rem;
-  }
   div{
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
     flex-wrap: wrap;
   }
+  span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: ${({ theme }) => theme["Blue-200"]};
+    
+  }
+`
+
+export const Text = styled.p`
+  font-size: 1rem;
+  font-weight: 300;
+  color: ${({ theme }) => theme["Blue-100"]};
+  margin-bottom: 2rem;
+`
+
+export const BarProgress = styled.div`
+  
+  width: 300px;
+  
+  border-radius: 1rem;
+  height: 1rem;
+  background: ${({ theme }) => theme["Blue-Gray-500"]};
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+`
+
+export const Space = styled.div`
+  width: 100%;
+  height: 2rem;
+`
+export const Progress = styled(motion.div)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+`
+
+export const TextProgress = styled.p`
+  font-size: 1rem;
+  font-weight: 300;
+  color: ${({ theme }) => theme["Blue-200"]};
+  margin-right: 1rem;
+  font-weight: 500;
 `

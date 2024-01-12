@@ -16,14 +16,14 @@ export function About(){
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
     const centery = (cardRect.top + cardRect.bottom) /2;
-    return -(y - centery) / 35;
+    return -(y - centery) / 55;
   }
   
   const calcY = (x: number) => {
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
     const centerx = (cardRect.left + cardRect.right) /2;
-    return (x - centerx) / 35;
+    return (x - centerx) / 55;
   }
 
   

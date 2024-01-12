@@ -165,67 +165,89 @@ export const listaProjetos = [
 
 export const listaSkills=[
   {
-    id:"react-native", 
-    titulo:"React Native",
-    description:"React Native, uma extensão da poderosa biblioteca React, revolucionou o desenvolvimento móvel ao permitir a criação de aplicativos nativos para iOS e Android a partir de um único código-base. Essa abordagem eficiente economiza tempo, recursos e oferece uma experiência consistente em ambas as plataformas.",
-    tecnologiasAxiliares:["Expo","Native Base", "React Navigation", "React Native Gesture Handler", "React Native Reanimated"]
-
-  },
-  {
-    id:"nodejs",
-    titulo:"NodeJS",
-    description:"Node.js é uma plataforma de desenvolvimento de software de código aberto para a execução de códigos JavaScript do lado do servidor. É um ambiente de execução de código aberto, multiplataforma, que executa códigos JavaScript no backend/servidor e frontend/interface, baseado no V8 interpretador de JavaScript em C++ do Google, criado para ser rápido e escalável.",
-    tecnologiasAxiliares:["Express", "TypeScript", "TypeORM", "Socket.io", "JWT"]
-  },
-  {
+    experiencia:"2,5 anos",
+    nivel:10,
     id:"react",
     titulo:"React",
     description:"ReactJS, desenvolvido pelo Facebook, tornou-se uma pedra angular no universo do desenvolvimento front-end. Sua abordagem centrada em componentes, fluxo de dados unidirecional e reatividade eficiente oferecem uma base sólida para a construção de interfaces de usuário dinâmicas e responsivas.",
     tecnologiasAxiliares:["NextJS","Styled Components", "Redux", "TypeScript", "Tailwind CSS", "Framer Motion", "Spring Web"]
   },
   {
+    experiencia:"1 ano",
+    nivel:7,
     id:"java",
     titulo:"Java",
     description:"Java consolidou-se como uma escolha líder para o desenvolvimento backend, fornecendo uma plataforma confiável e escalável para a construção de aplicações empresariais robustas. Sua combinação de portabilidade, desempenho e uma ampla comunidade de desenvolvedores fazem dele uma escolha sólida para ambientes de servidor.",
     tecnologiasAxiliares:["Spring Boot", "Spring Web", "Spring Data JPA", "Spring Security", "Spring Cloud"]
   },
   {
+    experiencia:"2 anos",
+    nivel:10,
+    id:"react-native", 
+    titulo:"React Native",
+    description:"React Native, uma extensão da poderosa biblioteca React, revolucionou o desenvolvimento móvel ao permitir a criação de aplicativos nativos para iOS e Android a partir de um único código-base. Essa abordagem eficiente economiza tempo, recursos e oferece uma experiência consistente em ambas as plataformas.",
+    tecnologiasAxiliares:["Expo","Native Base", "React Navigation", "React Native Gesture Handler", "React Native Reanimated"]
+  },
+  {
+    experiencia:"1 ano",
+    nivel:7,
+    id:"nodejs",
+    titulo:"NodeJS",
+    description:"Node.js é uma plataforma de desenvolvimento de software de código aberto para a execução de códigos JavaScript do lado do servidor. É um ambiente de execução de código aberto, multiplataforma, que executa códigos JavaScript no backend/servidor e frontend/interface, baseado no V8 interpretador de JavaScript em C++ do Google, criado para ser rápido e escalável.",
+    tecnologiasAxiliares:["Express", "TypeScript", "TypeORM", "Socket.io", "JWT"]
+  },
+  
+  {
+    experiencia:"6 anos",
+    nivel:10,
     id:"python",
     titulo:"Python",
     description:"Python emergiu como a linguagem de programação dominante no campo do Machine Learning (ML), proporcionando uma sintaxe clara, uma comunidade ativa e uma riqueza de bibliotecas especializadas. Essa linguagem se tornou a escolha primária para cientistas de dados, engenheiros de machine learning e pesquisadores de IA.",
     tecnologiasAxiliares:["Pandas", "Numpy", "Matplotlib", "Scikit-Learn", "Keras", "TensorFlow", "PyTorch"]
   },
   {
+    experiencia:"3 anos",
+    nivel:10,
     id:"typescript",
     titulo:"Typescript",
     description:"TypeScript, uma extensão tipada do JavaScript, tem se destacado como uma escolha poderosa para o desenvolvimento de backend. Ao agregar tipagem estática ao JavaScript, o TypeScript oferece benefícios significativos em termos de segurança, legibilidade e escalabilidade do código.",
     tecnologiasAxiliares:["NodeJs", "React", "React Native"]
   },
   {
+    experiencia:"6 anos",
+    nivel:10,
     id:"github",
     titulo:"Git/GitHub",
     description:"O GitHub é uma plataforma central para o desenvolvimento de software colaborativo, oferecendo controle de versão, colaboração e ferramentas de gerenciamento de projetos. No coração do GitHub está o Git, um sistema de controle de versão distribuído. Ele permite que desenvolvedores rastreiem mudanças no código-fonte ao longo do tempo, facilitando a colaboração entre membros da equipe e o gerenciamento eficiente de projetos.",
     tecnologiasAxiliares:["Git", "GitHub"]
   },
   {
+    experiencia:"2 anos",
+    nivel:6,
     id:"tailwind",
     titulo:"Tailwind CSS",
     description:"O Tailwind CSS é uma estrutura de estilização utilitária que se destaca por sua abordagem única e eficiente para o desenvolvimento de interfaces. Ao contrário de outras estruturas que fornecem componentes pré-estilizados, o Tailwind CSS oferece um conjunto abrangente de classes utilitárias que permitem aos desenvolvedores estilizar rapidamente elementos HTML.",
     tecnologiasAxiliares:["React"]
   },
   {
+    experiencia:"2 anos",
+    nivel:10,
     id:"styled-components",
     titulo:"Styled Components",
     description:"Styled Components é uma biblioteca para React e React Native que permite que você use estilos ao nível de componente na sua aplicação. Eles são escritos em uma mistura de JavaScript com CSS. Styled Components remove a separação entre componentes e estilos, e permite que você escreva código que mistura os dois.",
     tecnologiasAxiliares:["React", "React Native"]
   },
   {
+    experiencia:"1 ano",
+    nivel:5,
     id:"nextjs",
     titulo:"NextJs",
     description:"Next.js é um framework para React que simplifica o desenvolvimento de aplicações web modernas, oferecendo uma abordagem estruturada e eficiente para a construção de interfaces reativas. Desenvolvido pela Vercel, Next.js tornou-se uma escolha popular para projetos React mais complexos.",
     tecnologiasAxiliares:["React"]
   },
   {
+    experiencia:"6 anos",
+    nivel:10,
     id:"code",
     titulo:"C++",
     description:"C++ é uma linguagem de programação conhecida por sua eficiência e controle de baixo nível. Amplamente utilizada no desenvolvimento de sistemas operacionais, jogos e aplicativos de desempenho crítico, o C++ oferece recursos como ponteiros, manipulação direta de memória e suporte a programação orientada a objetos. Sua versatilidade, desempenho e controle direto sobre os recursos do sistema o tornam uma escolha poderosa para desenvolvedores que buscam alta performance.",
