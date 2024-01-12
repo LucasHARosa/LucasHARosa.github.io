@@ -1,4 +1,4 @@
-import astronormal from '../../assets/astronormal.png'
+import astro2 from '../../assets/astro2.png'
 import Typewriter from "typewriter-effect";
 
 import {LinkedinLogo, GithubLogo} from 'phosphor-react'
@@ -41,7 +41,7 @@ export function Intro(){
             </button></a>
           </IntroButtons>
         </IntroContent>
-        <img src={astronormal} alt="" />
+        <img src={astro2} alt="" />
         
       </IntroContainer>
     </section>

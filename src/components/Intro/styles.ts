@@ -30,10 +30,10 @@ export const IntroContainer = styled.div`
   }
 
   img{
-    animation: floatAnimation 4s infinite;
+    animation: floatAnimation 6s infinite;
     transition-timing-function: ease-in-out;
     z-index: -1;
-    width: 25rem;
+    width: 30rem;
     @media(max-width: 768px){
       display: none;
     }
