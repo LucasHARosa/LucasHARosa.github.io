@@ -46,7 +46,7 @@ export const listaProjetos = [
   "descricao":"É uma aplicação que simula um feed de notícias de uma rede social. Nela você pode ver as postagens, comentar, curtir e criar postagens",
   "tags":["React", "TypeScript"],
   "imagem":"/imagens/telaInicial.png",
-  "Link":"",
+  "Link":"https://lucasharosa.github.io/Ignite_Feed/",
   "LinkGit":"https://github.com/LucasHARosa/Ignite_Feed",
   "tipo":"desenvolvimento"
 },
@@ -156,7 +156,7 @@ export const listaProjetos = [
   "descricao":"Game tracker é uma aplicação de ecommerce de jogos, onde você pode comprar jogos, filtrar a lista de jogos e obter informações dos Games.",
   "tags":["React","JavaScript"],
   "imagem":"/imagens/Game_tracker_web.png",
-  "Link":"",
+  "Link":"https://lucasharosa.github.io/Game_tracker/",
   "LinkGit":"https://github.com/LucasHARosa/Game_tracker",
   "tipo":"desenvolvimento"
 },
