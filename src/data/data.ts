@@ -25,7 +25,7 @@ export const listaProjetos = [
   "descricao":"Enigm é uma aplicação desenvolvida em NextJs que simula o jogo TERMO, onde o objetivo é acertar a palavra de 5 letras com 6 tentativas",
   "tags":["NextJs","TypeScript", "React"],
   "imagem":"/imagens/Enigm.png",
-  "Link":"",
+  "Link":"https://enigm.vercel.app/",
   "LinkGit":"https://github.com/LucasHARosa/Enigm",
   "tipo":"desenvolvimento"
 },
