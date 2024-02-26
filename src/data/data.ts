@@ -160,6 +160,16 @@ export const listaProjetos = [
   "LinkGit":"https://github.com/LucasHARosa/Game_tracker",
   "tipo":"desenvolvimento"
 },
+{
+  "id": 17,
+  "titulo":"DT Money",
+  "descricao":"DT Money é aplicação de controle financeiro, tem como objetivo ajudar os usuários a gerenciar suas finanças pessoais de forma eficiente",
+  "tags":["React","TypeScript","json-server"],
+  "imagem":"/imagens/dt_money.png",
+  "Link":"",
+  "LinkGit":"https://github.com/LucasHARosa/DT_Money",
+  "tipo":"desenvolvimento"
+},
 
 ]
 
