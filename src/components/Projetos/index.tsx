@@ -24,14 +24,14 @@ export function Projetos(props: ProjetosProps) {
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
     const centery = (cardRect.top + cardRect.bottom) / 2;
-    return -(y - centery) / 400;
+    return -(y - centery) / 700;
   }
 
   const calcY = (x: number) => {
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
     const centerx = (cardRect.left + cardRect.right) / 2;
-    return (x - centerx) / 40;
+    return (x - centerx) / 70;
   }
 
   const [{ x, y, rotateX, rotateY, rotateZ, scale, zoom }, api] = useSpring(

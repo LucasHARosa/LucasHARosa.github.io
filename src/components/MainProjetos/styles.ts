@@ -36,7 +36,9 @@ export const ContainerButtonSelect = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
 
   @media(max-width: 768px){
     gap: 1rem;

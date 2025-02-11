@@ -11,8 +11,6 @@ import { SiCplusplus, SiNextdotjs, SiTypescript } from "react-icons/si";
 import { motion } from 'framer-motion';
 import { SiNestjs } from "react-icons/si";
 
-
-
 export function Skills() {
   const [numberSkill, setNumberSkill] = useState(0);
   const [skill, setSkill] = useState(listaSkills[numberSkill]);

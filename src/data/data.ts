@@ -7,7 +7,7 @@ export const listaProjetos = [
     imagem: "/imagens/quizprogram.png",
     Link: "",
     LinkGit: "https://github.com/LucasHARosa/Quiz-Programing",
-    tipo: ["mobile"]
+    tipo: ["mobile", "principais"]
   },
   {
     id: 18,
@@ -19,16 +19,7 @@ export const listaProjetos = [
     LinkGit: "https://github.com/LucasHARosa/IWeather",
     tipo: ["mobile"]
   },
-  {
-    id: 19,
-    titulo: "Keyboard Test",
-    descricao: "Teste de teclado qual tecla está sendo pressionada em um teclado 65% com som e histórico de teclas. Idealmente feito para testar meus teclados mecânicos.",
-    tags: ["React", "NextJs"],
-    imagem: "/imagens/testKeyboard.png",
-    Link: "https://keyboard-test-eight.vercel.app/",
-    LinkGit: "",
-    tipo: ["frontend"]
-  },
+
 
   {
     id: 14,
@@ -58,7 +49,7 @@ export const listaProjetos = [
     imagem: "/imagens/timer_pomoro_1.png",
     Link: "https://lucasharosa.github.io/Timer-Pomodoro/",
     LinkGit: "https://github.com/LucasHARosa/Timer-Pomodoro",
-    tipo: ["frontend"]
+    tipo: ["frontend", "principais"]
   },
   {
     id: 1,
@@ -70,6 +61,7 @@ export const listaProjetos = [
     LinkGit: "https://github.com/LucasHARosa/Habit",
     tipo: ["mobile", "frontend", "backend"]
   },
+
   {
     id: 2,
     titulo: "Coffee Delivery",
@@ -92,7 +84,7 @@ export const listaProjetos = [
   },
   {
     id: 12,
-    titulo: "TCC: IA para Soldagem (GMAW)",
+    titulo: "TCC: IA para Soldagem",
     descricao: "Sistema de Inteligência Artificial baseado em YOLOV8 para detecção de padrões em processos de soldagem, auxiliando no monitoramento da qualidade.",
     tags: ["CNN", "TCC", "YOLOV8"],
     imagem: "/imagens/tcc.PNG",
@@ -168,7 +160,17 @@ export const listaProjetos = [
     imagem: "/imagens/home.png",
     Link: "",
     LinkGit: "https://github.com/LucasHARosa/MKS-Sistemas",
-    tipo: ["frontend", "principais"]
+    tipo: ["frontend"]
+  },
+  {
+    id: 19,
+    titulo: "Keyboard Test",
+    descricao: "Teste de teclado qual tecla está sendo pressionada em um teclado 65% com som e histórico de teclas. Idealmente feito para testar meus teclados mecânicos.",
+    tags: ["React", "NextJs"],
+    imagem: "/imagens/testKeyboard.png",
+    Link: "https://keyboard-test-eight.vercel.app/",
+    LinkGit: "",
+    tipo: ["frontend"]
   },
   {
     id: 10,
@@ -195,7 +197,7 @@ export const listaProjetos = [
     titulo: "Transações Financeiras",
     descricao: "Aplicação backend para controle de transações financeiras, permitindo a criação, listagem e remoção de transações.",
     tags: ["React", "TypeScript"],
-    imagem: "/imagens/bank.png",
+    imagem: "/imagens/bank.jpg",
     Link: "",
     LinkGit: "https://github.com/LucasHARosa/Bank-Transactions",
     tipo: ["backend"]
