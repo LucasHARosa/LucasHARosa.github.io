@@ -97,7 +97,7 @@ export const listaProjetos = [
     tags: ["CNN", "TCC", "YOLOV8"],
     imagem: "/imagens/tcc.PNG",
     Link: "",
-    LinkGit: "https://github.com/LucasHARosa/IA-GMAW-TG-UnB",
+    LinkGit: "https://github.com/LucasHARosa/UnB-TCC-IA",
     tipo: ["ia", "principais"]
   },
   {
@@ -190,6 +190,17 @@ export const listaProjetos = [
     LinkGit: "https://github.com/LucasHARosa/To-Do-List",
     tipo: ["frontend", "mobile"]
   },
+  {
+    id: 20,
+    titulo: "Transações Financeiras",
+    descricao: "Aplicação backend para controle de transações financeiras, permitindo a criação, listagem e remoção de transações.",
+    tags: ["React", "TypeScript"],
+    imagem: "/imagens/bank.png",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/Bank-Transactions",
+    tipo: ["backend"]
+  },
+
 ];
 
 
