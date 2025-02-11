@@ -7,7 +7,7 @@ import { DiNodejs } from "react-icons/di";
 import { FaGithub, FaReact } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
-import { SiCplusplus, SiNextdotjs, SiStyledcomponents, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiCplusplus, SiNextdotjs, SiTypescript } from "react-icons/si";
 import { motion } from 'framer-motion';
 import { SiNestjs } from "react-icons/si";
 
