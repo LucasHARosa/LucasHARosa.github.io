@@ -1,268 +1,258 @@
 export const listaProjetos = [
   {
-    "id": 1,
-    "titulo": "Habits",
-    "descricao": "Habit é uma aplicação que ajuda você a criar e manter hábitos saudáveis. Com ele você pode criar hábitos, acompanhar o progresso e ver estatísticas sobre seus hábitos.",
-    "tags": ["React", "React Native", "NodeJS"],
-    "imagem": "/imagens/habits.png",
-    "Link": "",
-    "LinkGit": "https://github.com/LucasHARosa/Habit",
-    "tipo": "desenvolvimento"
+    id: 15,
+    titulo: "Quiz Programing",
+    descricao: "Aplicativo mobile de quiz sobre programação, oferecendo perguntas dinâmicas e desafios para testar conhecimentos em diversas linguagens e conceitos.",
+    tags: ["React Native", "TypeScript", "Native Base"],
+    imagem: "/imagens/quizprogram.png",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/Quiz_Programing",
+    tipo: ["mobile"]
   },
   {
-    "id": 2,
-    "titulo": "Coffee Delivery",
-    "descricao": "Coffee Delivery É uma aplicação desenvolvida em ReactJS para web que simula um delivery de cafés, onde é possível selecionar os cafés de sua preferência, informar seu endereço e selecionar a forma de pagamento",
-    "tags": ["React", "TypeScript"],
-    "imagem": "/imagens/coffe_deliveryHome.png",
-    "Link": "https://lucasharosa.github.io/Coffee_delivery/",
-    "LinkGit": "https://github.com/LucasHARosa/Coffe_delivery",
-    "tipo": "desenvolvimento"
+    id: 14,
+    titulo: "Gym Train",
+    descricao: "Aplicativo para organização e acompanhamento de treinos de academia. Permite o cadastro de exercícios, divisão por grupos musculares e histórico de evolução.",
+    tags: ["React Native", "TypeScript", "Styled Components"],
+    imagem: "/imagens/gyntrain.png",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/gym_train",
+    tipo: ["mobile"]
   },
   {
-    "id": 3,
-    "titulo": "Enigm",
-    "descricao": "Enigm é uma aplicação desenvolvida em NextJs que simula o jogo TERMO, onde o objetivo é acertar a palavra de 5 letras com 6 tentativas",
-    "tags": ["NextJs", "TypeScript", "React"],
-    "imagem": "/imagens/Enigm.png",
-    "Link": "https://enigm.vercel.app/",
-    "LinkGit": "https://github.com/LucasHARosa/Enigm",
-    "tipo": "desenvolvimento"
+    id: 17,
+    titulo: "DT Money",
+    descricao: "Aplicação para controle financeiro pessoal. Ajudando os usuários a gerenciar suas finanças pessoais de forma eficiente",
+    tags: ["React", "TypeScript", "json-server"],
+    imagem: "/imagens/dt_money.png",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/DT_Money",
+    tipo: ["frontend"]
   },
+  {
+    id: 4,
+    titulo: "Timer Pomodoro",
+    descricao: "Timer para organização de tarefas com foco na técnica Pomodoro.",
+    tags: ["React", "TypeScript"],
+    imagem: "/imagens/timer_pomoro_1.png",
+    Link: "https://lucasharosa.github.io/Timer_Pomodoro/",
+    LinkGit: "https://github.com/LucasHARosa/Timer_Pomodoro",
+    tipo: ["frontend"]
+  },
+  {
+    id: 1,
+    titulo: "Habits",
+    descricao: "Aplicação full stack para criação e monitoramento de hábitos. Possui uma interface interativa e estatísticas diárias para auxiliar no acompanhamento de metas.",
+    tags: ["React", "React Native", "NodeJS"],
+    imagem: "/imagens/habits.png",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/Habit",
+    tipo: ["mobile", "frontend", "backend"]
+  },
+  {
+    id: 2,
+    titulo: "Coffee Delivery",
+    descricao: "Aplicação de e-commerce para compra de cafés, simulando um sistema de pedidos com carrinho de compras e cálculo de preços.",
+    tags: ["React", "TypeScript"],
+    imagem: "/imagens/coffe_deliveryHome.png",
+    Link: "https://lucasharosa.github.io/Coffee_delivery/",
+    LinkGit: "https://github.com/LucasHARosa/Coffe_delivery",
+    tipo: ["frontend"]
+  },
+  {
+    id: 3,
+    titulo: "Enigm",
+    descricao: "Jogo de palavras estilo TERMO, desenvolvido em Next.js, permitindo que os usuários desafiem seus conhecimentos em um jogo divertido e interativo.",
+    tags: ["NextJs", "TypeScript", "React"],
+    imagem: "/imagens/Enigm.png",
+    Link: "https://enigm.vercel.app/",
+    LinkGit: "https://github.com/LucasHARosa/Enigm",
+    tipo: ["frontend"]
+  },
+  {
+    id: 12,
+    titulo: "TCC: IA para Soldagem (GMAW)",
+    descricao: "Sistema de Inteligência Artificial baseado em YOLOV8 para detecção de padrões em processos de soldagem, auxiliando no monitoramento da qualidade.",
+    tags: ["CNN", "TCC", "YOLOV8"],
+    imagem: "/imagens/tcc.PNG",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/IA_GMAW_TG_UnB",
+    tipo: ["ia", "principais"]
+  },
+  {
+    id: 7,
+    titulo: "Redes Neurais: Classificação",
+    descricao: "Projeto de IA para tarefas de classificação de dados.",
+    tags: ["Python", "Redes Neurais"],
+    imagem: "https://static.imasters.com.br/wp-content/uploads/2016/06/redes-1.png",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/IA_Classification",
+    tipo: ["ia"]
+  },
+  {
+    id: 8,
+    titulo: "Redes Neurais: Regressão",
+    descricao: "Projeto de IA para prever valores numéricos contínuos.",
+    tags: ["Python", "Redes Neurais"],
+    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXAcZTGYRe0OSumsIhXkiXB44sVkhC-X64ig&usqp=CAU",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/IA_Regression",
+    tipo: ["ia"]
+  },
+  {
+    id: 9,
+    titulo: "Redes Neurais Convolucionais",
+    descricao: "Projeto de CNN para processamento de imagens.",
+    tags: ["Python", "Redes Neurais", "CNN"],
+    imagem: "https://www.sakurai.dev.br/assets/images/posts/2017-12-20-cnn-mapreduce.png",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/IA_convolution",
+    tipo: ["ia"]
+  },
+  {
+    id: 11,
+    titulo: "Redes Neurais com Ruído",
+    descricao: "Análise dos efeitos de ruído em redes neurais para classificação.",
+    tags: ["CNN", "Redes Neurais", "Ruído"],
+    imagem: "/imagens/ruidos.PNG",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/IA_ruidos",
+    tipo: ["ia"]
+  },
+  {
+    id: 5,
+    titulo: "Feed de notícias",
+    descricao: "Simula um feed de rede social com postagens, comentários e curtidas.",
+    tags: ["React", "TypeScript"],
+    imagem: "/imagens/telaInicial.png",
+    Link: "https://lucasharosa.github.io/Ignite_Feed/",
+    LinkGit: "https://github.com/LucasHARosa/Ignite_Feed",
+    tipo: ["frontend"]
+  },
+  {
+    id: 16,
+    titulo: "Game Tracker",
+    descricao: "E-commerce de jogos com filtros e informações detalhadas.",
+    tags: ["React", "JavaScript"],
+    imagem: "/imagens/Game_tracker_web.png",
+    Link: "https://lucasharosa.github.io/Game_tracker/",
+    LinkGit: "https://github.com/LucasHARosa/Game_tracker",
+    tipo: ["frontend"]
+  },
+  {
+    id: 13,
+    titulo: "E-Commerce",
+    descricao: "Loja virtual de produtos de tecnologia com integração de API, onde os usuários podem visualizar produtos, adicionar ao carrinho e simular pedidos.",
+    tags: ["React", "TypeScript", "Frame Motion"],
+    imagem: "/imagens/home.png",
+    Link: "https://lucasharosa.github.io/MKS_SISTEMAS/",
+    LinkGit: "https://github.com/LucasHARosa/MKS_SISTEMAS",
+    tipo: ["frontend", "principais"]
+  },
+  {
+    id: 10,
+    titulo: "Teams",
+    descricao: "Aplicativo mobile para gerenciamento de times e eventos.",
+    tags: ["React Native", "TypeScript"],
+    imagem: "/imagens/teams.PNG",
+    Link: "",
+    LinkGit: "https://github.com/LucasHARosa/Teams",
+    tipo: ["mobile"]
+  },
+  {
+    id: 6,
+    titulo: "To do List",
+    descricao: "Lista de tarefas para cadastrar, concluir e excluir atividades.",
+    tags: ["React", "React Native"],
+    imagem: "/imagens/todolist.png",
+    Link: "https://lucasharosa.github.io/To_Do_List/",
+    LinkGit: "https://github.com/LucasHARosa/To_Do_List",
+    tipo: ["frontend", "mobile"]
+  },
+];
 
-  {
-    "id": 4,
-    "titulo": "Timer Pomodoro",
-    "descricao": "Timer Pomodoro que simula um timer de tarefas, onde é possível organizar uma rotina, definir um tempo para cada tarefa programada e visualizar todas as tarefas realizadas",
-    "tags": ["React", "TypeScript"],
-    "imagem": "/imagens/timer_pomoro_1.png",
-    "Link": "https://lucasharosa.github.io/Timer_Pomodoro/",
-    "LinkGit": "https://github.com/LucasHARosa/Timer_Pomodoro",
-    "tipo": "desenvolvimento"
-  },
-  {
-    "id": 5,
-    "titulo": "Feed de noticias",
-    "descricao": "É uma aplicação que simula um feed de notícias de uma rede social. Nela você pode ver as postagens, comentar, curtir e criar postagens",
-    "tags": ["React", "TypeScript"],
-    "imagem": "/imagens/telaInicial.png",
-    "Link": "https://lucasharosa.github.io/Ignite_Feed/",
-    "LinkGit": "https://github.com/LucasHARosa/Ignite_Feed",
-    "tipo": "desenvolvimento"
-  },
-  {
-    "id": 6,
-    "titulo": "To do List",
-    "descricao": "To Do List É uma aplicação desenvolvida em ReactJS para web que simula uma lista de atividades. Onde é possível cadastrar atividades marcar como concluídas e excluir atividades.",
-    "tags": ["React", "React Native"],
-    "imagem": "/imagens/todolist.png",
-    "Link": "https://lucasharosa.github.io/To_Do_List/",
-    "LinkGit": "https://github.com/LucasHARosa/To_Do_List",
-    "tipo": "desenvolvimento"
-  },
-  {
-    "id": 7,
-    "titulo": "Redes Neurais: Classificação",
-    "descricao": "Redes neurais de classificação são um tipo de rede neural projetada para prever a classe de um objeto ou dados de entrada. Elas são amplamente utilizadas em tarefas de classificação.",
-    "tags": ["Python", "Redes Neurais"],
-    "imagem": "https://static.imasters.com.br/wp-content/uploads/2016/06/redes-1.png",
-    "Link": "",
-    "LinkGit": "https://github.com/LucasHARosa/IA_Classification",
-    "tipo": "Machine"
-  },
-  {
-    "id": 8,
-    "titulo": "Redes Neurais: Regressão",
-    "descricao": "Redes neurais de regressão são um tipo de rede neural projetada para prever valores numéricos contínuos, em vez de prever classes discretas como em uma rede neural de classificação. Elas são úteis em problemas que envolvem a previsão de um valor numérico.",
-    "tags": ["Python", "Redes Neurais"],
-    "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXAcZTGYRe0OSumsIhXkiXB44sVkhC-X64ig&usqp=CAU",
-    "Link": "",
-    "LinkGit": "https://github.com/LucasHARosa/IA_Regression",
-    "tipo": "Machine"
-  },
-  {
-    "id": 9,
-    "titulo": "Redes Neurais Convolucionais",
-    "descricao": "Redes neurais convolucionais (CNNs) são um tipo especializado de rede neural projetado para trabalhar com dados de imagem e processamento de vídeo",
-    "tags": ["Python", "Redes Neurais", "CNN"],
-    "imagem": "https://www.sakurai.dev.br/assets/images/posts/2017-12-20-cnn-mapreduce.png",
-    "Link": "",
-    "LinkGit": "https://github.com/LucasHARosa/IA_convolution",
-    "tipo": "Machine"
-  },
-  {
-    "id": 10,
-    "titulo": "Teams",
-    "descricao": "Aplicação Mobile para gerenciamento de times de jogos, onde é possível criar times, adicionar jogadores, criar eventos e gerenciar os times.",
-    "tags": ["React Native", "TypeScript"],
-    "imagem": "/imagens/teams.PNG",
-    "Link": "",
-    "LinkGit": "https://github.com/LucasHARosa/Teams",
-    "tipo": "desenvolvimento"
-  },
-  {
-    "id": 11,
-    "titulo": "Redes Neurais com Ruído",
-    "descricao": "Redes neurais com ruído são um tipo de rede neural projetada para prever a classe de um objeto ou dados de entrada. Elas são amplamente utilizadas em tarefas de classificação. Nessa aplicação vemos os efeitos de ruídos em uma rede neural",
-    "tags": ["CNN", "Redes Neurais", "Ruído"],
-    "imagem": "/imagens/ruidos.PNG",
-    "Link": "",
-    "LinkGit": "https://github.com/LucasHARosa/IA_ruidos",
-    "tipo": "Machine"
-  },
-  {
-    "id": 12,
-    "titulo": "TCC: Inteligência Artificial (GMAW)",
-    "descricao": "Trabalho de conclusão de curso, onde foi desenvolvido um sistema de inteligência artificial para identificação da poça de solda e o arame em soldagens GMAW. Uso do YOLOV8",
-    "tags": ["CNN", "TCC", "YOLOV8"],
-    "imagem": "/imagens/tcc.PNG",
-    "Link": "",
-    "LinkGit": "https://github.com/LucasHARosa/IA_GMAW_TG_UnB",
-    "tipo": "Machine"
-  },
-  {
-    "id": 13,
-    "titulo": "E-Commerce",
-    "descricao": "E-Commerce é uma aplicação de ecommerce de produtos de tecnologia e computadores, onde é possível adicionar produtos ao carrinho. Uma aplicação integrada com API e demonstrando o uso de animações",
-    "tags": ["React", "TypeScript", "Frame Motion"],
-    "imagem": "/imagens/home.png",
-    "Link": "https://lucasharosa.github.io/MKS_SISTEMAS/",
-    "LinkGit": "https://github.com/LucasHARosa/MKS_SISTEMAS",
-    "tipo": "desenvolvimento"
-  },
-  {
-    "id": 14,
-    "titulo": "Gym Train",
-    "descricao": "Gym Train é uma aplicação desenvolvida em React Native para mobile que simula um aplicativo de academia, onde é possível criar treinos, visualizar treinos, visualizar exercícios e criar exercícios.",
-    "tags": ["React Native", "TypeScript", "Styled Components"],
-    "imagem": "/imagens/gyntrain.png",
-    "Link": "",
-    "LinkGit": "https://github.com/LucasHARosa/gym_train",
-    "tipo": "desenvolvimento"
-  },
-  {
-    "id": 15,
-    "titulo": "Quiz Programing",
-    "descricao": "Quiz Programing é uma aplicação desenvolvida em React Native para mobile que simula um quiz de perguntas e respostas sobre programação, onde é possível responder perguntas e visualizar o resultado",
-    "tags": ["React Native", "TypeScript", "Native Base"],
-    "imagem": "/imagens/quizprogram.png",
-    "Link": "",
-    "LinkGit": "https://github.com/LucasHARosa/Quiz_Programing",
-    "tipo": "desenvolvimento"
-  },
-  {
-    "id": 16,
-    "titulo": "Game tracker",
-    "descricao": "Game tracker é uma aplicação de ecommerce de jogos, onde você pode comprar jogos, filtrar a lista de jogos e obter informações dos Games.",
-    "tags": ["React", "JavaScript"],
-    "imagem": "/imagens/Game_tracker_web.png",
-    "Link": "https://lucasharosa.github.io/Game_tracker/",
-    "LinkGit": "https://github.com/LucasHARosa/Game_tracker",
-    "tipo": "desenvolvimento"
-  },
-  {
-    "id": 17,
-    "titulo": "DT Money",
-    "descricao": "DT Money é aplicação de controle financeiro, tem como objetivo ajudar os usuários a gerenciar suas finanças pessoais de forma eficiente",
-    "tags": ["React", "TypeScript", "json-server"],
-    "imagem": "/imagens/dt_money.png",
-    "Link": "",
-    "LinkGit": "https://github.com/LucasHARosa/DT_Money",
-    "tipo": "desenvolvimento"
-  },
-
-]
 
 export const listaSkills = [
   {
-    experiencia: "4 anos",
+    experiencia: "5 anos",
     nivel: 10,
     id: "react",
     titulo: "React",
-    description: "ReactJS, desenvolvido pelo Facebook, tornou-se uma pedra angular no universo do desenvolvimento front-end. Sua abordagem centrada em componentes, fluxo de dados unidirecional e reatividade eficiente oferecem uma base sólida para a construção de interfaces de usuário dinâmicas e responsivas.",
-    tecnologiasAxiliares: ["NextJS", "Styled Components", "Redux", "TypeScript", "Tailwind CSS", "Framer Motion", "Spring Web"]
+    description: "Construção de aplicações web modernas e performáticas com React. Experiência com hooks, context API e melhores práticas de componentização.",
+    tecnologiasAxiliares: ["NextJS", "Styled Components", "Redux", "TypeScript", "BootStrap", "Tailwind CSS", "Framer Motion", "Vite", "Jest"]
+  },
+  {
+    experiencia: "2 anos",
+    nivel: 7,
+    id: "nodejs",
+    titulo: "NodeJS",
+    description: "Criação de APIs performáticas e escaláveis utilizando Node.js, com foco em microsserviços e mensageria.",
+    tecnologiasAxiliares: ["NestJS", "Express", "TypeORM", "Prisma", "Socket.io", "JWT", "GraphQL"]
+  },
+  {
+    experiencia: "5 anos",
+    nivel: 10,
+    id: "react-native",
+    titulo: "React Native",
+    description: "Desenvolvimento de aplicativos mobile para Android e iOS com alta performance e integração nativa.",
+    tecnologiasAxiliares: ["Expo", "Native Base", "React Navigation", "React Native Gesture Handler", "React Native Reanimated"]
   },
   {
     experiencia: "2 anos",
     nivel: 7,
     id: "java",
     titulo: "Java",
-    description: "Java consolidou-se como uma escolha líder para o desenvolvimento backend, fornecendo uma plataforma confiável e escalável para a construção de aplicações empresariais robustas. Sua combinação de portabilidade, desempenho e uma ampla comunidade de desenvolvedores fazem dele uma escolha sólida para ambientes de servidor.",
-    tecnologiasAxiliares: ["Spring Boot", "Spring Web", "Spring Data JPA", "Spring Security", "Spring Cloud"]
-  },
-  {
-    experiencia: "4 anos",
-    nivel: 10,
-    id: "react-native",
-    titulo: "React Native",
-    description: "React Native, uma extensão da poderosa biblioteca React, revolucionou o desenvolvimento móvel ao permitir a criação de aplicativos nativos para iOS e Android a partir de um único código-base. Essa abordagem eficiente economiza tempo, recursos e oferece uma experiência consistente em ambas as plataformas.",
-    tecnologiasAxiliares: ["Expo", "Native Base", "React Navigation", "React Native Gesture Handler", "React Native Reanimated"]
-  },
-  {
-    experiencia: "1 ano",
-    nivel: 7,
-    id: "nodejs",
-    titulo: "NodeJS",
-    description: "Node.js é uma plataforma de desenvolvimento de software de código aberto para a execução de códigos JavaScript do lado do servidor. É um ambiente de execução de código aberto, multiplataforma, que executa códigos JavaScript no backend/servidor e frontend/interface, baseado no V8 interpretador de JavaScript em C++ do Google, criado para ser rápido e escalável.",
-    tecnologiasAxiliares: ["Express", "TypeScript", "TypeORM", "Socket.io", "JWT"]
-  },
-
-  {
-    experiencia: "6 anos",
-    nivel: 10,
-    id: "python",
-    titulo: "Python",
-    description: "Python emergiu como a linguagem de programação dominante no campo do Machine Learning (ML), proporcionando uma sintaxe clara, uma comunidade ativa e uma riqueza de bibliotecas especializadas. Essa linguagem se tornou a escolha primária para cientistas de dados, engenheiros de machine learning e pesquisadores de IA.",
-    tecnologiasAxiliares: ["Pandas", "Numpy", "Matplotlib", "Scikit-Learn", "Keras", "TensorFlow", "PyTorch"]
-  },
-  {
-    experiencia: "5 anos",
-    nivel: 10,
-    id: "typescript",
-    titulo: "Typescript",
-    description: "TypeScript, uma extensão tipada do JavaScript, tem se destacado como uma escolha poderosa para o desenvolvimento de backend. Ao agregar tipagem estática ao JavaScript, o TypeScript oferece benefícios significativos em termos de segurança, legibilidade e escalabilidade do código.",
-    tecnologiasAxiliares: ["NodeJs", "React", "React Native"]
-  },
-  {
-    experiencia: "6 anos",
-    nivel: 10,
-    id: "github",
-    titulo: "Git/GitHub",
-    description: "O GitHub é uma plataforma central para o desenvolvimento de software colaborativo, oferecendo controle de versão, colaboração e ferramentas de gerenciamento de projetos. No coração do GitHub está o Git, um sistema de controle de versão distribuído. Ele permite que desenvolvedores rastreiem mudanças no código-fonte ao longo do tempo, facilitando a colaboração entre membros da equipe e o gerenciamento eficiente de projetos.",
-    tecnologiasAxiliares: ["Git", "GitHub"]
+    description: "Desenvolvimento backend robusto e seguro com Java, focado em APIs RESTful e sistemas distribuídos.",
+    tecnologiasAxiliares: ["Spring Boot", "Spring Web", "Spring Data JPA", "Spring Security", "Spring Cloud", "Hibernate"]
   },
   {
     experiencia: "2 anos",
     nivel: 10,
-    id: "tailwind",
-    titulo: "Tailwind CSS",
-    description: "O Tailwind CSS é uma estrutura de estilização utilitária que se destaca por sua abordagem única e eficiente para o desenvolvimento de interfaces. Ao contrário de outras estruturas que fornecem componentes pré-estilizados, o Tailwind CSS oferece um conjunto abrangente de classes utilitárias que permitem aos desenvolvedores estilizar rapidamente elementos HTML.",
-    tecnologiasAxiliares: ["React"]
-  },
-  {
-    experiencia: "4 anos",
-    nivel: 10,
-    id: "styled-components",
-    titulo: "Styled Components",
-    description: "Styled Components é uma biblioteca para React e React Native que permite que você use estilos ao nível de componente na sua aplicação. Eles são escritos em uma mistura de JavaScript com CSS. Styled Components remove a separação entre componentes e estilos, e permite que você escreva código que mistura os dois.",
-    tecnologiasAxiliares: ["React", "React Native"]
-  },
-  {
-    experiencia: "2 ano",
-    nivel: 10,
     id: "nextjs",
     titulo: "NextJs",
-    description: "Next.js é um framework para React que simplifica o desenvolvimento de aplicações web modernas, oferecendo uma abordagem estruturada e eficiente para a construção de interfaces reativas. Desenvolvido pela Vercel, Next.js tornou-se uma escolha popular para projetos React mais complexos.",
-    tecnologiasAxiliares: ["React"]
+    description: "Criação de aplicações SSR e SSG utilizando Next.js, otimizando performance e SEO.",
+    tecnologiasAxiliares: ["React", "TypeScript"]
+  },
+  {
+    experiencia: "2 anos",
+    nivel: 8,
+    id: "nestjs",
+    titulo: "NestJS",
+    description: "Desenvolvimento backend modular e escalável com NestJS, utilizando arquitetura limpa e princípios SOLID.",
+    tecnologiasAxiliares: ["TypeScript", "NodeJS", "JWT", "TypeORM", "Swagger"]
+  },
+  {
+    experiencia: "7 anos",
+    nivel: 10,
+    id: "python",
+    titulo: "Python",
+    description: "Desenvolvimento de scripts, automação e projetos de IA/Machine Learning utilizando Python.",
+    tecnologiasAxiliares: ["Pandas", "Numpy", "Matplotlib", "Scikit-Learn", "Keras", "TensorFlow", "PyTorch", "FastAPI"]
   },
   {
     experiencia: "6 anos",
     nivel: 10,
+    id: "typescript",
+    titulo: "TypeScript",
+    description: "Uso avançado do TypeScript para tipagem segura e escalável em aplicações frontend e backend.",
+    tecnologiasAxiliares: ["React", "NodeJs", "NestJS"]
+  },
+
+  {
+    experiencia: "7 anos",
+    nivel: 10,
+    id: "github",
+    titulo: "Git/GitHub",
+    description: "Gestão de versionamento de código, repositórios e colaboração eficiente em projetos com Git.",
+    tecnologiasAxiliares: ["Git", "GitHub", "GitFlow", "CI/CD"]
+  },
+  {
+    experiencia: "7 anos",
+    nivel: 10,
     id: "code",
     titulo: "C++",
-    description: "C++ é uma linguagem de programação conhecida por sua eficiência e controle de baixo nível. Amplamente utilizada no desenvolvimento de sistemas operacionais, jogos e aplicativos de desempenho crítico, o C++ oferece recursos como ponteiros, manipulação direta de memória e suporte a programação orientada a objetos. Sua versatilidade, desempenho e controle direto sobre os recursos do sistema o tornam uma escolha poderosa para desenvolvedores que buscam alta performance.",
+    description: "C++ é o código raiz: se você quer entender o que acontece debaixo do capô, essa é a chave da ignição.",
     tecnologiasAxiliares: ["C++", "Microcontroladores"]
-  }
+  },
 
-
-]
+];

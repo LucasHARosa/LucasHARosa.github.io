@@ -6,14 +6,14 @@ export const ContainerAbout = styled.div`
   align-items: center;
   gap: 130px;
   padding: 4rem 10vw;
-
   @media(max-width: 768px){
     flex-direction: column;
     gap: 2rem;
+    padding: 0rem 10vw 2rem 10vw;
     
   }
 
-` 
+`
 
 export const ContainerAboutText = styled.div`
   display: flex;

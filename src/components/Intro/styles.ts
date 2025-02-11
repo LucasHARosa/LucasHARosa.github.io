@@ -10,6 +10,7 @@ export const IntroContainer = styled.div`
   padding: 0 20vw ;
   @media(max-width: 768px){
     justify-content: center;
+    height: 95vh;
     padding: 0 1rem 6.25rem;
   }
 

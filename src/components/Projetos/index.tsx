@@ -1,5 +1,5 @@
 import { Tag } from '../Tag';
-import { GithubLogo , Link} from 'phosphor-react'
+import { GithubLogo, Link } from 'phosphor-react'
 import { Container, ContainerButtons, ContainerTags } from './styles';
 import { useRef } from 'react';
 import { animated, to, useSpring } from '@react-spring/web';
@@ -19,30 +19,29 @@ interface ProjetosProps {
 export function Projetos(props: ProjetosProps) {
 
   const domTarget = useRef<HTMLDivElement>(null);
- 
 
   const calcX = (y: number) => {
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
-    const centery = (cardRect.top + cardRect.bottom) /2;
-    return -(y - centery) / 800;
+    const centery = (cardRect.top + cardRect.bottom) / 2;
+    return -(y - centery) / 400;
   }
-  
+
   const calcY = (x: number) => {
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
-    const centerx = (cardRect.left + cardRect.right) /2;
-    return (x - centerx) / 70;
+    const centerx = (cardRect.left + cardRect.right) / 2;
+    return (x - centerx) / 40;
   }
 
-  const [{ x, y, rotateX, rotateY,rotateZ,scale,zoom}, api] = useSpring(
+  const [{ x, y, rotateX, rotateY, rotateZ, scale, zoom }, api] = useSpring(
     () => ({
       rotateX: 0,
       rotateY: 0,
       rotateZ: 0,
       x: 0,
       y: 0,
-      scale:1,
+      scale: 1,
       zoom: 0,
       config: { mass: 10, tension: 450, friction: 30 },
     }),
@@ -57,13 +56,13 @@ export function Projetos(props: ProjetosProps) {
           rotateY: calcY(px),
           scale: 1.02,
         }),
-        onHover: ({ hovering }) =>
+      onHover: ({ hovering }) =>
         !hovering && api({ rotateX: 0, rotateY: 0, scale: 1 }),
     },
-    { domTarget,eventOptions: { passive: false }},
+    { domTarget, eventOptions: { passive: false } },
   );
 
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -83,41 +82,42 @@ export function Projetos(props: ProjetosProps) {
           rotateZ,
         }}
       >
-      <Container>
-        <div>
-          <h1>{props.titulo}</h1>
-          <p>{props.descricao}</p>
-        </div>
-        <div>
-          <ContainerTags>
-            {props.tags.map((tag) => {
-              return (
-                <Tag key={tag} color="blue" background='blue'>{tag}</Tag>
+        <Container>
+          <div>
+            <h1>{props.titulo}</h1>
+            <p>{props.descricao}</p>
+          </div>
+          <div>
+            <ContainerTags>
+              {props.tags.map((tag) => {
+                return (
+                  <Tag key={tag} color="blue" background='blue'>{tag}</Tag>
+                )
+              }
               )}
-            )}
-          </ContainerTags>
-          <img src={props.imagem} />
-          <ContainerButtons>
-            <a href={props.LinkGithub} target="_blank">
-              <button>
-                <div><GithubLogo size={20}/></div>
-                Github
-              </button>
-            </a>
-            {props.Link === '' ?
-            '' 
-            :
-            <a href={props.Link} target="_blank">
-              <button>
-                <div><Link size={20}/></div>
-                Link
-              </button>
-            </a>
-            }       
-          </ContainerButtons>
-        </div>
-        
-      </Container>
+            </ContainerTags>
+            <img src={props.imagem} />
+            <ContainerButtons>
+              <a href={props.LinkGithub} target="_blank">
+                <button>
+                  <div><GithubLogo size={20} /></div>
+                  Github
+                </button>
+              </a>
+              {props.Link === '' ?
+                ''
+                :
+                <a href={props.Link} target="_blank">
+                  <button>
+                    <div><Link size={20} /></div>
+                    Link
+                  </button>
+                </a>
+              }
+            </ContainerButtons>
+          </div>
+
+        </Container>
       </animated.div>
     </motion.div>
   )

@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
+
+
 export const SectionContainer = styled.div`
-  
-  padding: 5rem 10vw;
+  margin-top: 1rem;
+  padding: 10rem 10vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,7 +15,9 @@ export const SectionContainer = styled.div`
 
   @media(max-width: 768px){
     flex-direction: column;
-    padding: 2.5rem 1rem;
+    padding: 2rem 10vw ;
+    align-items: flex-start;
+    
   }
 
   h1{
@@ -27,15 +31,34 @@ export const SectionContainer = styled.div`
   }
 `
 
+export const ContainerTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  h1{
+    color: ${({ theme }) => theme['Blue-100']};
+    font-size: 3rem;
+    font-weight: 600;
+    @media(max-width: 768px){
+      font-size: 2rem;
+    }
+  }
+`
+
 export const ContainerContact = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  width: 100%;
   gap:2rem;
-  flex-wrap: wrap;
   
 
+  @media(max-width: 768px){
+    
+    gap: 1rem;
+  }
+  
   a{
     display: flex;
     flex-direction: row;
@@ -62,7 +85,9 @@ export const ContainerContact = styled.div`
     }
 
     @media(max-width: 768px){
-      font-size: 0.625rem;
+      font-size: 0.8rem;
+      padding: 0.5rem 0.5rem;
+      gap: 0.5rem;
     }
     
     svg{

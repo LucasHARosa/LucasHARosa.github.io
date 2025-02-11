@@ -1,4 +1,3 @@
-
 import { About } from "../../components/About";
 import { Contact } from "../../components/Contact";
 import { Footer } from "../../components/Footer";
@@ -7,10 +6,7 @@ import { Intro } from "../../components/Intro";
 import { MainProjetos } from "../../components/MainProjetos";
 import { Skills } from "../../components/Skills";
 
-
-export function Home(){
-
-  
+export function Home() {
 
   return (
     <>
@@ -21,7 +17,6 @@ export function Home(){
       <Skills />
       <Contact />
       <Footer />
-      
     </>
   )
 }

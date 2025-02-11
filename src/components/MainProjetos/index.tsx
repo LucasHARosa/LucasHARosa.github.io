@@ -1,26 +1,31 @@
 import { Projetos } from '../Projetos';
-import {Code, Cpu} from 'phosphor-react'
+import { Code, Cpu, DeviceMobile, Globe, HardDrives } from 'phosphor-react';
 import { useState } from 'react';
 import { listaProjetos } from '../../data/data';
 import { Tag } from '../Tag';
-import { ButtonSelect, ContainerButtonSelect, ContainerProjetos, ContainerTitle, SectionContainer, SelectContainer } from './styles';
+import {
+  ButtonSelect,
+  ContainerButtonSelect,
+  ContainerProjetos,
+  ContainerTitle,
+  SectionContainer,
+  SelectContainer
+} from './styles';
 
-export function MainProjetos(){
-  const [buttonActive, setButtonActive] = useState(false)
-  
-  const lista = listaProjetos.filter((item) => {
-    if (item.tipo === "desenvolvimento" && buttonActive === false){
-      return item
-    }
-    if (item.tipo === "Machine" && buttonActive === true){
-      return item
-    }
-  })
+const categorias = [
+  { label: "Principais", value: "principais", icon: <Globe size={22} /> },
+  { label: "Mobile", value: "mobile", icon: <DeviceMobile size={22} /> },
+  { label: "Frontend", value: "frontend", icon: <Code size={22} /> },
+  { label: "Backend", value: "backend", icon: <HardDrives size={22} /> },
+  { label: "IA", value: "ia", icon: <Cpu size={22} /> }
+];
 
-  function handleChangeButton(){ 
-    setButtonActive(!buttonActive)
-  }
-  
+export function MainProjetos() {
+  const [categoriaAtiva, setCategoriaAtiva] = useState("mobile");
+
+  const listaFiltrada = listaProjetos.filter((projeto) =>
+    projeto.tipo.includes(categoriaAtiva)
+  );
 
   return (
     <SectionContainer id="Projetos">
@@ -29,39 +34,34 @@ export function MainProjetos(){
           <Tag color="blue" background='blue'>📁 &nbsp; Portfólio</Tag>
           <h1>Trabalhos e projetos</h1>
         </ContainerTitle>
-        
+
         <ContainerButtonSelect>
-          <ButtonSelect isActive={!buttonActive}
-            onClick={handleChangeButton}>
-            <div><Code size={22}/></div>
-            Desenvolvimento
-          </ButtonSelect>
-          <ButtonSelect isActive={buttonActive}
-            onClick={handleChangeButton}>
-            <div><Cpu size={22}/></div>
-            Machine Learning
-          </ButtonSelect>
-          
+          {categorias.map(({ label, value, icon }) => (
+            <ButtonSelect
+              key={value}
+              isActive={categoriaAtiva === value}
+              onClick={() => setCategoriaAtiva(value)}
+            >
+              <div>{icon}</div>
+              {label}
+            </ButtonSelect>
+          ))}
         </ContainerButtonSelect>
       </SelectContainer>
-       
+
       <ContainerProjetos>
-        {lista.map((item) => {
-          return (
-            <Projetos
-              key={item.id}
-              titulo={item.titulo}
-              tags={item.tags}
-              descricao={item.descricao}
-              imagem={item.imagem}
-              LinkGithub={item.LinkGit}
-              Link={item.Link} 
-            />
-          )
-        })}
-        
+        {listaFiltrada.map((item) => (
+          <Projetos
+            key={item.id}
+            titulo={item.titulo}
+            tags={item.tags}
+            descricao={item.descricao}
+            imagem={item.imagem}
+            LinkGithub={item.LinkGit}
+            Link={item.Link}
+          />
+        ))}
       </ContainerProjetos>
-        
     </SectionContainer>
-  )
+  );
 }

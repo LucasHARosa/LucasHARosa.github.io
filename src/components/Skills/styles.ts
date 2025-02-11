@@ -5,13 +5,13 @@ export const ContainerSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: start;
 
   padding: 4rem 10vw ;
   gap: 2rem;
 
   @media(max-width: 768px){
-    
+    height: 140vh;
     align-items: center;
   }
 `
@@ -45,6 +45,7 @@ export const ContainerTechs = styled.div`
     gap: 2rem;
     flex-direction: column;
     align-items: center;
+    margin-top: 1rem;
   }
 `
 
@@ -62,7 +63,7 @@ export const Techs = styled.div`
   height: auto;
   max-height: 80vh;
 
-  background: linear-gradient(to bottom right, ${({ theme }) => theme["Blue-Gray-500"]} , ${({ theme }) => theme["Blue-Green-600"]} 150%);
+  background: linear-gradient(to bottom right, ${({ theme }) => theme["Blue-Gray-500"]} , ${({ theme }) => theme["Blue-500"]} 150%);
 
   @media(max-width: 768px){
     width: 100%;
@@ -83,7 +84,7 @@ export const ContainerButtons = styled.div`
   flex-wrap: wrap;
 `
 
-interface ButtonProps{
+interface ButtonProps {
   active: boolean;
 }
 export const ButtonSkill = styled.button<ButtonProps>`
@@ -159,7 +160,10 @@ export const Progress = styled(motion.div)`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
+  @media(max-width: 768px){
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 `
 
 export const TextProgress = styled.p`
