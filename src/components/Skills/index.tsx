@@ -1,6 +1,6 @@
 
 import { Tag } from '../Tag';
-import { BarProgress, Text, ButtonSkill, ContainerButtons, ContainerSection, ContainerTechs, ContainerTitle, Progress, Space, Techs, TechsDescription, TechsLogo, TextProgress } from './styles';
+import { BarProgress, Text, ButtonSkill, ContainerButtons, ContainerSection, ContainerTechs, ContainerTitle, Progress, Space, Techs, TechsDescription, TechsLogo, TextProgress, IconWrapper } from './styles';
 import { useEffect, useState } from 'react'
 import { listaSkills } from '../../data/data';
 import { DiNodejs } from "react-icons/di";
@@ -16,7 +16,6 @@ export function Skills() {
   const [skill, setSkill] = useState(listaSkills[numberSkill]);
   const [stop, setStop] = useState(false);
 
-
   function handleChangeSkill(id: string) {
     setStop(true);
 
@@ -30,29 +29,30 @@ export function Skills() {
 
 
   const ImagemFundo = () => {
+
     switch (skill.id) {
       case "nodejs":
-        return <DiNodejs size={300} color="#a8cff0" />
+        return <DiNodejs />
       case "react":
-        return <FaReact size={300} color="#a8cff0" />
+        return <FaReact />
       case "java":
-        return <FaJava size={300} color="#a8cff0" />
+        return <FaJava />
       case "python":
-        return <FaPython size={300} color="#a8cff0" />
+        return <FaPython />
       case "react-native":
-        return <FaReact size={300} color="#a8cff0" />
+        return <FaReact />
       case "typescript":
-        return <SiTypescript size={300} color="#a8cff0" />
+        return <SiTypescript />
       case "github":
-        return <FaGithub size={300} color="#a8cff0" />
+        return <FaGithub />
       case "nextjs":
-        return <SiNextdotjs size={300} color="#a8cff0" />
+        return <SiNextdotjs />
       case "code":
-        return <SiCplusplus size={300} color="#a8cff0" />
+        return <SiCplusplus />
       case "nestjs":
-        return <SiNestjs size={300} color="#a8cff0" />
+        return <SiNestjs />
       default:
-        return <FaReact size={300} color="#a8cff0" />
+        return <FaReact />
     }
   }
 
@@ -94,7 +94,10 @@ export function Skills() {
 
             transition={{ duration: 1.2, type: "spring" }}
           >
-            {ImagemFundo()}
+            <IconWrapper>
+
+              {ImagemFundo()}
+            </IconWrapper>
           </TechsLogo>
 
           <ContainerButtons>

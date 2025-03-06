@@ -1,23 +1,17 @@
-import { Tag } from '../Tag';
-import { GithubLogo, Link } from 'phosphor-react'
-import { Container, ContainerButtons, ContainerTags } from './styles';
-import { useRef } from 'react';
-import { animated, to, useSpring } from '@react-spring/web';
-import { useGesture } from 'react-use-gesture';
-import { motion } from 'framer-motion';
+import { animated, to, useSpring } from "@react-spring/web";
+import { motion } from "framer-motion";
+import { AppleLogo, GithubLogo, GooglePlayLogo, Link } from "phosphor-react";
+import { useRef } from "react";
+import { useGesture } from "react-use-gesture";
+import { ProjetosProps } from "../../data/data";
+import { Tag } from "../Tag";
+import { Container, ContainerButtons, ContainerTags } from "./styles";
 
-
-interface ProjetosProps {
-  titulo: string;
-  tags: string[];
-  descricao: string;
-  imagem: string;
-  LinkGithub: string;
-  Link: string;
+interface Props {
+  projeto: ProjetosProps;
 }
 
-export function Projetos(props: ProjetosProps) {
-
+export function Projetos({ projeto }: Props) {
   const domTarget = useRef<HTMLDivElement>(null);
 
   const calcX = (y: number) => {
@@ -25,14 +19,14 @@ export function Projetos(props: ProjetosProps) {
     const cardRect = domTarget.current.getBoundingClientRect();
     const centery = (cardRect.top + cardRect.bottom) / 2;
     return -(y - centery) / 700;
-  }
+  };
 
   const calcY = (x: number) => {
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
     const centerx = (cardRect.left + cardRect.right) / 2;
     return (x - centerx) / 70;
-  }
+  };
 
   const [{ x, y, rotateX, rotateY, rotateZ, scale, zoom }, api] = useSpring(
     () => ({
@@ -44,7 +38,7 @@ export function Projetos(props: ProjetosProps) {
       scale: 1,
       zoom: 0,
       config: { mass: 10, tension: 450, friction: 30 },
-    }),
+    })
   );
 
   useGesture(
@@ -59,9 +53,8 @@ export function Projetos(props: ProjetosProps) {
       onHover: ({ hovering }) =>
         !hovering && api({ rotateX: 0, rotateY: 0, scale: 1 }),
     },
-    { domTarget, eventOptions: { passive: false } },
+    { domTarget, eventOptions: { passive: false } }
   );
-
 
   return (
     <motion.div
@@ -84,41 +77,65 @@ export function Projetos(props: ProjetosProps) {
       >
         <Container>
           <div>
-            <h1>{props.titulo}</h1>
-            <p>{props.descricao}</p>
+            <h1>{projeto.titulo}</h1>
+            <p>{projeto.descricao}</p>
           </div>
           <div>
             <ContainerTags>
-              {props.tags.map((tag) => {
+              {projeto.tags.map((tag) => {
                 return (
-                  <Tag key={tag} color="blue" background='blue'>{tag}</Tag>
-                )
-              }
-              )}
+                  <Tag key={tag} color="blue" background="blue">
+                    {tag}
+                  </Tag>
+                );
+              })}
             </ContainerTags>
-            <img src={props.imagem} />
+            <img src={projeto.imagem} />
             <ContainerButtons>
-              <a href={props.LinkGithub} target="_blank">
-                <button>
-                  <div><GithubLogo size={20} /></div>
-                  Github
-                </button>
-              </a>
-              {props.Link === '' ?
-                ''
-                :
-                <a href={props.Link} target="_blank">
+              {projeto.LinkGoogle && (
+                <a href={projeto.Link} target="_blank">
                   <button>
-                    <div><Link size={20} /></div>
+                    <div>
+                      <GooglePlayLogo size={20} />
+                    </div>
+                    Google Play
+                  </button>
+                </a>
+              )}
+              {projeto.LinkApple && (
+                <a href={projeto.LinkGit} target="_blank">
+                  <button>
+                    <div>
+                      <AppleLogo size={20} weight="fill" />
+                    </div>
+                    Apple Store
+                  </button>
+                </a>
+              )}
+              {projeto.LinkGit && (
+                <a href={projeto.LinkGit} target="_blank">
+                  <button>
+                    <div>
+                      <GithubLogo size={20} />
+                    </div>
+                    Github
+                  </button>
+                </a>
+              )}
+              {projeto.Link && (
+                <a href={projeto.Link} target="_blank">
+                  <button>
+                    <div>
+                      <Link size={20} />
+                    </div>
                     Link
                   </button>
                 </a>
-              }
+              )}
             </ContainerButtons>
           </div>
-
         </Container>
       </animated.div>
     </motion.div>
-  )
+  );
 }

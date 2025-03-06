@@ -53,12 +53,7 @@ export function MainProjetos() {
         {listaFiltrada.map((item) => (
           <Projetos
             key={item.id}
-            titulo={item.titulo}
-            tags={item.tags}
-            descricao={item.descricao}
-            imagem={item.imagem}
-            LinkGithub={item.LinkGit}
-            Link={item.Link}
+            projeto={item}
           />
         ))}
       </ContainerProjetos>
