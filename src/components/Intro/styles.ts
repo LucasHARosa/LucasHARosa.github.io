@@ -95,17 +95,17 @@ export const IntroButtons = styled.div`
     gap: 0.625rem;
     justify-content: center;
     padding: 0.75rem 1.5rem;
-    border: 1px solid ${({ theme }) => theme["Blue-500"]};
+    border: 1px solid ${({ theme }) => theme["Gray-700"]};
     border-radius: 0.5rem;
     font-size: 0.875rem;
     font-weight: 500;
     color: ${({ theme }) => theme["Blue-100"]};
-    background-color: ${({ theme }) => theme["Blue-600-opacity"]};
+    background-color: ${({ theme }) => theme["Gray-700"]};
     box-shadow: ${({ theme }) => theme["shadow-sm"]};
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      background-color: ${({ theme }) => theme["Blue-500"]};
+      background-color: ${({ theme }) => theme["Gray-600"]};
       box-shadow: ${({ theme }) => theme["shadow-md"]};
       transform: translateY(-2px);
     }

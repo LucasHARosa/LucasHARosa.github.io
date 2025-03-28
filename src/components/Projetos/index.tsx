@@ -42,7 +42,7 @@ export function Projetos({ projeto }: Props) {
       y: 0,
       scale: 1,
       zoom: 0,
-      config: { mass: 10, tension: 450, friction: 30 },
+      config: { mass: 20, tension: 450, friction: 40 },
     })
   );
 
@@ -53,7 +53,7 @@ export function Projetos({ projeto }: Props) {
         api({
           rotateX: calcX(py),
           rotateY: calcY(px),
-          scale: 1.02,
+          scale: 1.01,
         }),
       onHover: ({ hovering }) =>
         !hovering && api({ rotateX: 0, rotateY: 0, scale: 1 }),

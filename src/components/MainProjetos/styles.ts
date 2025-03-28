@@ -6,7 +6,7 @@ export const SectionContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 6rem 10vw;
+  padding: 6rem 5vw;
   position: relative;
   overflow: hidden;
 
@@ -73,9 +73,9 @@ export const ButtonSelect = styled.button<ButtonSelectProps>`
   color: ${({ theme }) => theme["Blue-100"]};
   border: 1px solid
     ${({ theme, isActive }) =>
-      isActive ? theme["Blue-500"] : theme["Blue-Gray-600"]};
+      isActive ? theme["Gray-700"] : theme["Blue-Gray-600"]};
   background-color: ${({ theme, isActive }) =>
-    isActive ? theme["Blue-600-opacity"] : "transparent"};
+    isActive ? theme["Gray-700"] : "transparent"};
   box-shadow: ${({ theme, isActive }) =>
     isActive ? theme["shadow-md"] : "none"};
 
@@ -87,8 +87,8 @@ export const ButtonSelect = styled.button<ButtonSelectProps>`
 
   &:hover {
     background-color: ${({ theme, isActive }) =>
-      isActive ? theme["Blue-600-opacity"] : theme["Blue-500-opacity"]};
-    border-color: ${({ theme }) => theme["Blue-400"]};
+      isActive ? theme["Gray-600"] : theme["Gray-700"]};
+    border-color: ${({ theme }) => theme["Gray-700"]};
     transform: ${({ isActive }) => (isActive ? "none" : "translateY(-2px)")};
   }
 
@@ -129,7 +129,6 @@ export const ContainerProjetos = styled.div`
   justify-content: center;
   gap: 2rem;
   width: 100%;
-  max-width: 1200px;
 
   @media (max-width: 768px) {
     gap: 1.5rem;

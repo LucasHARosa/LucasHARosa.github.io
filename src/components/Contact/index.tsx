@@ -1,6 +1,12 @@
 import emailjs from "@emailjs/browser";
-import { Envelope, WhatsappLogo } from "phosphor-react";
+import {
+  Envelope,
+  GithubLogo,
+  LinkedinLogo,
+  WhatsappLogo,
+} from "phosphor-react";
 import { useForm } from "react-hook-form";
+import { FaCode } from "react-icons/fa6";
 import { toast } from "react-toastify";
 import { Tag } from "../Tag";
 import {
@@ -67,14 +73,33 @@ export function Contact() {
         <ContainerContact>
           <div>
             <a href="https://wa.me/5561992836376">
-              <WhatsappLogo size={50} color="#e5f1fb" />
+              <WhatsappLogo size={30} color="#bfdbfe" />
               <span>WhatsApp</span>
             </a>
           </div>
           <div>
             <a href="#Contato" onClick={handleCopy}>
-              <Envelope size={50} color="#e5f1fb" />
+              <Envelope size={30} color="#bfdbfe" />
               <span>Copiar E-mail</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/lucas-henrique-alves-rosa/">
+              <LinkedinLogo size={30} color="#bfdbfe" />
+              <span>Linkedin</span>
+            </a>
+          </div>
+
+          <div>
+            <a href="https://github.com/LucasHARosa">
+              <GithubLogo size={30} color="#bfdbfe" />
+              <span>GitHub</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://wa.me/5561992836376">
+              <FaCode size={30} color="#bfdbfe" />
+              <span>SoftHouse</span>
             </a>
           </div>
         </ContainerContact>

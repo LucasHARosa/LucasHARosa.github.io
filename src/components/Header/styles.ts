@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header`
   right: 0;
   width: 100%;
   z-index: 100;
-  background-color: ${({ theme }) => `rgba(15, 23, 42, 0.8)`};
+  background-color: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(8px);
 
   @media (max-width: 768px) {
@@ -22,9 +22,7 @@ export const HeaderContent = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 0.5rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0.5rem 3rem;
   border-radius: 0.5rem;
   width: 100%;
   color: ${({ theme }) => theme["white"]};

@@ -62,7 +62,8 @@ export const Content = styled.div`
 export const ContainerContact = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+
   width: 40%;
   gap: 1.5rem;
 
@@ -87,15 +88,15 @@ export const ContainerContact = styled.div`
     gap: 1rem;
     width: 100%;
     border-radius: 0.5rem;
-    padding: 0.75rem 1.25rem;
-    border: 1px solid ${({ theme }) => theme["Blue-500"]};
-    color: ${({ theme }) => theme["Blue-100"]};
-    background-color: ${({ theme }) => theme["Blue-600-opacity"]};
+    padding: 0.5rem 0.875rem;
+    border: 1px solid ${({ theme }) => theme["Gray-700"]};
+    color: ${({ theme }) => theme["Blue-200"]};
+    background-color: ${({ theme }) => theme["Gray-700"]};
     box-shadow: ${({ theme }) => theme["shadow-sm"]};
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      background-color: ${({ theme }) => theme["Blue-500"]};
+      background-color: ${({ theme }) => theme["Gray-600"]};
       box-shadow: ${({ theme }) => theme["shadow-md"]};
       transform: translateY(-2px);
     }

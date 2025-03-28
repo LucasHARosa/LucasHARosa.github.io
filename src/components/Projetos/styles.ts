@@ -7,9 +7,10 @@ export const Container = styled.div`
   border-radius: 0.75rem;
   background: linear-gradient(
     135deg,
-    ${({ theme }) => theme["Blue-Gray-700"]},
-    ${({ theme }) => theme["Blue-Gray-800"]}
+    ${({ theme }) => theme["Gray-700"]},
+    ${({ theme }) => theme["Gray-800"]}
   );
+
   width: 320px;
   height: 480px;
   overflow: hidden;
@@ -74,8 +75,8 @@ export const ContainerContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 1.25rem 1.25rem;
-  height: 100%;
+  padding: 1rem;
+  flex: 1;
 
   @media (max-width: 768px) {
     padding: 0.875rem 1rem 1rem;
@@ -129,12 +130,13 @@ export const ContainerButtons = styled.div`
     font-size: 0.875rem;
     font-weight: 400;
     color: ${({ theme }) => theme["Blue-100"]};
-    background-color: ${({ theme }) => theme["Blue-600-opacity"]};
-    border: 1px solid ${({ theme }) => theme["Blue-500"]};
+    background-color: transparent;
+    border: 1px solid ${({ theme }) => theme["Gray-700"]};
+    box-shadow: ${({ theme }) => theme["shadow-sm"]};
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      background-color: ${({ theme }) => theme["Blue-500"]};
+      background-color: ${({ theme }) => theme["Gray-700"]};
       transform: translateY(-2px);
     }
 
