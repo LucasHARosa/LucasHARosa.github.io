@@ -1,6 +1,6 @@
 export const defaultTheme = {
-  "white": "#fff",
-  "Gray-050":"#f9f9f9",
+  white: "#fff",
+  "Gray-050": "#f9f9f9",
   "Gray-100": "#f0f0f0",
   "Gray-200": "#d9d9d9",
   "Gray-200-opacity": "#d9d9d94d",
@@ -12,22 +12,21 @@ export const defaultTheme = {
   "Gray-800": "#404040",
   "Gray-900": "#262626",
 
+  "Orange-050": "#fdf1e0",
+  "Orange-100": "#fce3c1",
+  "Orange-200": "#f9d4a2",
+  "Orange-300": "#f0ab4f",
+  "Orange-300-opacity": "#f0ab4f8a",
+  "Orange-400": "#e59c3d",
+  "Orange-500": "#d98c2b",
+  "Orange-600": "#c2803b",
+  "Orange-600-opacity": "#c2803b9a",
+  "Orange-700": "#a36c32",
+  "Orange-800": "#935528",
+  "Orange-900": "#6b3e1d",
 
-  "Purple-050": "#ecd8ff",
-  "Purple-100": "#d8b9ff",
-  "Purple-200": "#c297ff",
-  "Purple-300": "#a475f9",
-  "Purple-300-opacity": "#a375f98a",
-  "Purple-400": "#8250df",
-  "Purple-500": "#6639ba",
-  "Purple-600": "#512a97",
-  "Purple-600-opacity": "#3f1f799a",
-  "Purple-700": "#3e1f79",
-  "Purple-800": "#2e1461",
-  "Purple-900": "#161218",
-  
-  "--purple-hover": "#34275064",
-  
+  "--orange-hover": "#c2803b64",
+
   "--red": "#e52e4d",
 
   "Green-050": "#e1f7e1",
@@ -71,19 +70,16 @@ export const defaultTheme = {
   "Blue-Green-800-opacity": "#126d6d8a",
   "Blue-Green-900": "#083e3e",
 
-
-
-  "background": "#0d1117",
-  "Blue-Gray-800":"#000a0f",
-  "Blue-Gray-700":"#101822",
+  background: "#0d1117",
+  "Blue-Gray-800": "#000a0f",
+  "Blue-Gray-700": "#101822",
   //background
-  "Blue-Gray-600":"#1f2736",
-  "Blue-Gray-500":"#2e374a",
-  "Blue-Gray-500-opacity":"#2e374a8a",
-  "Blue-Gray-400":"#3d4557",
-  "Blue-Gray-300":"#394654",
-  "Blue-Gray-300-opacity":"#3946548a",
-  "Blue-Gray-200":"#4a5460",
-  "Blue-Gray-100":"#5a6573",
-
-}
+  "Blue-Gray-600": "#1f2736",
+  "Blue-Gray-500": "#2e374a",
+  "Blue-Gray-500-opacity": "#2e374a8a",
+  "Blue-Gray-400": "#3d4557",
+  "Blue-Gray-300": "#394654",
+  "Blue-Gray-300-opacity": "#3946548a",
+  "Blue-Gray-200": "#4a5460",
+  "Blue-Gray-100": "#5a6573",
+};
