@@ -5,7 +5,12 @@ import { useRef } from "react";
 import { useGesture } from "react-use-gesture";
 import { ProjetosProps } from "../../data/data";
 import { Tag } from "../Tag";
-import { Container, ContainerButtons, ContainerTags } from "./styles";
+import {
+  Container,
+  ContainerButtons,
+  ContainerContent,
+  ContainerTags,
+} from "./styles";
 
 interface Props {
   projeto: ProjetosProps;
@@ -76,64 +81,67 @@ export function Projetos({ projeto }: Props) {
         }}
       >
         <Container>
-          <div>
-            <h1>{projeto.titulo}</h1>
-            <p>{projeto.descricao}</p>
-          </div>
-          <div>
-            <ContainerTags>
-              {projeto.tags.map((tag) => {
-                return (
-                  <Tag key={tag} color="blue" background="blue">
-                    {tag}
-                  </Tag>
-                );
-              })}
-            </ContainerTags>
-            <img src={projeto.imagem} />
-            <ContainerButtons>
-              {projeto.LinkGoogle && (
-                <a href={projeto.Link} target="_blank">
-                  <button>
-                    <div>
-                      <GooglePlayLogo size={20} />
-                    </div>
-                    Google Play
-                  </button>
-                </a>
-              )}
-              {projeto.LinkApple && (
-                <a href={projeto.LinkGit} target="_blank">
-                  <button>
-                    <div>
-                      <AppleLogo size={20} weight="fill" />
-                    </div>
-                    Apple Store
-                  </button>
-                </a>
-              )}
-              {projeto.LinkGit && (
-                <a href={projeto.LinkGit} target="_blank">
-                  <button>
-                    <div>
-                      <GithubLogo size={20} />
-                    </div>
-                    Github
-                  </button>
-                </a>
-              )}
-              {projeto.Link && (
-                <a href={projeto.Link} target="_blank">
-                  <button>
-                    <div>
-                      <Link size={20} />
-                    </div>
-                    Link
-                  </button>
-                </a>
-              )}
-            </ContainerButtons>
-          </div>
+          <img src={projeto.imagem} />
+          <ContainerContent>
+            <div>
+              <h1>{projeto.titulo}</h1>
+              <p>{projeto.descricao}</p>
+            </div>
+            <div>
+              <ContainerTags>
+                {projeto.tags.map((tag) => {
+                  return (
+                    <Tag key={tag} color="blue" background="blue">
+                      {tag}
+                    </Tag>
+                  );
+                })}
+              </ContainerTags>
+
+              <ContainerButtons>
+                {projeto.LinkGoogle && (
+                  <a href={projeto.Link} target="_blank">
+                    <button>
+                      <div>
+                        <GooglePlayLogo size={20} />
+                      </div>
+                      Google Play
+                    </button>
+                  </a>
+                )}
+                {projeto.LinkApple && (
+                  <a href={projeto.LinkGit} target="_blank">
+                    <button>
+                      <div>
+                        <AppleLogo size={20} weight="fill" />
+                      </div>
+                      Apple Store
+                    </button>
+                  </a>
+                )}
+                {projeto.LinkGit && (
+                  <a href={projeto.LinkGit} target="_blank">
+                    <button>
+                      <div>
+                        <GithubLogo size={20} />
+                      </div>
+                      Github
+                    </button>
+                  </a>
+                )}
+                {projeto.Link && (
+                  <a href={projeto.Link} target="_blank">
+                    <button>
+                      <div>
+                        <Link size={20} />
+                      </div>
+                      Link
+                    </button>
+                  </a>
+                )}
+              </ContainerButtons>
+            </div>
+          </ContainerContent>
         </Container>
       </animated.div>
     </motion.div>
