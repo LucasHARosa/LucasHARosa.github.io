@@ -6,7 +6,7 @@ export const SectionContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 6rem 5vw;
+  padding: 6rem 10vw;
   position: relative;
   overflow: hidden;
 

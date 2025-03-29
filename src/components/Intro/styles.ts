@@ -100,7 +100,7 @@ export const IntroButtons = styled.div`
     font-size: 0.875rem;
     font-weight: 500;
     color: ${({ theme }) => theme["Blue-100"]};
-    background-color: ${({ theme }) => theme["Gray-700"]};
+    background-color: ${({ theme }) => theme["Gray-200-opacity"]};
     box-shadow: ${({ theme }) => theme["shadow-sm"]};
     transition: all 0.2s ease-in-out;
 
