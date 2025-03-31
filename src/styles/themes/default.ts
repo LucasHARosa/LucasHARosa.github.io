@@ -31,6 +31,8 @@ export const defaultTheme = {
   "Blue-800": "#1e40af",
   "Blue-900": "#1e3a8a",
 
+  "Purple-300": "#a78bfa",
+
   // Accent colors - more subtle
   "Orange-300": "#fdba74",
   "Orange-300-opacity": "rgba(253, 186, 116, 0.3)",
@@ -42,7 +44,7 @@ export const defaultTheme = {
   "Green-600": "#16a34a",
 
   // Background colors - more professional
-  background: "#0f172a", // Darker, more professional background
+  background: "#020818", // Darker, more professional background
   "Blue-Gray-800": "#1e293b",
   "Blue-Gray-700": "#334155",
   "Blue-Gray-600": "#475569",

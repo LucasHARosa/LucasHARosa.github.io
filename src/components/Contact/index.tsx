@@ -99,7 +99,7 @@ export function Contact() {
           <div>
             <a href="https://wa.me/5561992836376">
               <FaCode size={30} color="#bfdbfe" />
-              <span>SoftHouse</span>
+              <span>SoftwareHouse</span>
             </a>
           </div>
         </ContainerContact>

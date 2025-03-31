@@ -50,7 +50,6 @@ export const Content = styled.div`
   align-items: flex-start;
   gap: 3rem;
   width: 100%;
-  max-width: 1200px;
 
   @media (max-width: 768px) {
     flex-direction: column;
