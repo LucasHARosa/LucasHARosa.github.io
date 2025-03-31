@@ -24,6 +24,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    padding-top: 4rem; /* Add padding to account for fixed header */
   }
 
   body, input, textarea, button {
@@ -76,5 +77,6 @@ export const GlobalStyle = createGlobalStyle`
   /* Smooth transitions */
   section {
     transition: all 0.3s ease-in-out;
+    scroll-margin-top: 4rem; /* Adjust scroll position for fixed header */
   }
 `;

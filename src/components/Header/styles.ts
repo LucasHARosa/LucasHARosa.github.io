@@ -42,6 +42,27 @@ export const HeaderContent = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${({ theme }) => theme["Gray-300"]};
+    margin-left: 0.5rem;
+  }
+`;
+
+export const CurrentSection = styled.div`
+  font-size: 1rem;
+  font-weight: 600;
+  color: ${({ theme }) => theme["white"]};
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 `;
 
 export const HeaderButton = styled(motion.button)`
@@ -86,6 +107,11 @@ export const HeaderNav = styled.nav`
     &:hover {
       color: ${({ theme }) => theme["Blue-300"]};
     }
+  }
+
+  li.active a {
+    color: ${({ theme }) => theme["white"]};
+    font-weight: 600;
   }
 `;
 
@@ -134,10 +160,15 @@ export const NavLi = styled(motion.li)`
       background-color: ${({ theme }) => theme["Blue-Gray-600"]};
     }
   }
+
+  &.active a {
+    color: ${({ theme }) => theme["white"]};
+    font-weight: 600;
+  }
 `;
 
 export const ContainerVertical = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 `;

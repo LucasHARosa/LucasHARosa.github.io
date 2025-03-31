@@ -7,6 +7,7 @@ interface Props {
   text: string;
   link: string;
   mobile?: boolean;
+  active?: boolean;
 }
 
 export function ButtonAnimationHover({
@@ -14,6 +15,7 @@ export function ButtonAnimationHover({
   text,
   link,
   mobile = false,
+  active = false,
 }: Props) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -25,12 +27,16 @@ export function ButtonAnimationHover({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Link href={link} onClick={handleTheme}>
+      <Link
+        href={link}
+        onClick={handleTheme}
+        className={active ? "active" : ""}
+      >
         {text}
       </Link>
-      {isHovered && mobile === false && (
+      {(isHovered || active) && mobile === false && (
         <motion.div
-          initial={{ scaleX: 0 }}
+          initial={{ scaleX: active ? 1 : 0 }}
           animate={{ scaleX: 1 }}
           exit={{ scaleX: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -40,7 +46,7 @@ export function ButtonAnimationHover({
             left: 0,
             right: 0,
             height: 2,
-            background: "#3b82f6",
+            background: active ? "#ffffff" : "#9ca3af",
             transformOrigin: "left",
           }}
         />

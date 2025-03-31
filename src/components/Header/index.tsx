@@ -1,6 +1,6 @@
 import { Variants, motion } from "framer-motion";
-import { List, X } from "phosphor-react";
-import { useState } from "react";
+import { List, X, Sun, Moon } from "phosphor-react";
+import { useState, useEffect } from "react";
 import { ButtonAnimationHover } from "../ButtonAnimationHover";
 import { ParticleLight } from "../Particles/particleLight";
 import { ParticleAmong } from "../Particles/particlesAmong";
@@ -14,6 +14,7 @@ import {
   HeaderNav,
   HeaderNavMobile,
   NavLi,
+  CurrentSection,
 } from "./styles";
 
 const itemVariants: Variants = {
@@ -28,6 +29,7 @@ const itemVariants: Variants = {
 export function Header() {
   const [menu, setMenu] = useState(false);
   const [theme, setTheme] = useState("among");
+  const [activeSection, setActiveSection] = useState("Home");
 
   function handleTheme() {
     if (theme === "stars") {
@@ -44,30 +46,64 @@ export function Header() {
   const dataHeader = [
     {
       id: 1,
-      name: "Home",
+      name: "Inicio",
       link: "#Home",
+      section: "Home",
     },
     {
       id: 2,
       name: "Sobre mim",
       link: "#SobreMim",
+      section: "SobreMim",
     },
     {
       id: 3,
       name: "Projetos",
       link: "#Projetos",
+      section: "Projetos",
     },
     {
       id: 4,
-      name: "Skills",
+      name: "Habilidades",
       link: "#Skills",
+      section: "Skills",
     },
     {
       id: 5,
       name: "Contato",
       link: "#Contato",
+      section: "Contato",
     },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      let currentSection = "Home";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 200) {
+          currentSection = section.id || "Home";
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once to set initial state
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const getCurrentSectionName = () => {
+    const section = dataHeader.find((item) => item.section === activeSection);
+    return section ? section.name : "Inicio";
+  };
 
   return (
     <>
@@ -76,10 +112,22 @@ export function Header() {
           <a href="#Home">
             <img src="/lr.svg" alt="" />
           </a>
+
+          <CurrentSection>{getCurrentSectionName()}</CurrentSection>
+
           <ContainerVertical>
             <HeaderButton onClick={() => setMenu(!menu)}>
-              {menu ? <X size={30} /> : <List size={30} />}
+              {menu ? <X size={24} /> : <List size={24} />}
             </HeaderButton>
+
+            <motion.button
+              className="theme-toggle"
+              onClick={handleTheme}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
+            </motion.button>
 
             <HeaderNavMobile initial={false} animate={menu ? "open" : "closed"}>
               <motion.ul
@@ -106,39 +154,36 @@ export function Header() {
                 style={{ pointerEvents: menu ? "auto" : "none" }}
               >
                 {dataHeader.map((item) => (
-                  <NavLi key={item.id} variants={itemVariants}>
+                  <NavLi
+                    key={item.id}
+                    variants={itemVariants}
+                    className={activeSection === item.section ? "active" : ""}
+                  >
                     <ButtonAnimationHover
                       text={item.name}
                       link={item.link}
                       mobile={true}
+                      active={activeSection === item.section}
                     />
                   </NavLi>
                 ))}
-                <NavLi variants={itemVariants}>
-                  <ButtonAnimationHover
-                    text={"Mudar o tema"}
-                    link={"#"}
-                    handleTheme={handleTheme}
-                    mobile={true}
-                  />
-                </NavLi>
               </motion.ul>
             </HeaderNavMobile>
 
             <HeaderNav>
               <ul>
                 {dataHeader.map((item) => (
-                  <li key={item.id}>
-                    <ButtonAnimationHover text={item.name} link={item.link} />
+                  <li
+                    key={item.id}
+                    className={activeSection === item.section ? "active" : ""}
+                  >
+                    <ButtonAnimationHover
+                      text={item.name}
+                      link={item.link}
+                      active={activeSection === item.section}
+                    />
                   </li>
                 ))}
-                <li>
-                  <ButtonAnimationHover
-                    text={"Mudar o tema"}
-                    link={"#"}
-                    handleTheme={handleTheme}
-                  />
-                </li>
               </ul>
             </HeaderNav>
           </ContainerVertical>
