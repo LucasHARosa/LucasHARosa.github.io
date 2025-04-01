@@ -1,5 +1,6 @@
 export const defaultTheme = {
   white: "#ffffff",
+  transparent: "transparent",
 
   // Neutral grays - more subtle and professional
   "Gray-050": "#f9fafb",
