@@ -121,6 +121,7 @@ export function Header() {
                   handleTheme={handleTheme}
                   text="Mudar tema"
                   link=""
+                  icon
                 />
               </li>
             </ul>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ImMagicWand } from "react-icons/im";
 import { Link } from "./styles";
 
 interface Props {
@@ -7,13 +8,14 @@ interface Props {
   link: string;
   mobile?: boolean;
   active?: boolean;
+  icon?: boolean;
 }
 
 export function ButtonAnimationHover({
   handleTheme = () => {},
   text,
   link,
-
+  icon = false,
   active = false,
 }: Props) {
   return (
@@ -26,8 +28,15 @@ export function ButtonAnimationHover({
         href={link}
         onClick={handleTheme}
         className={active ? "active" : ""}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "0.5rem",
+        }}
       >
         {text}
+        {icon && <ImMagicWand />}
       </Link>
     </motion.div>
   );

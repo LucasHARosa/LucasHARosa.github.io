@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   position: fixed;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
@@ -71,7 +71,7 @@ export const HeaderNav = styled.nav`
     font-size: 0.875rem;
     font-weight: 400;
     transition: all 0.3s ease-in-out;
-    padding: 0.4rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 16rem;
     &:hover {
       color: ${({ theme }) => theme["Gray-300"]};
@@ -80,7 +80,6 @@ export const HeaderNav = styled.nav`
 
   li.active a {
     background-color: ${({ theme }) => theme["Gray-100"]};
-
     color: ${({ theme }) => theme["Gray-900"]};
     font-weight: 400;
   }
