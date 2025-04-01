@@ -33,6 +33,8 @@ export const defaultTheme = {
   "Blue-900": "#1e3a8a",
 
   "Purple-300": "#a78bfa",
+  "Purple-800": "#4c1d95",
+  "Purple-900": "#3b0820",
 
   // Accent colors - more subtle
   "Orange-300": "#fdba74",
