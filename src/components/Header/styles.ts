@@ -2,66 +2,28 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  padding: 1rem 2rem;
   position: fixed;
+  padding: 1rem 0;
   top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
   z-index: 100;
-  background-color: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(8px);
-
-  @media (max-width: 768px) {
-    padding: 0.75rem 1rem;
-  }
 `;
 
 export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  background-color: rgb(255 255 255 / 20%);
+  backdrop-filter: blur(8px);
   flex-direction: row;
-  padding: 0.5rem 3rem;
-  border-radius: 0.5rem;
-  width: 100%;
-  color: ${({ theme }) => theme["white"]};
-
-  img {
-    width: 50px;
-    height: 35px;
-    transition: transform 0.2s ease-in-out;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .theme-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: ${({ theme }) => theme["Gray-300"]};
-    margin-left: 0.5rem;
-  }
-`;
-
-export const CurrentSection = styled.div`
-  font-size: 1rem;
-  font-weight: 600;
-  color: ${({ theme }) => theme["white"]};
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-
+  padding: 0.5rem;
+  border-radius: 2rem;
   @media (max-width: 768px) {
-    font-size: 0.875rem;
+    padding: 0.5rem 0rem;
+    border-radius: 0.5rem;
+    width: 100vw;
+    width: 100%;
   }
 `;
 
@@ -70,15 +32,21 @@ export const HeaderButton = styled(motion.button)`
 
   @media (max-width: 768px) {
     display: flex;
+    width: 100vw;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: ${({ theme }) => theme["Gray-300"]};
     background-color: transparent;
     border: none;
     cursor: pointer;
     height: 30px;
     z-index: 10;
-    padding: 0.25rem;
+    padding: 1rem;
+    img {
+      width: 3rem;
+      margin-top: 0.5rem;
+    }
   }
 `;
 
@@ -91,7 +59,7 @@ export const HeaderNav = styled.nav`
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 2rem;
+    gap: 0.5rem;
     list-style: none;
   }
 
@@ -99,19 +67,22 @@ export const HeaderNav = styled.nav`
     display: flex;
     align-items: center;
     flex-direction: row;
-    color: ${({ theme }) => theme["Gray-300"]};
+    color: ${({ theme }) => theme["Gray-200"]};
     font-size: 0.875rem;
-    font-weight: 500;
-    transition: color 0.2s ease-in-out;
-
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+    padding: 0.4rem 1rem;
+    border-radius: 16rem;
     &:hover {
-      color: ${({ theme }) => theme["Blue-300"]};
+      color: ${({ theme }) => theme["Gray-300"]};
     }
   }
 
   li.active a {
-    color: ${({ theme }) => theme["white"]};
-    font-weight: 600;
+    background-color: ${({ theme }) => theme["Gray-100"]};
+
+    color: ${({ theme }) => theme["Gray-900"]};
+    font-weight: 400;
   }
 `;
 
@@ -165,10 +136,4 @@ export const NavLi = styled(motion.li)`
     color: ${({ theme }) => theme["white"]};
     font-weight: 600;
   }
-`;
-
-export const ContainerVertical = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 `;
