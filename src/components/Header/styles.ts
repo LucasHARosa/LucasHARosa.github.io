@@ -32,7 +32,7 @@ export const HeaderButton = styled(motion.button)`
 
   @media (max-width: 768px) {
     display: flex;
-    width: 100vw;
+    width: 90vw;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -97,7 +97,6 @@ export const HeaderNavMobile = styled(motion.nav)`
   border-radius: 0.5rem;
   z-index: 100;
   overflow: hidden;
-  box-shadow: ${({ theme }) => theme["shadow-lg"]};
 
   ul {
     padding: 0.75rem;

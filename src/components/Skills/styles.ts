@@ -216,7 +216,7 @@ export const BarProgress = styled.div`
   overflow: hidden;
 
   @media (max-width: 768px) {
-    width: 200px;
+    width: 150px;
   }
 `;
 
@@ -233,7 +233,7 @@ export const Progress = styled(motion.div)`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center
     gap: 0.5rem;
   }
 `;

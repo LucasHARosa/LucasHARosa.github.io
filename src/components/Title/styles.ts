@@ -19,6 +19,10 @@ export const Container = styled.div`
   height: 100%;
   text-align: center;
   gap: 0.75rem;
+  @media (max-width: 768px) {
+    width: 90%;
+    gap: 0.5rem;
+  }
 `;
 
 export const SubTitle = styled.h2`

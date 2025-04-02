@@ -56,10 +56,10 @@ export const ContainerContact = styled.div`
   gap: 1.5rem;
 
   @media (max-width: 768px) {
-    flex-direction: row;
     width: 100%;
     justify-content: center;
     gap: 1rem;
+    align-items: center;
   }
 
   div {

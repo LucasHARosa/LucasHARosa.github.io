@@ -11,8 +11,6 @@ export const IntroContainer = styled.div`
 
   @media (max-width: 768px) {
     justify-content: center;
-    padding: 6rem 5vw 4rem;
-    text-align: center;
   }
 
   @keyframes floatAnimation {
