@@ -1,19 +1,20 @@
 import { useCallback } from "react";
-import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
+import type { Container, Engine } from "tsparticles-engine";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
 export function ParticleAmong() {
   const particlesInit = useCallback(async (engine: Engine) => {
-
-
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    await console.log(container);
-  }, []);
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {
+      await console.log(container);
+    },
+    []
+  );
   return (
     <Particles
       id="tsparticles"
@@ -42,26 +43,26 @@ export function ParticleAmong() {
         },
         particles: {
           color: {
-            value: "#cce3f7",
+            value: "#a78bfa",
           },
           move: {
             angle: {
               offset: 0,
-              value: 10
+              value: 10,
             },
             attract: {
               distance: 400,
               enable: false,
               rotate: {
                 x: 3000,
-                y: 3000
-              }
+                y: 3000,
+              },
             },
             center: {
               x: 50,
               y: 50,
               mode: "percent",
-              radius: 0
+              radius: 0,
             },
             decay: 0,
             distance: {},
@@ -72,7 +73,7 @@ export function ParticleAmong() {
               acceleration: 9.81,
               enable: false,
               inverse: false,
-              maxSpeed: 80
+              maxSpeed: 80,
             },
 
             outModes: {
@@ -80,13 +81,13 @@ export function ParticleAmong() {
               bottom: "out",
               left: "out",
               right: "out",
-              top: "out"
+              top: "out",
             },
 
             speed: 2,
           },
           number: {
-            value: 170
+            value: 170,
           },
           opacity: {
             value: 1,
@@ -94,7 +95,7 @@ export function ParticleAmong() {
           shape: {
             close: true,
             fill: true,
-            type: "circle"
+            type: "circle",
           },
           size: {
             value: { min: 0.5, max: 1.2 },
@@ -102,62 +103,61 @@ export function ParticleAmong() {
           groups: {
             z5000: {
               number: {
-                value: 70
+                value: 70,
               },
               zIndex: {
-                value: 50
-              }
+                value: 50,
+              },
             },
             z7500: {
               number: {
-                value: 30
+                value: 30,
               },
               zIndex: {
-                value: 75
-              }
+                value: 75,
+              },
             },
             z2500: {
               number: {
-                value: 50
+                value: 50,
               },
               zIndex: {
-                value: 25
-              }
+                value: 25,
+              },
             },
             z1000: {
               number: {
-                value: 40
+                value: 40,
               },
               zIndex: {
-                value: 10
-              }
-            }
-
-          }
+                value: 10,
+              },
+            },
+          },
         },
         pauseOnBlur: true,
         pauseOnOutsideViewport: true,
         detectRetina: true,
-        "responsive": [],
-        "smooth": false,
-        "style": {},
-        "themes": [],
+        responsive: [],
+        smooth: false,
+        style: {},
+        themes: [],
         emitters: {
           autoPlay: true,
           fill: true,
           life: {
-            wait: false
+            wait: false,
           },
           rate: {
             quantity: 1,
-            delay: 7
+            delay: 7,
           },
           shape: "square",
           startCount: 0,
           size: {
             mode: "percent",
             height: 0,
-            width: 0
+            width: 0,
           },
           particles: {
             shape: {
@@ -166,48 +166,48 @@ export function ParticleAmong() {
                 images: {
                   src: "https://particles.js.org/images/cyan_amongus.png",
                   width: 500,
-                  height: 634
-                }
-              }
+                  height: 634,
+                },
+              },
             },
             size: {
-              value: 40
+              value: 40,
             },
             move: {
               speed: 10,
               outModes: {
                 default: "none",
-                right: "destroy"
+                right: "destroy",
               },
-              straight: true
+              straight: true,
             },
             zIndex: {
-              value: 0
+              value: 0,
             },
             rotate: {
               value: {
                 min: 0,
-                max: 360
+                max: 360,
               },
               animation: {
                 enable: true,
                 speed: 10,
-                sync: true
-              }
-            }
+                sync: true,
+              },
+            },
           },
           position: {
             x: -5,
-            y: 55
-          }
+            y: 55,
+          },
         },
-        "motion": {
-          "disable": false,
-          "reduce": {
-            "factor": 4,
-            "value": true
-          }
-        }
+        motion: {
+          disable: false,
+          reduce: {
+            factor: 4,
+            value: true,
+          },
+        },
       }}
     />
   );

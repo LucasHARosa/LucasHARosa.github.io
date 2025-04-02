@@ -5,8 +5,8 @@ export const IntroContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  min-height: 100vh;
-  padding: 6rem 10vw 4rem;
+  min-height: 85vh;
+  padding: 0rem 10vw 0rem;
   position: relative;
 
   @media (max-width: 768px) {
@@ -40,7 +40,7 @@ export const IntroContainer = styled.div`
 export const IntroContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   max-width: 600px;
 
   h1 {
@@ -49,8 +49,8 @@ export const IntroContent = styled.div`
     font-size: 3.5rem;
     background: linear-gradient(
       90deg,
-      ${({ theme }) => theme["Blue-200"]},
-      ${({ theme }) => theme["Blue-400"]}
+      ${({ theme }) => theme["Blue-500"]},
+      ${({ theme }) => theme["Purple-300"]}
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -68,7 +68,7 @@ export const TypeWriterText = styled.div`
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
-  color: ${({ theme }) => theme["Blue-300"]};
+  color: ${({ theme }) => theme["Gray-400"]};
   margin-bottom: 1rem;
 
   @media (max-width: 768px) {
@@ -79,52 +79,11 @@ export const TypeWriterText = styled.div`
 export const IntroButtons = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 0.5rem;
 
   @media (max-width: 768px) {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-  }
-
-  button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.625rem;
-    justify-content: center;
-    padding: 0.75rem 1.5rem;
-    border: 1px solid ${({ theme }) => theme["Gray-700"]};
-    border-radius: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: ${({ theme }) => theme["Blue-100"]};
-    background-color: ${({ theme }) => theme["Gray-200-opacity"]};
-    box-shadow: ${({ theme }) => theme["shadow-sm"]};
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-      background-color: ${({ theme }) => theme["Gray-600"]};
-      box-shadow: ${({ theme }) => theme["shadow-md"]};
-      transform: translateY(-2px);
-    }
-
-    &:active {
-      transform: translateY(0);
-    }
-
-    div {
-      color: ${({ theme }) => theme["Blue-300"]};
-      height: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @media (max-width: 768px) {
-      padding: 0.625rem 1.25rem;
-      font-size: 0.8125rem;
-    }
   }
 `;

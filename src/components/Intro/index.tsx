@@ -2,6 +2,7 @@ import Typewriter from "typewriter-effect";
 import astro2 from "../../assets/astro2.png";
 
 import { GithubLogo, LinkedinLogo } from "phosphor-react";
+import { Button } from "../Button";
 import { Tag } from "../Tag";
 import {
   IntroButtons,
@@ -34,23 +35,19 @@ export function Intro() {
           </TypeWriterText>
           <IntroButtons>
             <a href="https://github.com/LucasHARosa" target="_blank">
-              <button>
-                <div>
-                  <GithubLogo size={22} />
-                </div>
+              <Button>
+                <GithubLogo size={22} />
                 Github
-              </button>
+              </Button>
             </a>
             <a
               href="https://www.linkedin.com/in/lucas-henrique-alves-rosa/"
               target="_blank"
             >
-              <button>
-                <div>
-                  <LinkedinLogo size={22} />
-                </div>
+              <Button>
+                <LinkedinLogo size={22} />
                 Linkedin
-              </button>
+              </Button>
             </a>
           </IntroButtons>
         </IntroContent>
