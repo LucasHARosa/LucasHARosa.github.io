@@ -50,14 +50,14 @@ export const ContainerTechs = styled.div`
 `;
 
 export const IconWrapper = styled.div`
-  color: ${({ theme }) => theme["Blue-200"]};
+  color: ${({ theme }) => theme["Blue-400"]};
   display: flex;
   justify-content: center;
   align-items: center;
 
   svg {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     opacity: 0.8;
 
     @media (max-width: 1000px) {
@@ -77,20 +77,18 @@ export const Techs = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 0.75rem;
-  gap: 3rem;
-  width: 40%;
+  gap: 1rem;
+  width: 50%;
   height: auto;
   background: linear-gradient(
-    135deg,
-    ${({ theme }) => theme["Blue-Gray-700"]},
-    ${({ theme }) => theme["Blue-Gray-800"]}
+    180deg,
+    ${({ theme }) => theme["Gray-800"]},
+    ${({ theme }) => theme["Blue-300-opacity"]}
   );
   box-shadow: ${({ theme }) => theme["shadow-lg"]};
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     box-shadow: ${({ theme }) => theme["shadow-xl"]};
@@ -147,7 +145,7 @@ export const ButtonSkill = styled.button<ButtonProps>`
   background: none;
   transition: all 0.2s ease-in-out;
   color: ${({ theme, active }) =>
-    active ? theme["Blue-300"] : theme["Blue-Gray-400"]};
+    active ? theme["Blue-400"] : theme["Gray-400"]};
   padding: 0.5rem;
   border-radius: 0.5rem;
 
@@ -167,7 +165,7 @@ export const TechsDescription = styled(motion.div)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 55%;
+  width: 50%;
   padding: 1rem;
 
   @media (max-width: 768px) {
@@ -175,10 +173,10 @@ export const TechsDescription = styled(motion.div)`
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: ${({ theme }) => theme["Blue-100"]};
+    color: ${({ theme }) => theme["Gray-100"]};
 
     @media (max-width: 768px) {
       font-size: 1.75rem;
@@ -193,18 +191,17 @@ export const TechsDescription = styled(motion.div)`
   }
 
   span {
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 500;
-    color: ${({ theme }) => theme["Blue-300"]};
+    color: ${({ theme }) => theme["Gray-300"]};
   }
 `;
 
 export const Text = styled.p`
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 300;
-  color: ${({ theme }) => theme["Gray-300"]};
+  color: ${({ theme }) => theme["Gray-400"]};
   margin-bottom: 1.5rem;
-  line-height: 1.6;
 
   @media (max-width: 768px) {
     font-size: 0.875rem;
@@ -244,5 +241,5 @@ export const Progress = styled(motion.div)`
 export const TextProgress = styled.p`
   font-size: 0.875rem;
   font-weight: 500;
-  color: ${({ theme }) => theme["Blue-300"]};
+  color: ${({ theme }) => theme["Gray-300"]};
 `;

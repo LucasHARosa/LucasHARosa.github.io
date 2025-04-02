@@ -7,8 +7,8 @@ export const Container = styled.div`
   border-radius: 0.75rem;
   background: linear-gradient(
     180deg,
-    ${({ theme }) => theme["Gray-900"]} 0%,
-    ${({ theme }) => theme["Blue-300-opacity"]} 100%
+    ${({ theme }) => theme["Gray-800"]},
+    ${({ theme }) => theme["Blue-300-opacity"]}
   );
   border: 1px solid ${({ theme }) => theme["Gray-800"]};
 

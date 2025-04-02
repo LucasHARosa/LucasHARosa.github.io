@@ -86,7 +86,7 @@ export function Skills() {
         setNumberSkill(numberSkill + 1);
       }
       setSkill(listaSkills[numberSkill]);
-    }, 3000);
+    }, 6000);
     return () => clearInterval(interval);
   }, [skill, stop, numberSkill]);
 
@@ -182,11 +182,7 @@ export function Skills() {
           <Text>{skill.description}</Text>
           <motion.div transition={{ staggerChildren: 1 }}>
             {skill.tecnologiasAxiliares.map((tag) => {
-              return (
-                <Tag key={tag} color="blue" background="blue">
-                  {tag}
-                </Tag>
-              );
+              return <Tag key={tag}>{tag}</Tag>;
             })}
           </motion.div>
           <Space />
@@ -203,7 +199,7 @@ export function Skills() {
                 transition={{ ease: "easeOut", duration: 1 }}
                 style={{
                   height: "100%",
-                  backgroundColor: "#2e6ebf",
+                  backgroundColor: "#60a5fa",
                   borderRadius: "1rem",
                 }}
               />
