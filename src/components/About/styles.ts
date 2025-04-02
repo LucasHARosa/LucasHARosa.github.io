@@ -1,79 +1,85 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+
+export const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 6rem 0;
+`;
 
 export const ContainerAbout = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 130px;
-  padding: 4rem 10vw;
-  @media(max-width: 768px){
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0rem 10vw 2rem 10vw;
-    
-  }
+  gap: 6rem;
+  padding: 3rem 10vw;
+  position: relative;
 
-`
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 5vw;
+  }
+`;
 
 export const ContainerAboutText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 
-  h1{
+  p {
     font-style: normal;
-    font-weight: 400; 
-    font-size: 2rem;
-    color: ${({ theme }) => theme['Blue-100']};
-    @media(max-width: 768px){
-      font-size: 1.5rem;
+    font-weight: 300;
+    font-size: 1rem;
+    color: ${({ theme }) => theme["Gray-300"]};
+    line-height: 1.6;
+
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
     }
   }
 
-  p{
-    font-style: normal;
-    font-weight: 300; 
-    font-size: 1rem;
-    color: ${({ theme }) => theme['Gray-300']};
-    @media(max-width: 768px){
-      font-size: 0.675rem;
-    }
-  }
-  div{
+  div {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
   }
-`
+`;
 
 export const ContainerAboutImage = styled.div`
   padding: 0.5rem;
-  background-color: ${({ theme }) => theme['Blue-600-opacity']};
+  background-color: ${({ theme }) => theme["Gray-200-opacity"]};
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  transition: 0.4s;
-  box-shadow: 0px 0px 30px ${({ theme }) => theme['Blue-600-opacity']};
-  
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  box-shadow: ${({ theme }) => theme["shadow-md"]};
 
-  img{
+  img {
     width: 25vw;
-    @media(max-width: 768px){
-      width: 50vw;
+    max-width: 400px;
+    border-radius: 0.25rem;
+
+    @media (max-width: 768px) {
+      width: 70vw;
+      max-width: 300px;
     }
   }
 
-  &:hover{
-    box-shadow: 0px 0px 100px ${({ theme }) => theme['Blue-600-opacity']};
-    transition: 0.4s;
+  &:hover {
+    box-shadow: ${({ theme }) => theme["shadow-xl"]};
+    transform: translateY(-5px);
   }
-`
+`;
 
 export const LegendImage = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
-
-`
-
-
+  gap: 0.75rem;
+  justify-content: flex-start;
+  padding: 0.5rem 0;
+`;

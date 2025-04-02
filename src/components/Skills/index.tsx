@@ -1,15 +1,31 @@
-
-import { Tag } from '../Tag';
-import { BarProgress, Text, ButtonSkill, ContainerButtons, ContainerSection, ContainerTechs, ContainerTitle, Progress, Space, Techs, TechsDescription, TechsLogo, TextProgress, IconWrapper } from './styles';
-import { useEffect, useState } from 'react'
-import { listaSkills } from '../../data/data';
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { DiNodejs } from "react-icons/di";
-import { FaGithub, FaReact } from "react-icons/fa";
-import { FaPython } from "react-icons/fa";
-import { FaJava } from "react-icons/fa";
-import { SiCplusplus, SiNextdotjs, SiTypescript } from "react-icons/si";
-import { motion } from 'framer-motion';
-import { SiNestjs } from "react-icons/si";
+import { FaGithub, FaJava, FaPython, FaReact } from "react-icons/fa";
+import {
+  SiCplusplus,
+  SiNestjs,
+  SiNextdotjs,
+  SiTypescript,
+} from "react-icons/si";
+import { listaSkills } from "../../data/data";
+import { Tag } from "../Tag";
+import { Title } from "../Title";
+import {
+  BarProgress,
+  ButtonSkill,
+  ContainerButtons,
+  ContainerSection,
+  ContainerTechs,
+  IconWrapper,
+  Progress,
+  Space,
+  Techs,
+  TechsDescription,
+  TechsLogo,
+  Text,
+  TextProgress,
+} from "./styles";
 
 export function Skills() {
   const [numberSkill, setNumberSkill] = useState(0);
@@ -21,40 +37,37 @@ export function Skills() {
 
     listaSkills.filter((item) => {
       if (item.id === id) {
-        setSkill(item)
+        setSkill(item);
       }
-    })
+    });
   }
-
-
 
   const ImagemFundo = () => {
-
     switch (skill.id) {
       case "nodejs":
-        return <DiNodejs />
+        return <DiNodejs />;
       case "react":
-        return <FaReact />
+        return <FaReact />;
       case "java":
-        return <FaJava />
+        return <FaJava />;
       case "python":
-        return <FaPython />
+        return <FaPython />;
       case "react-native":
-        return <FaReact />
+        return <FaReact />;
       case "typescript":
-        return <SiTypescript />
+        return <SiTypescript />;
       case "github":
-        return <FaGithub />
+        return <FaGithub />;
       case "nextjs":
-        return <SiNextdotjs />
+        return <SiNextdotjs />;
       case "code":
-        return <SiCplusplus />
+        return <SiCplusplus />;
       case "nestjs":
-        return <SiNestjs />
+        return <SiNestjs />;
       default:
-        return <FaReact />
+        return <FaReact />;
     }
-  }
+  };
 
   const normalizedPercentage = Math.min(100, Math.max(0, skill.nivel * 10));
 
@@ -68,67 +81,93 @@ export function Skills() {
     const interval = setInterval(() => {
       if (stop) return;
       if (numberSkill === listaSkills.length - 1) {
-        setNumberSkill(0)
+        setNumberSkill(0);
       } else {
-        setNumberSkill(numberSkill + 1)
+        setNumberSkill(numberSkill + 1);
       }
-      setSkill(listaSkills[numberSkill])
-    }, 3000);
+      setSkill(listaSkills[numberSkill]);
+    }, 6000);
     return () => clearInterval(interval);
-  }, [skill, stop, numberSkill])
+  }, [skill, stop, numberSkill]);
 
   return (
     <ContainerSection id="Skills">
-      <ContainerTitle>
-        <Tag color="blue" background='blue'>💻&nbsp;Skills</Tag>
-        <h1>Tecnologias e linguagens</h1>
-      </ContainerTitle>
+      <Title
+        title="Habilidades e Tecnologias"
+        subTitle="Tecnologias que uso"
+        description="Aqui estão algumas das tecnologias que tenho experiência e conhecimento. Clique em cada uma delas para ver mais detalhes."
+      />
 
       <ContainerTechs>
         <Techs>
-
           <TechsLogo
             key={skill.id}
             initial={{ opacity: 0, scale: 0.8, x: -50 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
-
             transition={{ duration: 1.2, type: "spring" }}
           >
-            <IconWrapper>
-
-              {ImagemFundo()}
-            </IconWrapper>
+            <IconWrapper>{ImagemFundo()}</IconWrapper>
           </TechsLogo>
 
           <ContainerButtons>
-            <ButtonSkill onClick={() => handleChangeSkill("react")} active={skill.id === "react"}>
+            <ButtonSkill
+              onClick={() => handleChangeSkill("react")}
+              active={skill.id === "react"}
+            >
               <FaReact size={30} />
             </ButtonSkill>
-            <ButtonSkill onClick={() => handleChangeSkill("nodejs")} active={skill.id === "nodejs"}>
+            <ButtonSkill
+              onClick={() => handleChangeSkill("nodejs")}
+              active={skill.id === "nodejs"}
+            >
               <DiNodejs size={30} />
             </ButtonSkill>
-            <ButtonSkill onClick={() => handleChangeSkill("react-native")} active={skill.id === "react-native"}>
+            <ButtonSkill
+              onClick={() => handleChangeSkill("react-native")}
+              active={skill.id === "react-native"}
+            >
               <FaReact size={30} />
             </ButtonSkill>
-            <ButtonSkill onClick={() => handleChangeSkill("java")} active={skill.id === "java"}>
+            <ButtonSkill
+              onClick={() => handleChangeSkill("java")}
+              active={skill.id === "java"}
+            >
               <FaJava size={30} />
             </ButtonSkill>
-            <ButtonSkill onClick={() => handleChangeSkill("nextjs")} active={skill.id === "nextjs"}>
+            <ButtonSkill
+              onClick={() => handleChangeSkill("nextjs")}
+              active={skill.id === "nextjs"}
+            >
               <SiNextdotjs size={30} />
             </ButtonSkill>
-            <ButtonSkill onClick={() => handleChangeSkill("nestjs")} active={skill.id === "nestjs"}>
+            <ButtonSkill
+              onClick={() => handleChangeSkill("nestjs")}
+              active={skill.id === "nestjs"}
+            >
               <SiNestjs size={30} />
             </ButtonSkill>
-            <ButtonSkill onClick={() => handleChangeSkill("python")} active={skill.id === "python"}>
+            <ButtonSkill
+              onClick={() => handleChangeSkill("python")}
+              active={skill.id === "python"}
+            >
               <FaPython size={30} />
             </ButtonSkill>
-            <ButtonSkill onClick={() => handleChangeSkill("typescript")} active={skill.id === "typescript"}>
+            <ButtonSkill
+              onClick={() => handleChangeSkill("typescript")}
+              active={skill.id === "typescript"}
+            >
               <SiTypescript size={30} />
             </ButtonSkill>
-            <ButtonSkill onClick={() => handleChangeSkill("github")} active={skill.id === "github"}>
+            <ButtonSkill
+              onClick={() => handleChangeSkill("github")}
+              active={skill.id === "github"}
+            >
               <FaGithub size={30} />
             </ButtonSkill>
-            <ButtonSkill onClick={() => handleChangeSkill("code")} active={skill.id === "code"}>
+            <ButtonSkill
+              onClick={() => handleChangeSkill("code")}
+              active={skill.id === "code"}
+            >
               <SiCplusplus size={30} />
             </ButtonSkill>
           </ContainerButtons>
@@ -139,41 +178,35 @@ export function Skills() {
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 1.2, type: "spring" }}
         >
-
           <h2>{skill.titulo}</h2>
           <Text>{skill.description}</Text>
-          <motion.div
-            transition={{ staggerChildren: 1 }}
-          >
+          <motion.div transition={{ staggerChildren: 1 }}>
             {skill.tecnologiasAxiliares.map((tag) => {
-              return (
-                <Tag key={tag} color="blue" background='blue'>{tag}</Tag>
-              )
-            }
-            )}
+              return <Tag key={tag}>{tag}</Tag>;
+            })}
           </motion.div>
           <Space />
-          <Text><span>Experiência: </span>{skill.experiencia}</Text>
+          <Text>
+            <span>Experiência: </span>
+            {skill.experiencia}
+          </Text>
           <Progress>
             <TextProgress>Conhecimento:</TextProgress>
             <BarProgress>
               <motion.div
-                initial={{ width: '0%', opacity: 0 }}
+                initial={{ width: "0%", opacity: 0 }}
                 animate={barAnimation}
-                transition={{ ease: 'easeOut', duration: 1 }}
+                transition={{ ease: "easeOut", duration: 1 }}
                 style={{
-                  height: '100%',
-                  backgroundColor: "#2e6ebf",
-                  borderRadius: '1rem',
+                  height: "100%",
+                  backgroundColor: "#60a5fa",
+                  borderRadius: "1rem",
                 }}
               />
             </BarProgress>
           </Progress>
-
-
         </TechsDescription>
       </ContainerTechs>
-
     </ContainerSection>
-  )
+  );
 }

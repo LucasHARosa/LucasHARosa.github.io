@@ -1,23 +1,22 @@
-import { Projetos } from '../Projetos';
-import { Code, Cpu, DeviceMobile, Globe, HardDrives } from 'phosphor-react';
-import { useState } from 'react';
-import { listaProjetos } from '../../data/data';
-import { Tag } from '../Tag';
+import { Code, Cpu, DeviceMobile, Globe, HardDrives } from "phosphor-react";
+import { useState } from "react";
+import { listaProjetos } from "../../data/data";
+import { Projetos } from "../Projetos";
+import { Title } from "../Title";
 import {
   ButtonSelect,
   ContainerButtonSelect,
   ContainerProjetos,
-  ContainerTitle,
   SectionContainer,
-  SelectContainer
-} from './styles';
+  SelectContainer,
+} from "./styles";
 
 const categorias = [
   { label: "Principais", value: "principais", icon: <Globe size={22} /> },
   { label: "Mobile", value: "mobile", icon: <DeviceMobile size={22} /> },
   { label: "Frontend", value: "frontend", icon: <Code size={22} /> },
   { label: "Backend", value: "backend", icon: <HardDrives size={22} /> },
-  { label: "IA", value: "ia", icon: <Cpu size={22} /> }
+  { label: "IA", value: "ia", icon: <Cpu size={22} /> },
 ];
 
 export function MainProjetos() {
@@ -30,10 +29,11 @@ export function MainProjetos() {
   return (
     <SectionContainer id="Projetos">
       <SelectContainer>
-        <ContainerTitle>
-          <Tag color="blue" background='blue'>📁 &nbsp; Portfólio</Tag>
-          <h1>Trabalhos e projetos</h1>
-        </ContainerTitle>
+        <Title
+          title="Projetos e Trabalhos"
+          subTitle="Resultados do meu trabalho"
+          description="Aqui estão alguns dos meus projetos mais recentes. Clique em cada um deles para ver mais detalhes."
+        />
 
         <ContainerButtonSelect>
           {categorias.map(({ label, value, icon }) => (
@@ -42,7 +42,7 @@ export function MainProjetos() {
               isActive={categoriaAtiva === value}
               onClick={() => setCategoriaAtiva(value)}
             >
-              <div>{icon}</div>
+              {icon}
               {label}
             </ButtonSelect>
           ))}
@@ -51,10 +51,7 @@ export function MainProjetos() {
 
       <ContainerProjetos>
         {listaFiltrada.map((item) => (
-          <Projetos
-            key={item.id}
-            projeto={item}
-          />
+          <Projetos key={item.id} projeto={item} />
         ))}
       </ContainerProjetos>
     </SectionContainer>

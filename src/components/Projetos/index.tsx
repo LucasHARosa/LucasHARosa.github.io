@@ -4,8 +4,14 @@ import { AppleLogo, GithubLogo, GooglePlayLogo, Link } from "phosphor-react";
 import { useRef } from "react";
 import { useGesture } from "react-use-gesture";
 import { ProjetosProps } from "../../data/data";
-import { Tag } from "../Tag";
-import { Container, ContainerButtons, ContainerTags } from "./styles";
+
+import {
+  Container,
+  ContainerButtons,
+  ContainerContent,
+  ContainerTags,
+  Tag,
+} from "./styles";
 
 interface Props {
   projeto: ProjetosProps;
@@ -37,7 +43,7 @@ export function Projetos({ projeto }: Props) {
       y: 0,
       scale: 1,
       zoom: 0,
-      config: { mass: 10, tension: 450, friction: 30 },
+      config: { mass: 20, tension: 450, friction: 40 },
     })
   );
 
@@ -48,7 +54,7 @@ export function Projetos({ projeto }: Props) {
         api({
           rotateX: calcX(py),
           rotateY: calcY(px),
-          scale: 1.02,
+          scale: 1.01,
         }),
       onHover: ({ hovering }) =>
         !hovering && api({ rotateX: 0, rotateY: 0, scale: 1 }),
@@ -76,64 +82,63 @@ export function Projetos({ projeto }: Props) {
         }}
       >
         <Container>
-          <div>
-            <h1>{projeto.titulo}</h1>
-            <p>{projeto.descricao}</p>
-          </div>
-          <div>
-            <ContainerTags>
-              {projeto.tags.map((tag) => {
-                return (
-                  <Tag key={tag} color="blue" background="blue">
-                    {tag}
-                  </Tag>
-                );
-              })}
-            </ContainerTags>
-            <img src={projeto.imagem} />
-            <ContainerButtons>
-              {projeto.LinkGoogle && (
-                <a href={projeto.Link} target="_blank">
-                  <button>
-                    <div>
-                      <GooglePlayLogo size={20} />
-                    </div>
-                    Google Play
-                  </button>
-                </a>
-              )}
-              {projeto.LinkApple && (
-                <a href={projeto.LinkGit} target="_blank">
-                  <button>
-                    <div>
-                      <AppleLogo size={20} weight="fill" />
-                    </div>
-                    Apple Store
-                  </button>
-                </a>
-              )}
-              {projeto.LinkGit && (
-                <a href={projeto.LinkGit} target="_blank">
-                  <button>
-                    <div>
-                      <GithubLogo size={20} />
-                    </div>
-                    Github
-                  </button>
-                </a>
-              )}
-              {projeto.Link && (
-                <a href={projeto.Link} target="_blank">
-                  <button>
-                    <div>
-                      <Link size={20} />
-                    </div>
-                    Link
-                  </button>
-                </a>
-              )}
-            </ContainerButtons>
-          </div>
+          <img src={projeto.imagem} />
+          <ContainerContent>
+            <div>
+              <h1>{projeto.titulo}</h1>
+              <p>{projeto.descricao}</p>
+            </div>
+            <div>
+              <ContainerTags>
+                {projeto.tags.map((tag) => {
+                  return <Tag key={tag}>{tag}</Tag>;
+                })}
+              </ContainerTags>
+
+              <ContainerButtons>
+                {projeto.LinkGoogle && (
+                  <a href={projeto.Link} target="_blank">
+                    <button>
+                      <div>
+                        <GooglePlayLogo size={20} />
+                      </div>
+                      Google Play
+                    </button>
+                  </a>
+                )}
+                {projeto.LinkApple && (
+                  <a href={projeto.LinkGit} target="_blank">
+                    <button>
+                      <div>
+                        <AppleLogo size={20} weight="fill" />
+                      </div>
+                      Apple Store
+                    </button>
+                  </a>
+                )}
+                {projeto.LinkGit && (
+                  <a href={projeto.LinkGit} target="_blank">
+                    <button>
+                      <div>
+                        <GithubLogo size={20} />
+                      </div>
+                      Github
+                    </button>
+                  </a>
+                )}
+                {projeto.Link && (
+                  <a href={projeto.Link} target="_blank">
+                    <button>
+                      <div>
+                        <Link size={20} />
+                      </div>
+                      Link
+                    </button>
+                  </a>
+                )}
+              </ContainerButtons>
+            </div>
+          </ContainerContent>
         </Container>
       </animated.div>
     </motion.div>

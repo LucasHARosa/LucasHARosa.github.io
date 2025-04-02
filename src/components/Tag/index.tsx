@@ -6,10 +6,14 @@ interface TagProps {
   background?: string;
 }
 
-export function Tag(  {children, color="purple", background="purple"}: TagProps){
+export function Tag({
+  children,
+  color = "none",
+  background = "none",
+}: TagProps) {
   return (
     <TagContainer color={color} background={background}>
       {children}
     </TagContainer>
-  )
+  );
 }

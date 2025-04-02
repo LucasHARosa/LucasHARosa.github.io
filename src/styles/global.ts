@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
+import './tailwind.css';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -6,36 +7,77 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  body {
-    background: #0d1117;
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    @media (max-width: 1080px) {
+      font-size: 93.75%; // 15px
+    }
+    @media (max-width: 720px) {
+      font-size: 87.5%; // 14px
+    }
   }
+
+  body {
+    background: #020818;
+    color:#f8fafc;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    padding-top: 4rem; /* Add padding to account for fixed header */
+  }
+
   body, input, textarea, button {
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
+    line-height: 1.4;
   }
-  a{
-    text-decoration: none;
 
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
   }
-  html{
-    scroll-behavior: smooth;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease-in-out;
   }
+
+  button {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+  }
+
+  [disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  /* Custom scrollbar styling */
   ::-webkit-scrollbar {
-    width: 7px;
+    width: 6px;
   }
   
   ::-webkit-scrollbar-track {
-    background-color: #101822;
+    background-color: #1e293b;
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #394654;
-    border-radius: 0.5rem;
+    background-color: #64748b;
+    border-radius: 6px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #4a5460;
+    background-color: #94a3b8;
   }
-`
+
+  /* Smooth transitions */
+  section {
+    transition: all 0.3s ease-in-out;
+    scroll-margin-top: 4rem; /* Adjust scroll position for fixed header */
+  }
+`;

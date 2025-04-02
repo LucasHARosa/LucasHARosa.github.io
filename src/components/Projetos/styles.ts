@@ -4,61 +4,79 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  border: 0.5px solid ${({ theme }) => theme["Blue-600-opacity"]};
-  border-radius: 1rem;
-  // background-color: ${({ theme }) => theme["Blue-600-opacity"]};
+  border-radius: 0.75rem;
   background: linear-gradient(
-    to bottom right,
-    ${({ theme }) => theme["Blue-400-opacity"]},
-    ${({ theme }) => theme["Blue-600-opacity"]}
+    180deg,
+    ${({ theme }) => theme["Gray-800"]},
+    ${({ theme }) => theme["Blue-300-opacity"]}
   );
-  width: 350px;
-  height: 530px;
-  padding: 1.625rem 1.875rem;
-  transition: 0.3s;
-  box-shadow: 0px 0px 10px ${({ theme }) => theme["Blue-500-opacity"]};
+  border: 1px solid ${({ theme }) => theme["Gray-800"]};
+
+  width: 320px;
+  height: 480px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: ${({ theme }) => theme["shadow-md"]};
 
   &:hover {
-    box-shadow: 0px 0px 50px ${({ theme }) => theme["Blue-500-opacity"]};
-    transition: 0.3s;
+    box-shadow: ${({ theme }) => theme["shadow-xl"]};
+
+    transform: translateY(-5px);
   }
 
   @media (max-width: 768px) {
     width: 280px;
-    height: 400px;
-    padding: 0.8rem;
+    height: 420px;
   }
 
   h1 {
-    color: ${({ theme }) => theme["Blue-100"]};
+    color: ${({ theme }) => theme["Gray-100"]};
+    font-size: 1.25rem;
+    font-weight: 600;
+
     @media (max-width: 768px) {
-      font-size: 1rem;
+      font-size: 1.125rem;
     }
   }
 
   p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 300;
-    color: ${({ theme }) => theme["Gray-200"]};
+    color: ${({ theme }) => theme["Gray-400"]};
     margin-top: 0.5rem;
+    line-height: 1.5;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 
     @media (max-width: 768px) {
-      font-size: 0.625rem;
+      font-size: 0.75rem;
+      -webkit-line-clamp: 3;
     }
   }
+
   img {
     width: 100%;
-    height: 10.625rem;
+    height: 180px;
     object-fit: cover;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+
     @media (max-width: 768px) {
-      height: 7.5rem;
+      height: 160px;
     }
+  }
+`;
+
+export const ContainerContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    padding: 0.875rem 1rem 1rem;
   }
 `;
 
@@ -69,69 +87,100 @@ export const ContainerTags = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 0.625rem;
+  gap: 0.5rem;
+
   @media (max-width: 768px) {
-    gap: 0.5rem;
+    gap: 0.375rem;
+    margin-bottom: 0.75rem;
+  }
+`;
+
+export const Tag = styled.div`
+  width: fit-content;
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 0.3rem;
+  background-color: ${({ theme }) => theme["white"]};
+  color: ${({ theme }) => theme["Gray-900"]};
+  box-shadow: ${({ theme }) => theme["shadow-sm"]};
+  font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    gap: 0.25rem;
   }
 `;
 
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  @media(max-width: 768px){
-    gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    gap: 0.375rem;
   }
-  
-  button{
+
+  a {
+    flex: 1;
+    min-width: calc(50% - 0.25rem);
+
+    @media (max-width: 768px) {
+      min-width: calc(50% - 0.1875rem);
+    }
+  }
+
+  button {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
     justify-content: center;
-    width: 135px;
-
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    border: 1.5px solid ${({ theme }) => theme["Blue-300-opacity"]};
-    border-radius: 0.5rem;
-
+    gap: 0.375rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
     font-size: 0.875rem;
-    font-weight: 300;
-    color: ${({ theme }) => theme["Blue-100"]};
-
+    font-weight: 400;
+    color: ${({ theme }) => theme["white"]};
     background-color: transparent;
-    cursor: pointer;
-    transition: 0.4s;
+    border: 1px solid ${({ theme }) => theme["Gray-600"]};
+    box-shadow: ${({ theme }) => theme["shadow-sm"]};
+    transition: all 0.2s ease-in-out;
 
-    &:hover{
-      transition: 0.4s;
-      background-color: ${({ theme }) => theme["Blue-300-opacity"]};
+    &:hover {
+      background-color: ${({ theme }) => theme["Gray-500"]};
+      transform: translateY(-2px);
     }
 
-    @media(max-width: 768px){
-      width: 120px;
-      font-size: 0.625rem;
-      border: 1px solid ${({ theme }) => theme["Blue-300"]};
-      margin-top: 0.5rem;
-      padding: 0.5rem 0.5rem;
+    &:active {
+      transform: translateY(0);
     }
 
-    svg{
-      @media(max-width: 768px){
+    @media (max-width: 768px) {
+      font-size: 0.75rem;
+      padding: 0.375rem 0.5rem;
+      gap: 0.25rem;
+    }
+
+    svg {
+      @media (max-width: 768px) {
         width: 0.875rem;
         height: 0.875rem;
       }
     }
 
-    div{
-      color: ${({ theme }) => theme["Blue-100"]};
-      height: 22px;
-      margin-right: 0.25rem;
-      @media(max-width: 768px){
-        height: 14px;
-        margin-right: 0;
+    div {
+      color: ${({ theme }) => theme["white"]};
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        height: 16px;
       }
     }
+  }
 `;

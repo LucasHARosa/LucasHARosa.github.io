@@ -1,108 +1,89 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const IntroContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 90vh;
-  maring-bottom: 0vh;
-  padding: 0 20vw ;
-  @media(max-width: 768px){
+  min-height: 85vh;
+  padding: 0rem 10vw 0rem;
+  position: relative;
+
+  @media (max-width: 768px) {
     justify-content: center;
-    height: 95vh;
-    padding: 0 1rem 6.25rem;
+    padding: 6rem 5vw 4rem;
+    text-align: center;
   }
 
   @keyframes floatAnimation {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
-    }
-    25% {
-      transform: translateY(-15px);
-      
     }
     50% {
-      transform: translateY(0);
-    }
-    75% {
-      transform: translateY(15px);
+      transform: translateY(-15px);
     }
   }
 
-  img{
-    animation: floatAnimation 6s infinite;
-    transition-timing-function: ease-in-out;
-    z-index: -1;
-    width: 30rem;
-    @media(max-width: 768px){
+  img {
+    animation: floatAnimation 6s ease-in-out infinite;
+    z-index: 1;
+    width: 28rem;
+    max-width: 40%;
+
+    @media (max-width: 768px) {
       display: none;
     }
   }
-`
+`;
 
 export const IntroContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+  max-width: 600px;
 
-  h1{
+  h1 {
     font-style: normal;
-    font-weight: 400; 
-    font-size: 3rem;
-    color: ${({ theme }) => theme['Gray-100']};
-  }
-  p{
-    font-style: normal;
-    font-weight: 400; 
-    font-size: 1.5rem;
-    color: ${({ theme }) => theme['Blue-400']};
+    font-weight: 700;
+    font-size: 3.5rem;
+    background: linear-gradient(
+      90deg,
+      ${({ theme }) => theme["Blue-500"]},
+      ${({ theme }) => theme["Purple-300"]}
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 0.5rem;
 
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
-`
+`;
 
 export const TypeWriterText = styled.div`
   font-style: normal;
-  font-weight: 400; 
+  font-weight: 500;
   font-size: 1.5rem;
-  color: ${({ theme }) => theme['Blue-400']};
-`
+  color: ${({ theme }) => theme["Gray-400"]};
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+`;
 
 export const IntroButtons = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 0.5rem;
 
-  button{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
+  @media (max-width: 768px) {
     justify-content: center;
-
-    margin-top: 1rem;
-    padding: 0.5rem 1.5rem;
-    border: 1px solid ${({ theme }) => theme['Blue-300']};
-    border-radius: 0.5rem;
-
-    
-    font-size: 1rem;
-    font-weight: 300;
-    color: ${({ theme }) => theme['Blue-100']};
-
-    background-color: transparent;
-    cursor: pointer;
-    transition: 0.4s;
-
-    &:hover{
-      background-color:  ${({ theme }) => theme['Blue-500-opacity']};
-      box-shadow: 0px 0px 30px ${({ theme }) => theme['Blue-300-opacity']};
-      transition: 0.4s;
-    }
-    div{
-      color: ${({ theme }) => theme['Blue-300']};
-      height: 22px;
-    }
+    flex-wrap: wrap;
+    gap: 1rem;
   }
-`
-
+`;

@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-interface Props{
+interface Props {
   color?: string;
   background?: string;
 }
@@ -8,35 +8,54 @@ interface Props{
 export const TagContainer = styled.div<Props>`
   width: fit-content;
   font-size: 0.875rem;
-  
+
   border-radius: 0.5rem;
-  padding: 0.25rem 0.675rem 0.25rem 0.675rem ;
+  border: 1px solid
+    ${({ color, theme }) => {
+      switch (color) {
+        case "none":
+          return theme["Gray-800"];
+        case "blue":
+          return theme["Blue-300"];
+        case "white":
+          return "#fff";
+        case "purple":
+          return theme["Purple-300"];
+        default:
+          return theme["Gray-800"];
+      }
+    }};
+  padding: 0.375rem 1rem 0.375rem 1rem;
   background-color: ${({ background, theme }) => {
     switch (background) {
-      case 'blue':
+      case "none":
+        return theme["transparent"];
+      case "blue":
         return theme["Blue-300-opacity"];
-      case 'green':
-        return theme["Green-300-opacity"];
-      case 'purple':
+      case "white":
+        return "#fff";
+      case "purple":
         return theme["Purple-300-opacity"];
       default:
-        return theme["Blue-300"];
+        return theme["transparent"];
     }
   }};
   color: ${({ color, theme }) => {
     switch (color) {
-      case 'blue':
+      case "none":
+        return theme["Gray-050"];
+      case "blue":
         return theme["Blue-100"];
-      case 'green':
-        return theme["Green-100"];
-      case 'purple':
+      case "white":
+        return theme["Gray-900"];
+      case "purple":
         return theme["Purple-050"];
       default:
-        return theme["Blue-900"];
+        return theme["Gray-050"];
     }
   }};
 
-  @media(max-width: 768px){
-    font-size: 0.625rem;
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
   }
-`
+`;

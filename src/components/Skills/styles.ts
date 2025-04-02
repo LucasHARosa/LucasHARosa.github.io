@@ -6,12 +6,14 @@ export const ContainerSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;
-
-  padding: 4rem 10vw;
-  gap: 2rem;
+  padding: 6rem 10vw;
+  gap: 3rem;
+  position: relative;
+  overflow: hidden;
 
   @media (max-width: 768px) {
-    height: 780px
+    padding: 4rem 5vw;
+    gap: 2rem;
     align-items: center;
   }
 `;
@@ -20,12 +22,12 @@ export const ContainerTitle = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  @media (max-width: 768px) {
-  }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
+    color: ${({ theme }) => theme["Blue-100"]};
+
     @media (max-width: 768px) {
       font-size: 2rem;
     }
@@ -38,25 +40,29 @@ export const ContainerTechs = styled.div`
   gap: 4rem;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 3rem;
+  width: 100%;
+
   @media (max-width: 768px) {
     gap: 2rem;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
   }
 `;
 
 export const IconWrapper = styled.div`
-  color: #a8cff0;
+  color: ${({ theme }) => theme["Blue-400"]};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   svg {
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
+    opacity: 0.8;
 
     @media (max-width: 1000px) {
-      width: 200px;
-      height: 200px;
+      width: 160px;
+      height: 160px;
     }
 
     @media (max-width: 768px) {
@@ -71,60 +77,86 @@ export const Techs = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
-  padding: 2rem 1rem;
-  border-radius: 1rem;
-  gap: 4rem;
-
-  width: 35vw;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  gap: 1rem;
+  width: 50%;
   height: auto;
-  max-height: 80vh;
-
   background: linear-gradient(
-    to bottom right,
-    ${({ theme }) => theme["Blue-Gray-500"]},
-    ${({ theme }) => theme["Blue-500"]} 150%
+    180deg,
+    ${({ theme }) => theme["Gray-800"]},
+    ${({ theme }) => theme["Blue-300-opacity"]}
   );
+  box-shadow: ${({ theme }) => theme["shadow-lg"]};
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: ${({ theme }) => theme["shadow-xl"]};
+  }
 
   @media (max-width: 768px) {
     width: 100%;
-    height: auto;
-    max-height: 100vh;
+    padding: 1.5rem;
+    gap: 2rem;
   }
 `;
 
 export const TechsLogo = styled(motion.div)`
-  height: 300px;
-  display: fixed;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 1000px) {
-    height: 150px;
+    height: 160px;
   }
 
   @media (max-width: 768px) {
-    height: 70px;
+    height: 100px;
   }
 `;
+
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.75rem;
   flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0.5rem;
+
+  /* Hide scrollbar but allow scrolling */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 `;
 
 interface ButtonProps {
   active: boolean;
 }
+
 export const ButtonSkill = styled.button<ButtonProps>`
   border: none;
   cursor: pointer;
   background: none;
-  transition: 0.4s;
+  transition: all 0.2s ease-in-out;
   color: ${({ theme, active }) =>
-    active ? theme["Blue-200"] : theme["Blue-Gray-600"]};
+    active ? theme["Blue-400"] : theme["Gray-400"]};
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
   &:hover {
-    transition: 0.4s;
     color: ${({ theme }) => theme["Blue-200"]};
+    background-color: ${({ theme }) => theme["Blue-Gray-600"]};
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 `;
 
@@ -133,77 +165,81 @@ export const TechsDescription = styled(motion.div)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 35vw;
+  width: 50%;
+  padding: 1rem;
+
   @media (max-width: 768px) {
     width: 100%;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: ${({ theme }) => theme["Blue-100"]};
+    color: ${({ theme }) => theme["Gray-100"]};
+
+    @media (max-width: 768px) {
+      font-size: 1.75rem;
+    }
   }
+
   div {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
     flex-wrap: wrap;
   }
-  span {
-    font-size: 1rem;
-    font-weight: 500;
-    color: ${({ theme }) => theme["Blue-200"]};
-  }
 
-  @media (max-width: 768px) {
-    h2 {
-      font-size: 2rem;
-    }
+  span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: ${({ theme }) => theme["Gray-300"]};
   }
 `;
 
 export const Text = styled.p`
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 300;
-  color: ${({ theme }) => theme["Blue-100"]};
-  margin-bottom: 2rem;
+  color: ${({ theme }) => theme["Gray-400"]};
+  margin-bottom: 1.5rem;
+
   @media (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
   }
 `;
 
 export const BarProgress = styled.div`
   width: 300px;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+  background: ${({ theme }) => theme["Blue-Gray-700"]};
+  overflow: hidden;
 
-  border-radius: 1rem;
-  height: 1rem;
-  background: ${({ theme }) => theme["Blue-Gray-500"]};
-
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  @media (max-width: 768px) {
+    width: 200px;
+  }
 `;
 
 export const Space = styled.div`
   width: 100%;
-  height: 2rem;
+  height: 1.5rem;
 `;
+
 export const Progress = styled(motion.div)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  gap: 1rem;
+
   @media (max-width: 768px) {
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    gap: 0.5rem;
   }
 `;
 
 export const TextProgress = styled.p`
-  font-size: 1rem;
-  font-weight: 300;
-  color: ${({ theme }) => theme["Blue-200"]};
-  margin-right: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
+  color: ${({ theme }) => theme["Gray-300"]};
 `;

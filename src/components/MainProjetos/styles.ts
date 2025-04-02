@@ -1,35 +1,33 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const SectionContainer = styled.div`
+export const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 10rem 10vw;
-  @media(max-width: 768px){
-    padding: 2rem 1rem;
-  }
+  gap: 2rem;
+  padding: 6rem 10vw;
+  position: relative;
+  overflow: hidden;
 
-`
+  @media (max-width: 768px) {
+    padding: 4rem 5vw;
+    gap: 1.5rem;
+  }
+`;
 
 export const SelectContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
- 
-  gap: 1rem;
-  margin-bottom: 3rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
 
-  @media(max-width: 768px){
-    flex-direction: column;
-    align-items: start;
-    
-    gap: 1rem;
+  @media (max-width: 768px) {
+    gap: 1.5rem;
   }
- 
-`
+`;
 
 export const ContainerButtonSelect = styled.div`
   display: flex;
@@ -38,12 +36,22 @@ export const ContainerButtonSelect = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 0.5rem;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
 
-  @media(max-width: 768px){
-    gap: 1rem;
+  /* Hide scrollbar but allow scrolling */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
   }
-`
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+`;
 
 interface ButtonSelectProps {
   isActive?: boolean;
@@ -55,51 +63,55 @@ export const ButtonSelect = styled.button<ButtonSelectProps>`
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
-
-  width: 194px;
+  min-width: 160px;
   border-radius: 0.5rem;
-  padding: 0.875rem 1rem;
-
+  padding: 0.5rem 1.5rem;
   font-size: 0.875rem;
-  font-weight: 500;
-  transition: 0.4s;
-  cursor: ${({ isActive }) => isActive ? 'default' : 'pointer'};
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+  cursor: ${({ isActive }) => (isActive ? "default" : "pointer")};
+  color: ${({ theme }) => theme["Blue-100"]};
+  border: 1px solid
+    ${({ theme, isActive }) =>
+      isActive ? theme["Gray-700"] : theme["Gray-800"]};
+  background-color: ${({ theme, isActive }) =>
+    isActive ? theme["Gray-800"] : "transparent"};
+  box-shadow: ${({ theme, isActive }) =>
+    isActive ? theme["shadow-md"] : "none"};
 
-  color: ${({ theme }) => theme['Blue-100']};
-  border: 2px solid ${({ theme }) => theme['Blue-500-opacity']};
-  background-color: ${({ theme, isActive }) => isActive ? theme['Blue-500-opacity'] : 'transparent'};
-
-  @media(max-width: 768px){
-    width: 100px;
-    height: 40px;
-    font-size: 0.5rem;
+  @media (max-width: 768px) {
+    min-width: 120px;
+    padding: 0.625rem 0.75rem;
+    font-size: 0.75rem;
   }
 
-  &:hover{
-    background-color: ${({ theme }) => theme['Blue-500-opacity']};
-    box-shadow: 0px 0px 10px ${({ theme, isActive }) => isActive ? 'transparent' : theme['Blue-600']};
-    transition: 0.4s;
-  }
-  div{
-    height: 22px;
+  &:hover {
+    background-color: ${({ theme, isActive }) =>
+      isActive ? theme["Gray-600"] : theme["Gray-800"]};
+    border-color: ${({ theme }) => theme["Gray-800"]};
+    transform: ${({ isActive }) => (isActive ? "none" : "translateY(-2px)")};
   }
 
-`
+  &:active {
+    transform: translateY(0);
+  }
+`;
 
 export const ContainerTitle = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 2rem;
-  h1{
-    color: ${({ theme }) => theme['Blue-100']};
-    font-size: 3rem;
+
+  h1 {
+    color: ${({ theme }) => theme["Blue-100"]};
+    font-size: 2.5rem;
     font-weight: 600;
-    @media(max-width: 768px){
+
+    @media (max-width: 768px) {
       font-size: 2rem;
     }
   }
-`
+`;
 
 export const ContainerProjetos = styled.div`
   display: flex;
@@ -107,4 +119,9 @@ export const ContainerProjetos = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-`
+  width: 100%;
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
+`;
