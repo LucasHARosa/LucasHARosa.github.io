@@ -6,10 +6,11 @@ export const Container = styled.div`
   justify-content: space-between;
   border-radius: 0.75rem;
   background: linear-gradient(
-    135deg,
-    ${({ theme }) => theme["Gray-700"]},
-    ${({ theme }) => theme["Gray-800"]}
+    180deg,
+    ${({ theme }) => theme["Gray-900"]} 0%,
+    ${({ theme }) => theme["Blue-300-opacity"]} 100%
   );
+  border: 1px solid ${({ theme }) => theme["Gray-800"]};
 
   width: 320px;
   height: 480px;
@@ -19,6 +20,7 @@ export const Container = styled.div`
 
   &:hover {
     box-shadow: ${({ theme }) => theme["shadow-xl"]};
+
     transform: translateY(-5px);
   }
 
@@ -28,7 +30,7 @@ export const Container = styled.div`
   }
 
   h1 {
-    color: ${({ theme }) => theme["Blue-100"]};
+    color: ${({ theme }) => theme["Gray-100"]};
     font-size: 1.25rem;
     font-weight: 600;
 
@@ -40,7 +42,7 @@ export const Container = styled.div`
   p {
     font-size: 0.875rem;
     font-weight: 300;
-    color: ${({ theme }) => theme["Gray-300"]};
+    color: ${({ theme }) => theme["Gray-400"]};
     margin-top: 0.5rem;
     line-height: 1.5;
     overflow: hidden;
@@ -59,11 +61,6 @@ export const Container = styled.div`
     height: 180px;
     object-fit: cover;
     border-radius: 0.75rem 0.75rem 0 0;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.03);
-    }
 
     @media (max-width: 768px) {
       height: 160px;
@@ -98,6 +95,23 @@ export const ContainerTags = styled.div`
   }
 `;
 
+export const Tag = styled.div`
+  width: fit-content;
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 0.3rem;
+  background-color: ${({ theme }) => theme["white"]};
+  color: ${({ theme }) => theme["Gray-900"]};
+  box-shadow: ${({ theme }) => theme["shadow-sm"]};
+  font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    gap: 0.25rem;
+  }
+`;
+
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
@@ -129,14 +143,14 @@ export const ContainerButtons = styled.div`
     border-radius: 0.375rem;
     font-size: 0.875rem;
     font-weight: 400;
-    color: ${({ theme }) => theme["Blue-100"]};
+    color: ${({ theme }) => theme["white"]};
     background-color: transparent;
-    border: 1px solid ${({ theme }) => theme["Gray-700"]};
+    border: 1px solid ${({ theme }) => theme["Gray-600"]};
     box-shadow: ${({ theme }) => theme["shadow-sm"]};
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      background-color: ${({ theme }) => theme["Gray-700"]};
+      background-color: ${({ theme }) => theme["Gray-500"]};
       transform: translateY(-2px);
     }
 
@@ -158,7 +172,7 @@ export const ContainerButtons = styled.div`
     }
 
     div {
-      color: ${({ theme }) => theme["Blue-200"]};
+      color: ${({ theme }) => theme["white"]};
       height: 20px;
       display: flex;
       align-items: center;

@@ -42,7 +42,7 @@ export function MainProjetos() {
               isActive={categoriaAtiva === value}
               onClick={() => setCategoriaAtiva(value)}
             >
-              <div>{icon}</div>
+              {icon}
               {label}
             </ButtonSelect>
           ))}

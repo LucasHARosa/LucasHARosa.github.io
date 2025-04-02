@@ -17,8 +17,8 @@ export const TagContainer = styled.div<Props>`
           return theme["Gray-800"];
         case "blue":
           return theme["Blue-300"];
-        case "green":
-          return theme["Green-300"];
+        case "white":
+          return "#fff";
         case "purple":
           return theme["Purple-300"];
         default:
@@ -32,8 +32,8 @@ export const TagContainer = styled.div<Props>`
         return theme["transparent"];
       case "blue":
         return theme["Blue-300-opacity"];
-      case "green":
-        return theme["Green-300-opacity"];
+      case "white":
+        return "#fff";
       case "purple":
         return theme["Purple-300-opacity"];
       default:
@@ -46,8 +46,8 @@ export const TagContainer = styled.div<Props>`
         return theme["Gray-050"];
       case "blue":
         return theme["Blue-100"];
-      case "green":
-        return theme["Green-100"];
+      case "white":
+        return theme["Gray-900"];
       case "purple":
         return theme["Purple-050"];
       default:

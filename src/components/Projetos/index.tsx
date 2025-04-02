@@ -4,12 +4,13 @@ import { AppleLogo, GithubLogo, GooglePlayLogo, Link } from "phosphor-react";
 import { useRef } from "react";
 import { useGesture } from "react-use-gesture";
 import { ProjetosProps } from "../../data/data";
-import { Tag } from "../Tag";
+
 import {
   Container,
   ContainerButtons,
   ContainerContent,
   ContainerTags,
+  Tag,
 } from "./styles";
 
 interface Props {
@@ -90,11 +91,7 @@ export function Projetos({ projeto }: Props) {
             <div>
               <ContainerTags>
                 {projeto.tags.map((tag) => {
-                  return (
-                    <Tag key={tag} color="blue" background="blue">
-                      {tag}
-                    </Tag>
-                  );
+                  return <Tag key={tag}>{tag}</Tag>;
                 })}
               </ContainerTags>
 

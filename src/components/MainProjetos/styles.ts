@@ -65,17 +65,17 @@ export const ButtonSelect = styled.button<ButtonSelectProps>`
   justify-content: center;
   min-width: 160px;
   border-radius: 0.5rem;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1.5rem;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 400;
   transition: all 0.2s ease-in-out;
   cursor: ${({ isActive }) => (isActive ? "default" : "pointer")};
   color: ${({ theme }) => theme["Blue-100"]};
   border: 1px solid
     ${({ theme, isActive }) =>
-      isActive ? theme["Gray-700"] : theme["Blue-Gray-600"]};
+      isActive ? theme["Gray-700"] : theme["Gray-800"]};
   background-color: ${({ theme, isActive }) =>
-    isActive ? theme["Gray-700"] : "transparent"};
+    isActive ? theme["Gray-800"] : "transparent"};
   box-shadow: ${({ theme, isActive }) =>
     isActive ? theme["shadow-md"] : "none"};
 
@@ -87,22 +87,13 @@ export const ButtonSelect = styled.button<ButtonSelectProps>`
 
   &:hover {
     background-color: ${({ theme, isActive }) =>
-      isActive ? theme["Gray-600"] : theme["Gray-700"]};
-    border-color: ${({ theme }) => theme["Gray-700"]};
+      isActive ? theme["Gray-600"] : theme["Gray-800"]};
+    border-color: ${({ theme }) => theme["Gray-800"]};
     transform: ${({ isActive }) => (isActive ? "none" : "translateY(-2px)")};
   }
 
   &:active {
     transform: translateY(0);
-  }
-
-  div {
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: ${({ theme, isActive }) =>
-      isActive ? theme["Blue-300"] : theme["Blue-400"]};
   }
 `;
 
