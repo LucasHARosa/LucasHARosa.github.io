@@ -1,11 +1,21 @@
 import styled from "styled-components";
 
+export const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 6rem 0;
+`;
+
 export const ContainerAbout = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 6rem;
-  padding: 6rem 10vw;
+  padding: 3rem 10vw;
   position: relative;
 
   @media (max-width: 768px) {
@@ -19,17 +29,6 @@ export const ContainerAboutText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
-  h1 {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2.25rem;
-    color: ${({ theme }) => theme["Blue-100"]};
-
-    @media (max-width: 768px) {
-      font-size: 1.75rem;
-    }
-  }
 
   p {
     font-style: normal;
@@ -52,7 +51,7 @@ export const ContainerAboutText = styled.div`
 
 export const ContainerAboutImage = styled.div`
   padding: 0.5rem;
-  background-color: ${({ theme }) => theme["Blue-600-opacity"]};
+  background-color: ${({ theme }) => theme["Gray-200-opacity"]};
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -81,6 +80,6 @@ export const LegendImage = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.75rem;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0.5rem 0;
 `;
