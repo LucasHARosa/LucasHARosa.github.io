@@ -24,14 +24,14 @@ export function Projetos({ projeto }: Props) {
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
     const centery = (cardRect.top + cardRect.bottom) / 2;
-    return -(y - centery) / 700;
+    return (y - centery) / 200;
   };
 
   const calcY = (x: number) => {
     if (!domTarget.current) return;
     const cardRect = domTarget.current.getBoundingClientRect();
     const centerx = (cardRect.left + cardRect.right) / 2;
-    return (x - centerx) / 70;
+    return (x - centerx) / 50;
   };
 
   const [{ x, y, rotateX, rotateY, rotateZ, scale, zoom }, api] = useSpring(
@@ -43,7 +43,7 @@ export function Projetos({ projeto }: Props) {
       y: 0,
       scale: 1,
       zoom: 0,
-      config: { mass: 20, tension: 450, friction: 40 },
+      config: { mass: 20, tension: 700, friction: 40 },
     })
   );
 
