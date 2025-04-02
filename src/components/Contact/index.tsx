@@ -1,17 +1,12 @@
 import emailjs from "@emailjs/browser";
-import {
-  Envelope,
-  GithubLogo,
-  LinkedinLogo,
-  WhatsappLogo,
-} from "phosphor-react";
+import { ArrowRight, Envelope, WhatsappLogo } from "phosphor-react";
 import { useForm } from "react-hook-form";
 import { FaCode } from "react-icons/fa6";
 import { toast } from "react-toastify";
-import { Tag } from "../Tag";
+import { Title } from "../Title";
 import {
+  ButtonContainer,
   ContainerContact,
-  ContainerTitle,
   Content,
   FormContainer,
   SectionContainer,
@@ -62,43 +57,30 @@ export function Contact() {
 
   return (
     <SectionContainer id="Contato">
-      <ContainerTitle>
-        <Tag color="blue" background="blue">
-          📱&nbsp; Fale Comigo!
-        </Tag>
-        <h1>Entre em contato comigo</h1>
-      </ContainerTitle>
+      <Title
+        title="Entre em contato"
+        subTitle="Vamos conversar!"
+        description="Se você deseja discutir um projeto, fazer uma parceria ou apenas bater um papo, estou sempre aberto a novas oportunidades. Não hesite em entrar em contato!"
+      />
 
       <Content>
         <ContainerContact>
           <div>
             <a href="https://wa.me/5561992836376">
-              <WhatsappLogo size={30} color="#bfdbfe" />
+              <WhatsappLogo size={20} />
               <span>WhatsApp</span>
             </a>
           </div>
           <div>
-            <a href="#Contato" onClick={handleCopy}>
-              <Envelope size={30} color="#bfdbfe" />
+            <a href="" onClick={handleCopy}>
+              <Envelope size={20} />
               <span>Copiar E-mail</span>
-            </a>
-          </div>
-          <div>
-            <a href="https://www.linkedin.com/in/lucas-henrique-alves-rosa/">
-              <LinkedinLogo size={30} color="#bfdbfe" />
-              <span>Linkedin</span>
             </a>
           </div>
 
           <div>
-            <a href="https://github.com/LucasHARosa">
-              <GithubLogo size={30} color="#bfdbfe" />
-              <span>GitHub</span>
-            </a>
-          </div>
-          <div>
             <a href="https://wa.me/5561992836376">
-              <FaCode size={30} color="#bfdbfe" />
+              <FaCode size={20} />
               <span>SoftwareHouse</span>
             </a>
           </div>
@@ -125,7 +107,10 @@ export function Contact() {
           />
           {errors.message && <span>Mensagem é obrigatória</span>}
 
-          <button type="submit">Enviar</button>
+          <ButtonContainer type="submit" onClick={handleCopy}>
+            Enviar
+            <ArrowRight size={20} />
+          </ButtonContainer>
         </FormContainer>
       </Content>
     </SectionContainer>
