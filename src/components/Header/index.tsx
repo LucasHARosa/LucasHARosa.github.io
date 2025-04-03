@@ -120,7 +120,6 @@ export function Header() {
                 <ButtonAnimationHover
                   handleTheme={handleTheme}
                   text="Mudar tema"
-                  link=""
                   icon
                 />
               </li>
