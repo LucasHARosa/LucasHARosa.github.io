@@ -1,20 +1,11 @@
 import styled from "styled-components";
 
-export const Earth3DContainer = styled.div`
-  animation: floatAnimation 6s ease-in-out infinite;
+export const Space3DContainer = styled.div`
   z-index: 1;
   width: 28rem;
   max-width: 40%;
-
-  @keyframes floatAnimation {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
-  }
+  height: 28rem;
+  position: relative;
 
   @media (max-width: 768px) {
     display: none;

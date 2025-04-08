@@ -1,16 +1,58 @@
 import Typewriter from "typewriter-effect";
 
 import { GithubLogo, LinkedinLogo } from "phosphor-react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../Button";
 import { Tag } from "../Tag";
+import { SpaceScene } from "./SpaceScene";
 import {
   IntroButtons,
   IntroContainer,
   IntroContent,
+  Space3DContainer,
   TypeWriterText,
 } from "./styles";
 
 export function Intro() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+
+    const handleResize = () => {
+      if (containerRef.current) {
+        setDimensions({
+          width: containerRef.current.offsetWidth,
+          height: containerRef.current.offsetHeight,
+        });
+      }
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        // Normalize mouse position between -1 and 1
+        const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+        const y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+        setMousePosition({ x, y });
+      }
+    };
+
+    // Initial dimensions
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <section id="Home">
       <IntroContainer>
@@ -50,6 +92,9 @@ export function Intro() {
             </a>
           </IntroButtons>
         </IntroContent>
+        <Space3DContainer>
+          {isMounted && <SpaceScene mousePosition={mousePosition} />}
+        </Space3DContainer>
       </IntroContainer>
     </section>
   );

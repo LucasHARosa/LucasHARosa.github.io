@@ -1,5 +1,5 @@
 import { ChatCircle, Heart, PaperPlaneTilt } from "phosphor-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import foto from "../../assets/foto.png";
 import { Title } from "../Title";
 import {
@@ -10,11 +10,13 @@ import {
   LegendImage,
 } from "./styles";
 
-import { animated, to, useSpring } from "@react-spring/web";
+import { animated, to, useSpring, useTrail } from "@react-spring/web";
 import { useGesture } from "react-use-gesture";
 
 export function About() {
   const domTarget = useRef<HTMLDivElement>(null);
+  const textSectionRef = useRef<HTMLDivElement>(null);
+  const [textVisible, setTextVisible] = useState(false);
 
   const calcX = (y: number) => {
     if (!domTarget.current) return;
@@ -58,6 +60,37 @@ export function About() {
     { domTarget, eventOptions: { passive: false } }
   );
 
+  const trail = useTrail(3, {
+    from: { opacity: 0, y: 50 },
+    to: textVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 },
+    config: { mass: 1, tension: 280, friction: 60 },
+    delay: 200,
+  });
+
+  useEffect(() => {
+    // Create an Intersection Observer to detect when the text section is in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTextVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% of the element is visible
+    );
+
+    if (textSectionRef.current) {
+      observer.observe(textSectionRef.current);
+    }
+
+    return () => {
+      if (textSectionRef.current) {
+        observer.unobserve(textSectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <Container id="SobreMim">
       <Title
@@ -87,33 +120,18 @@ export function About() {
             </LegendImage>
           </ContainerAboutImage>
         </animated.div>
-        <ContainerAboutText>
-          {/* <Tag color="blue" background="blue">
-            ✍ &nbsp; Sobre mim
-          </Tag> */}
-
+        <ContainerAboutText ref={textSectionRef}>
           <div>
-            <p>
-              🖐 Prazer! Sou desenvolvedor e programador, com anos de
-              experiência em diversas linguagens de programação e frameworks,
-              tenho habilidades sólidas em desenvolvimento web e aplicativos,
-              bem como em automação e Machine Learning
-            </p>
-            <p>
-              🥇 Minha jornada como desenvolvedor começou quando percebi que
-              poderia unir minha paixão por tecnologia e solução de problemas
-              para criar soluções inovadoras. Ao longo dos anos, aprimorei
-              minhas habilidades em programação e desenvolvimento, trabalhando
-              em projetos desafiadores que exigiam pensamento crítico e
-              criatividade.
-            </p>
-            <p>
-              🚀 Se você está procurando um desenvolvedor web e programador que
-              possa levar sua empresa para o próximo nível, estou à disposição.
-              Meu compromisso com a excelência, juntamente com minhas
-              habilidades técnicas, me tornam um parceiro valioso em qualquer
-              projeto.
-            </p>
+            {trail.map((style, index) => (
+              <animated.p key={index} style={style}>
+                {index === 0 &&
+                  "🖐 Prazer! Sou desenvolvedor e programador, com anos de experiência em diversas linguagens de programação e frameworks, tenho habilidades sólidas em desenvolvimento web e aplicativos, bem como em automação e Machine Learning"}
+                {index === 1 &&
+                  "🥇 Minha jornada como desenvolvedor começou quando percebi que poderia unir minha paixão por tecnologia e solução de problemas para criar soluções inovadoras. Ao longo dos anos, aprimorei minhas habilidades em programação e desenvolvimento, trabalhando em projetos desafiadores que exigiam pensamento crítico e criatividade."}
+                {index === 2 &&
+                  "🚀 Se você está procurando um desenvolvedor web e programador que possa levar sua empresa para o próximo nível, estou à disposição. Meu compromisso com a excelência, juntamente com minhas habilidades técnicas, me tornam um parceiro valioso em qualquer projeto."}
+              </animated.p>
+            ))}
           </div>
         </ContainerAboutText>
       </ContainerAbout>
