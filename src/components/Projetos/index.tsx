@@ -11,6 +11,7 @@ import {
   ContainerContent,
   ContainerTags,
   Tag,
+  TagReal,
 } from "./styles";
 
 interface Props {
@@ -91,7 +92,15 @@ export function Projetos({ projeto }: Props) {
             <div>
               <ContainerTags>
                 {projeto.tags.map((tag) => {
-                  return <Tag key={tag}>{tag}</Tag>;
+                  if (tag === "Projeto Real") {
+                    return (
+                      <Tag key={tag}>
+                        <TagReal>{tag}</TagReal>
+                      </Tag>
+                    );
+                  } else {
+                    return <Tag key={tag}>{tag}</Tag>;
+                  }
                 })}
               </ContainerTags>
 

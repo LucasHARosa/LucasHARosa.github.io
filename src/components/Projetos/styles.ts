@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -110,6 +110,42 @@ export const Tag = styled.div`
     padding: 0.25rem 0.75rem;
     gap: 0.25rem;
   }
+`;
+
+const gradientAnimation = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+`;
+
+export const TagReal = styled.div`
+  background: linear-gradient(
+    90deg,
+    ${({ theme }) => theme["Blue-700"]},
+    ${({ theme }) => theme["Purple-500"]}
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: ${gradientAnimation} 3s ease-in-out infinite;
+
+  font-weight: 400;
+  font-size: 0.75rem;
+
+  background-size: 300% 300%;
 `;
 
 export const ContainerButtons = styled.div`
