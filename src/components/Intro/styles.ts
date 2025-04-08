@@ -13,6 +13,24 @@ export const Space3DContainer = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
+
+  span {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${({ theme }) => theme["Gray-400"]};
+    p {
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-align: center;
+      justify-self: center;
+      align-self: center;
+    }
+  }
 `;
 
 export const IntroContainer = styled.div`

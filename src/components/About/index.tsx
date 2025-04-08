@@ -7,10 +7,12 @@ import {
   ContainerAbout,
   ContainerAboutImage,
   ContainerAboutText,
+  Interact,
   LegendImage,
 } from "./styles";
 
 import { animated, to, useSpring, useTrail } from "@react-spring/web";
+import { PiArrowBendRightDown } from "react-icons/pi";
 import { useGesture } from "react-use-gesture";
 
 export function About() {
@@ -99,27 +101,34 @@ export function About() {
         description="Transformando ideias em código"
       />
       <ContainerAbout>
-        <animated.div
-          ref={domTarget}
-          style={{
-            x,
-            y,
-            transform: "perspective(600px)",
-            scale: to([scale, zoom], (s, z) => s + z),
-            rotateX,
-            rotateY,
-            rotateZ,
-          }}
-        >
-          <ContainerAboutImage>
-            <img src={foto} alt="" />
-            <LegendImage>
-              <Heart size={24} weight="fill" color="#e52e4d" />
-              <ChatCircle size={24} color="#FFF" />
-              <PaperPlaneTilt size={24} color="#FFF" />
-            </LegendImage>
-          </ContainerAboutImage>
-        </animated.div>
+        <span>
+          <Interact>
+            <p>Interaja aqui</p>
+            <PiArrowBendRightDown size={15} style={{ marginLeft: 2 }} />
+          </Interact>
+          <animated.div
+            ref={domTarget}
+            style={{
+              x,
+              y,
+              transform: "perspective(600px)",
+              scale: to([scale, zoom], (s, z) => s + z),
+              rotateX,
+              rotateY,
+              rotateZ,
+              zIndex: 100,
+            }}
+          >
+            <ContainerAboutImage>
+              <img src={foto} alt="" />
+              <LegendImage>
+                <Heart size={24} weight="fill" color="#e52e4d" />
+                <ChatCircle size={24} color="#FFF" />
+                <PaperPlaneTilt size={24} color="#FFF" />
+              </LegendImage>
+            </ContainerAboutImage>
+          </animated.div>
+        </span>
         <ContainerAboutText ref={textSectionRef}>
           <div>
             {trail.map((style, index) => (

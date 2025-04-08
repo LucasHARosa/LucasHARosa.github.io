@@ -2,6 +2,7 @@ import Typewriter from "typewriter-effect";
 
 import { GithubLogo, LinkedinLogo } from "phosphor-react";
 import { useEffect, useRef, useState } from "react";
+import { PiArrowBendRightDown } from "react-icons/pi";
 import { Button } from "../Button";
 import { Tag } from "../Tag";
 import { SpaceScene } from "./SpaceScene";
@@ -89,6 +90,10 @@ export function Intro() {
           </IntroButtons>
         </IntroContent>
         <Space3DContainer>
+          <span>
+            <p>Interaja aqui</p>
+            <PiArrowBendRightDown size={15} style={{ marginLeft: 2 }} />
+          </span>
           {isMounted && <SpaceScene mousePosition={mousePosition} />}
         </Space3DContainer>
       </IntroContainer>

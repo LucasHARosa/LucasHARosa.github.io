@@ -331,16 +331,26 @@ export function SpaceScene({ mousePosition }: SpaceSceneProps) {
       // Note: We don't adjust Y rotation here as it's used for the continuous spin
     }
   }, [mousePosition, modelLoaded]);
-
+  const [isGrabbing, setIsGrabbing] = useState(false);
   return (
-    <div ref={mountRef} style={{ width: "100%", height: "100%" }}>
+    <div
+      ref={mountRef}
+      style={{
+        width: "100%",
+        height: "100%",
+        cursor: isGrabbing ? "grabbing" : "grab",
+      }}
+      onMouseDown={() => setIsGrabbing(true)}
+      onMouseUp={() => setIsGrabbing(false)}
+      onMouseLeave={() => setIsGrabbing(false)}
+    >
       {modelError && (
         <div
           style={{
             position: "absolute",
             bottom: 0,
             left: 0,
-            background: "rgba(0,0,0,0.7)",
+            background: "rgba(0,0,0,1)",
             color: "white",
             padding: "5px",
             fontSize: "12px",
