@@ -1,5 +1,26 @@
 import styled from "styled-components";
 
+export const Earth3DContainer = styled.div`
+  animation: floatAnimation 6s ease-in-out infinite;
+  z-index: 1;
+  width: 28rem;
+  max-width: 40%;
+
+  @keyframes floatAnimation {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
 export const IntroContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -11,8 +32,6 @@ export const IntroContainer = styled.div`
 
   @media (max-width: 768px) {
     justify-content: center;
-    padding: 6rem 5vw 4rem;
-    text-align: center;
   }
 
   @keyframes floatAnimation {

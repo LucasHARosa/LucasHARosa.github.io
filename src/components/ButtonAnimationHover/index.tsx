@@ -5,7 +5,7 @@ import { Link } from "./styles";
 interface Props {
   handleTheme?: () => void;
   text: string;
-  link: string;
+  link?: string;
   mobile?: boolean;
   active?: boolean;
   icon?: boolean;

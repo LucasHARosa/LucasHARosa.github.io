@@ -86,7 +86,7 @@ export function Skills() {
         setNumberSkill(numberSkill + 1);
       }
       setSkill(listaSkills[numberSkill]);
-    }, 6000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [skill, stop, numberSkill]);
 

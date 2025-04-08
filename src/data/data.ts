@@ -13,11 +13,63 @@ export interface ProjetosProps {
 
 export const listaProjetos: ProjetosProps[] = [
   {
+    id: 27,
+    titulo: "Nacional Go",
+    descricao:
+      "Plataforma de transporte de veículos, oferecendo uma área exclusiva para clientes e um e-commerce integrado para serviços relacionados.",
+    tags: ["Projeto Real", "React", "PHP"],
+    imagem: "/imagens/nacional.png",
+    Link: "https://app.nacionalgo.com.br/",
+    LinkGit: "",
+    LinkGoogle: "",
+    LinkApple: "",
+    tipo: ["backend", "frontend", "principais"],
+  },
+  {
+    id: 26,
+    titulo: "SporTickets",
+    descricao:
+      "Aplicativo para compra e venda de ingressos, permitindo que os usuários comprem ingressos para eventos esportivos e parceiros podem criar e editar eventos.",
+    tags: ["Projeto Real", "NextJs", "NestJS"],
+    imagem: "/imagens/sporticket.png",
+    Link: "https://beta.sportickets.com.br/",
+    LinkGit: "",
+    LinkGoogle: "",
+    LinkApple: "",
+    tipo: ["backend", "frontend", "principais"],
+  },
+  {
+    id: 25,
+    titulo: "Vale Energia",
+    descricao:
+      "Aplicação web para pagamento de contas de energia, onde um usuário pode pagar contas e adiquirir vales e a empresa parceira pode cadastrar e gerenciar campanhas e vales.",
+    tags: ["Projeto Real", "React", "Vite", "NodeJS"],
+    imagem: "/imagens/valeenergia.png",
+    Link: "https://hml.valeenergia.site/dashboard",
+    LinkGit: "",
+    LinkGoogle: "",
+    LinkApple: "",
+    tipo: ["frontend", "backend", "principais"],
+  },
+  {
+    id: 24,
+    titulo: "Anac Arquitetura",
+    descricao:
+      "Site de portfólio para uma empresa de arquitetura, apresentando projetos e serviços oferecidos.",
+    tags: ["Projeto Real", "React", "Next", "TypeScript"],
+    imagem: "/imagens/anac.png",
+    Link: "https://hml.valeenergia.site/",
+    LinkGit: "",
+    LinkGoogle: "",
+    LinkApple: "",
+    tipo: ["frontend", "principais"],
+  },
+  {
     id: 23,
     titulo: "Cortex",
     descricao:
       "Com os dados dos sensores IoT enviados em tempo real para a nuvem, é possível monitorar constantemente o consumo e verificar a situação dos recursos, como a água, podendo identificar vazamentos ou diminuição nos níveis por meio de gráficos e alarmes configuráveis.",
-    tags: ["React Native", "Jest", "Expo"],
+    tags: ["Projeto Real", "React Native", "Expo"],
     imagem: "/imagens/cortex.png",
     Link: "",
     LinkGit: "",
@@ -34,7 +86,7 @@ export const listaProjetos: ProjetosProps[] = [
     imagem: "/imagens/quizprogram.png",
     Link: "",
     LinkGit: "https://github.com/LucasHARosa/Quiz-Programing",
-    tipo: ["mobile", "principais"],
+    tipo: ["mobile"],
   },
   {
     id: 18,
@@ -52,7 +104,7 @@ export const listaProjetos: ProjetosProps[] = [
     titulo: "Arthos",
     descricao:
       "O Arthos é um aplicativo inovador projetado para oferecer controle de acesso seguro e eficiente a diferentes espaços, como salas, prédios e áreas restritas.",
-    tags: ["React Native", "Expo"],
+    tags: ["Projeto Real", "React Native", "Expo"],
     imagem: "/imagens/Arthos.png",
     Link: "",
     LinkGit: "",
@@ -93,7 +145,7 @@ export const listaProjetos: ProjetosProps[] = [
     imagem: "/imagens/timer_pomoro_1.png",
     Link: "https://lucasharosa.github.io/Timer-Pomodoro/",
     LinkGit: "https://github.com/LucasHARosa/Timer-Pomodoro",
-    tipo: ["frontend", "principais"],
+    tipo: ["frontend"],
   },
   {
     id: 1,
@@ -138,7 +190,7 @@ export const listaProjetos: ProjetosProps[] = [
     imagem: "/imagens/tcc.PNG",
     Link: "",
     LinkGit: "https://github.com/LucasHARosa/UnB-TCC-IA",
-    tipo: ["ia", "principais"],
+    tipo: ["ia"],
   },
   {
     id: 7,
@@ -193,7 +245,7 @@ export const listaProjetos: ProjetosProps[] = [
     imagem: "/imagens/telaInicial.png",
     Link: "https://lucasharosa.github.io/Ignite-Feed/",
     LinkGit: "https://github.com/LucasHARosa/Ignite-Feed",
-    tipo: ["frontend"],
+    tipo: [""],
   },
   {
     id: 16,
@@ -254,7 +306,7 @@ export const listaProjetos: ProjetosProps[] = [
     titulo: "Transações Financeiras",
     descricao:
       "Aplicação backend para controle de transações financeiras, permitindo a criação, listagem e remoção de transações.",
-    tags: ["React", "TypeScript"],
+    tags: ["Spring Boot", "Java", "MySQL"],
     imagem: "/imagens/bank.jpg",
     Link: "",
     LinkGit: "https://github.com/LucasHARosa/Bank-Transactions",

@@ -47,10 +47,6 @@ export const ContainerButtonSelect = styled.div`
   &::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
-
-  @media (max-width: 768px) {
-    justify-content: flex-start;
-  }
 `;
 
 interface ButtonSelectProps {

@@ -20,7 +20,7 @@ const categorias = [
 ];
 
 export function MainProjetos() {
-  const [categoriaAtiva, setCategoriaAtiva] = useState("mobile");
+  const [categoriaAtiva, setCategoriaAtiva] = useState("principais");
 
   const listaFiltrada = listaProjetos.filter((projeto) =>
     projeto.tipo.includes(categoriaAtiva)

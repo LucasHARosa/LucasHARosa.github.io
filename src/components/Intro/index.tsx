@@ -1,5 +1,4 @@
 import Typewriter from "typewriter-effect";
-import astro2 from "../../assets/astro2.png";
 
 import { GithubLogo, LinkedinLogo } from "phosphor-react";
 import { Button } from "../Button";
@@ -51,7 +50,6 @@ export function Intro() {
             </a>
           </IntroButtons>
         </IntroContent>
-        <img src={astro2} alt="" />
       </IntroContainer>
     </section>
   );
