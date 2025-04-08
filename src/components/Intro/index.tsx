@@ -16,7 +16,7 @@ import {
 export function Intro() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -24,10 +24,6 @@ export function Intro() {
 
     const handleResize = () => {
       if (containerRef.current) {
-        setDimensions({
-          width: containerRef.current.offsetWidth,
-          height: containerRef.current.offsetHeight,
-        });
       }
     };
 

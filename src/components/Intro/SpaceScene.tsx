@@ -171,11 +171,6 @@ export function SpaceScene({ mousePosition }: SpaceSceneProps) {
       const earthGeometry = new THREE.SphereGeometry(1, 64, 64);
 
       // Create a basic Earth-like material with blue and green
-      const earthMaterial = new THREE.MeshStandardMaterial({
-        color: 0x2563eb,
-        metalness: 0.1,
-        roughness: 0.8,
-      });
 
       // Add some noise to the material to simulate continents
       const vertexShader = `
