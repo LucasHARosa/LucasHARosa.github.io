@@ -33,6 +33,7 @@ export function ButtonAnimationHover({
           alignItems: "center",
           justifyContent: "center",
           gap: "0.5rem",
+          cursor: "pointer",
         }}
       >
         {text}
