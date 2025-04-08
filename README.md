@@ -1,11 +1,15 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/LucasHARosa/LucasHARosa.github.io)
+![GitHub language count](https://img.shields.io/github/languages/count/LucasHARosa/LucasHARosa.github.io)
+![GitHub top language](https://img.shields.io/github/languages/top/LucasHARosa/LucasHARosa.github.io)
+![GitHub last commit](https://img.shields.io/github/last-commit/LucasHARosa/LucasHARosa.github.io)
+
 <h2 align="center">
   Portfolio Website - v1.0<br/>
   <a href="https://lucasharosa.github.io/" target="_blank">LucasHARosa</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="imagens\Design_sem_nome-removebg-preview.png" />
+  <img alt="Portfólio" src="public/imagens/portfolio.png" />
 </div>
-
 
 <div align="center">
   
