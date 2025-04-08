@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 export const Space3DContainer = styled.div`
   z-index: 1;
-  width: 28rem;
-  max-width: 40%;
-  height: 28rem;
+  width: 40rem;
+  max-width: 60%;
+  height: 40rem;
   position: relative;
+
+  align-self: center;
+  justify-self: center;
 
   @media (max-width: 768px) {
     display: none;
