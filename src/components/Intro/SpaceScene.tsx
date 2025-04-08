@@ -247,10 +247,10 @@ export function SpaceScene({ mousePosition }: SpaceSceneProps) {
       frameIdRef.current = requestAnimationFrame(animate);
 
       if (modelRef.current) {
-        modelRef.current.position.y = Math.sin(Date.now() * 0.001) * 0.2;
+        modelRef.current.position.y = Math.sin(Date.now() * 0.001) * 0.4;
 
         if (modelLoaded) {
-          modelRef.current.rotation.y += 0.003;
+          modelRef.current.rotation.y += 0.002;
         } else {
           tempSphere.rotation.y += 0.01;
         }
