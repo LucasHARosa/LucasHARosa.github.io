@@ -68,6 +68,19 @@ export function Header() {
     },
     {
       id: 5,
+      name: "Experiência",
+      link: "#Experiencia",
+      section: "Experiencia",
+    },
+    {
+      id: 6,
+      name: "Educação",
+      link: "#Educacao",
+      section: "Educacao",
+    },
+
+    {
+      id: 7,
       name: "Contato",
       link: "#Contato",
       section: "Contato",

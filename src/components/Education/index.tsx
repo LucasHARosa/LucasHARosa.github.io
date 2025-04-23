@@ -1,64 +1,102 @@
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { LiaCertificateSolid } from "react-icons/lia";
+import { PiGraduationCapFill } from "react-icons/pi";
+import { TbCertificate, TbDeviceMobileCode } from "react-icons/tb";
 import { EducationCard } from "../EducationCard";
+import { Title } from "../Title";
+import {
+  EducationContainer,
+  EducationSection,
+  TimelineContainer,
+} from "./styles";
 
-const education = [
+const educations = [
   {
-    institution: "Universidade Federal",
-    course: "Ciência da Computação",
-    period: "2015 - 2019",
-    description: "Bacharelado com ênfase em desenvolvimento de software e inteligência artificial.",
-    image: "/lovable-uploads/13153981-e123-480d-aa7b-bffe16ac833a.png"
+    icon: PiGraduationCapFill,
+    title: "Engenharia Mecatrônica",
+    subtitle: "Universidade de Brasília (UnB)",
+    description: "Graduação em Engenharia Mecatrônica, Controle e Automação.",
+    tags: ["Automação", "Controle", "Mecatrônica", "Engenharia"],
   },
   {
-    institution: "Digital Innovation One",
-    course: "Bootcamp Full Stack",
-    period: "2020",
-    description: "Desenvolvimento web fullstack com foco em React e Node.js.",
-    image: "/lovable-uploads/13153981-e123-480d-aa7b-bffe16ac833a.png"
+    icon: TbCertificate,
+    title: "Desenvolvimento Web",
+    subtitle: "Rocketseat",
+    description:
+      "Desenvolvimento de aplicações web com React, Node.js e TypeScript.",
+    tags: ["React", "Node.js", "Next.js", "Nest.js"],
   },
   {
-    institution: "Udemy",
-    course: "AWS Solutions Architect",
-    period: "2021",
-    description: "Certificação profissional em arquitetura de soluções na AWS.",
-    image: "/lovable-uploads/13153981-e123-480d-aa7b-bffe16ac833a.png"
-  }
+    icon: TbDeviceMobileCode,
+    title: "Desenvolvimento Mobile",
+    subtitle: "Rocketseat",
+    description: "Desenvolvimento de aplicações mobile com React Native.",
+    tags: ["React Native", "Expo", "JavaScript", "TypeScript"],
+  },
+  {
+    icon: TbCertificate,
+    title: "Desenvolvimento Backend",
+    subtitle: "ADA Tech",
+    description: "Desenvolvimento backend com Java",
+    tags: ["Java", "Spring Boot", "PostgreSQL", "Docker"],
+  },
+
+  {
+    icon: LiaCertificateSolid,
+    title: "Curso.Dev",
+    subtitle: "Filipe Deschamps",
+    description:
+      "Formação fullstack para dominar qualquer tecnologia e resolver qualquer desafio.",
+    tags: ["Next.js", "React", "Node.js", "TypeScript"],
+  },
 ];
 
-export const EducationCarousel = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+export function Education() {
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
+    const container = containerRef.current;
+    if (!container) return;
+
+    let scrollAmount = 0;
+    const speed = 0.25;
+
+    let animationFrameId: number;
 
     const scroll = () => {
-      if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth) {
-        scrollContainer.scrollLeft = 0;
-      } else {
-        scrollContainer.scrollLeft += 1;
+      if (!container) return;
+
+      scrollAmount += speed;
+      container.scrollLeft = scrollAmount;
+
+      // Quando chegar no fim dos itens originais, reinicia
+      if (scrollAmount >= container.scrollWidth / 2) {
+        scrollAmount = 0;
+        container.scrollLeft = 0;
       }
+
+      animationFrameId = requestAnimationFrame(scroll);
     };
 
-    const interval = setInterval(scroll, 30);
-    return () => clearInterval(interval);
+    scroll();
+
+    return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
   return (
-    <section className="min-h-screen py-20">
-      <div className="mx-auto max-w-7xl px-4">
-        <h2 className="mb-12 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-center text-3xl font-bold text-transparent">
-          Educação
-        </h2>
-        <div
-          ref={scrollRef}
-          className="flex gap-6 overflow-x-hidden scroll-smooth"
-        >
-          {[...education, ...education].map((edu, index) => (
+    <EducationSection id="Educacao">
+      <EducationContainer>
+        <Title
+          title="Educação"
+          subTitle="Minhas formações"
+          description="Sempre buscando novos conhecimentos e habilidades!"
+        />
+        <TimelineContainer ref={containerRef}>
+          {[...educations, ...educations].map((edu, index) => (
             <EducationCard key={index} {...edu} />
           ))}
-        </div>
-      </div>
-    </section>
+        </TimelineContainer>
+      </EducationContainer>
+    </EducationSection>
   );
-};
+}

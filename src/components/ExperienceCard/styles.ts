@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 1rem;
   padding: 1.5rem;
   background: linear-gradient(
@@ -12,10 +11,8 @@ export const CardContainer = styled.div`
     ${({ theme }) => theme["Blue-300-opacity"]}
   );
   border: 1px solid ${({ theme }) => theme["Gray-800"]};
-  border-radius: 0.75rem;
-
   transition: all 0.3s ease;
-  max-width: 450px;
+  border-radius: 0.75rem;
   margin-bottom: 2rem;
 
   &:hover {
@@ -29,7 +26,6 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  min-width: 0;
 `;
 
 export const IconContainer = styled.div`
@@ -46,12 +42,9 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  max-width: 100%;
-  min-width: 0;
-  flex: 1;
 `;
 
-export const Title = styled.h4`
+export const Title = styled.h3`
   font-size: 1.125rem;
   font-weight: 600;
   color: ${({ theme }) => theme["Gray-100"]};
@@ -66,9 +59,6 @@ export const Description = styled.p`
   font-size: 0.875rem;
   color: ${({ theme }) => theme["Gray-300"]};
   line-height: 1.5;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
 `;
 
 export const TagsContainer = styled.div`
@@ -77,7 +67,7 @@ export const TagsContainer = styled.div`
   gap: 0.5rem;
 `;
 
-export const Tag = styled.div`
+export const Tag = styled.span`
   width: fit-content;
   font-size: 0.75rem;
   padding: 2px 10px;
