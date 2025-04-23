@@ -8,6 +8,7 @@ export const EducationSection = styled.section`
 
 export const EducationContainer = styled.div`
   margin: 0 auto;
+  padding: 6rem 1rem 4rem;
 `;
 
 export const EducationTitle = styled.h2`

@@ -8,7 +8,7 @@ export const ExperienceSection = styled.section`
 export const ExperienceContainer = styled.div`
   max-width: 64rem;
   margin: 0 auto;
-  padding: 8rem 1rem;
+  padding: 6rem 1rem 4rem;
 `;
 
 export const ExperienceTitle = styled.h2`
