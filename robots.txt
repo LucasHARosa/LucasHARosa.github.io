@@ -1,0 +1,33 @@
+# www.robotstxt.org/
+# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://lucasrosa.dev.br/sitemap.xml
+Sitemap: https://lucasharosa.github.io/sitemap.xml
+
+# Diretórios que não devem ser indexados
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /dist/
+Disallow: /build/
+
+# Arquivos que não devem ser indexados
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.ts$
+Disallow: /*.tsx$
+Disallow: /*.map$
+Disallow: /*.config$
+Disallow: /*.env$
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Hosts
+Host: https://lucasrosa.dev.br
+Host: https://lucasharosa.github.io 
