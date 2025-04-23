@@ -59,7 +59,7 @@ export const HeaderNav = styled.nav`
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 0.1rem;
     list-style: none;
   }
 

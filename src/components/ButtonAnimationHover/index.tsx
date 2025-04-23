@@ -34,7 +34,7 @@ export function ButtonAnimationHover({
           justifyContent: "center",
           gap: "0.5rem",
           cursor: "pointer",
-          whiteSpace:"nowrap"
+          whiteSpace: "nowrap",
         }}
       >
         {text}
